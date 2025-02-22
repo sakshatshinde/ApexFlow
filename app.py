@@ -1,48 +1,45 @@
-from google import genai
-from google.genai.types import GenerateContentConfig, GoogleSearch, Tool
+import sys
 
-from config import settings
+from PySide6.QtWidgets import QApplication, QMainWindow
+from ai import Gemini
 
-SYS_PROMPT = '''
-System Prompt for AI Integration in Finance & Macroeconomic Analysis App
-
-Role & Scope:
-You are an expert AI assistant specializing in financial markets, macroeconomic trends, fiscal and monetary policy, trading, and investment analysis. You provide insights, data interpretation, risk assessment, and forecasting for stocks, forex, commodities, bonds, and other financial instruments. You also offer mathematical and statistical modeling, economic theory explanations, and scientific reasoning for market behaviors.
-
-Capabilities & Expectations:
-
-    Financial Analysis: Assist with stock valuation, fundamental and technical analysis, market trends, and risk-reward calculations.
-    Macroeconomics: Explain economic indicators (GDP, inflation, interest rates, employment data) and their impact on global markets.
-    Trading & Investment Strategies: Provide insights on algorithmic trading, portfolio diversification, derivatives, and hedging techniques.
-    Fiscal & Monetary Policy: Analyze central bank actions, government spending, taxation, and regulatory policies worldwide.
-    Forex & Commodities: Guide in forex trading strategies, currency pair correlations, and commodity price influences.
-    Mathematical & Scientific Insights: Apply quantitative models, game theory, econometrics, and statistical analysis.
-    Global Markets & Geopolitical Impact: Interpret economic policies, trade agreements, and geopolitical risks affecting asset classes.
-
-Guidelines:
-
-    Use real-time data where possible.
-    Explain in a structured, professional manner while allowing for detailed, technical breakdowns.
-    Avoid speculative or unverified information.
-    Provide references to reputable financial sources when necessary.'''
-
-google_search_tool = Tool(
-    google_search=GoogleSearch()
-)
+from ui.ui_main import Ui_MainWindow
 
 
-class Gemini():
+class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
-        self.api_key = settings.gemini
-        self.client = genai.Client(api_key=self.api_key)
-        self.model = "gemini-2.0-flash"
+        super().__init__()
+        self.setupUi(self)
+        self.setCentralWidget(self.tabWidget)
+        self.gemini = Gemini()  # Initialize the Gemini instance
+        self.pushButton.clicked.connect(self.handle_send_button)  # Connect the button click to a handler
+        self.show()
 
-    def generate(self, prompt):
-        response = self.client.models.generate_content(model=self.model, contents=prompt,
-                                                       config=GenerateContentConfig(system_instruction=SYS_PROMPT,
-                                                                                    tools=[google_search_tool],
-                                                                                    response_modalities=["TEXT"]))
-        return response.text
+    def handle_send_button(self):
+        prompt: str = self.textEdit.toPlainText()  # Get the text from the `textEdit` box
+        self.textBrowser.clear()  # Clear the textBrowser for the new response
+        self.textEdit.clear()  # Clear the textEdit field
 
-    def get_model(self):
-        return self.model
+        if prompt == "":
+            return
+
+        response_stream = self.gemini.generate(prompt)  # Generate a response stream using Gemini
+        for chunk in response_stream:  # Stream each response chunk
+            self.textBrowser.insertPlainText(chunk)  # Append the chunk to the textBrowser
+            self.textBrowser.verticalScrollBar().setValue(
+                self.textBrowser.verticalScrollBar().maximum()
+            )  # Auto-scroll to the bottom
+            QApplication.processEvents()  # Allow UI updates during the streaming process
+
+        try:
+            self.textBrowser.setMarkdown(self.textBrowser.toPlainText())  # Render as Markdown if possible
+        except RuntimeError:
+            pass  # Leave the plain text as-is if Markdown rendering fails
+
+
+app = QApplication(sys.argv)
+app.setStyle("Fusion")
+
+window = MainWindow()
+
+app.exec()
