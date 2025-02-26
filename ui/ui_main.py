@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainpjwSZK.ui'
+## Form generated from reading UI file 'mainGUAyvh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -76,20 +76,20 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
-        self.pushButton_3 = QPushButton(self.aiTab)
-        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.send_msg_to_ai_btn = QPushButton(self.aiTab)
+        self.send_msg_to_ai_btn.setObjectName(u"send_msg_to_ai_btn")
 
-        self.horizontalLayout.addWidget(self.pushButton_3)
+        self.horizontalLayout.addWidget(self.send_msg_to_ai_btn)
 
-        self.pushButton = QPushButton(self.aiTab)
-        self.pushButton.setObjectName(u"pushButton")
+        self.clear_prompt_btn = QPushButton(self.aiTab)
+        self.clear_prompt_btn.setObjectName(u"clear_prompt_btn")
 
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.clear_prompt_btn)
 
-        self.pushButton_2 = QPushButton(self.aiTab)
-        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.attach_ai_btn = QPushButton(self.aiTab)
+        self.attach_ai_btn.setObjectName(u"attach_ai_btn")
 
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.horizontalLayout.addWidget(self.attach_ai_btn)
 
 
         self.verticalLayout_5.addLayout(self.horizontalLayout)
@@ -663,7 +663,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(5)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -768,9 +768,9 @@ class Ui_MainWindow(object):
         self.actionAbout.setText(QCoreApplication.translate("MainWindow", u"About", None))
         self.textBrowser.setPlaceholderText(QCoreApplication.translate("MainWindow", u"AI assistant will reply here... Please note this is not a chat, no history of your messages will be kept in the context.", None))
         self.textEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Enter your prompt here...", None))
-        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Send", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Attach", None))
+        self.send_msg_to_ai_btn.setText(QCoreApplication.translate("MainWindow", u"Send", None))
+        self.clear_prompt_btn.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
+        self.attach_ai_btn.setText(QCoreApplication.translate("MainWindow", u"Attach", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.aiTab), QCoreApplication.translate("MainWindow", u"Ask AI", None))
 #if QT_CONFIG(tooltip)
         self.tabWidget.setTabToolTip(self.tabWidget.indexOf(self.aiTab), QCoreApplication.translate("MainWindow", u"Here you can send a message to Gemini and ask for it's input", None))

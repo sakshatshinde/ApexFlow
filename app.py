@@ -12,8 +12,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.setCentralWidget(self.tabWidget)
         self.gemini = Gemini()  # Initialize the Gemini instance
-        self.pushButton.clicked.connect(self.handle_send_button)  # Connect the button click to a handler
+        self.send_msg_to_ai_btn.clicked.connect(self.handle_send_button)  # Connect the button click to a handler
+        self.clear_prompt_btn.clicked.connect(self.handle_ai_prompt_cler_btn)
         self.show()
+
+    def handle_ai_prompt_cler_btn(self):
+        self.textEdit.clear()
 
     def handle_send_button(self):
         prompt: str = self.textEdit.toPlainText()  # Get the text from the `textEdit` box

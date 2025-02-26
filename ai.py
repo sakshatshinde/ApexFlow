@@ -24,7 +24,9 @@ Guidelines:
     Use real-time data where possible.
     Explain in a structured, professional manner while allowing for detailed, technical breakdowns.
     Avoid speculative or unverified information.
-    Provide references to reputable financial sources when necessary.'''
+    Provide references to reputable financial sources when necessary.
+    Always use fancy rich text or markdown formatting.
+    '''
 
 google_search_tool = Tool(
     google_search=GoogleSearch()
