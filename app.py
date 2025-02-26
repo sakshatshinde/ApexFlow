@@ -38,7 +38,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 app = QApplication(sys.argv)
-app.setStyle("Fusion")
 
 window = MainWindow()
 
