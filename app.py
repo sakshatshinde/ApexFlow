@@ -2,6 +2,7 @@ import sys
 
 from PySide6.QtWidgets import QApplication, QMainWindow
 from PySide6.QtCore import QTimer
+from PySide6.QtGui import QIcon
 
 from ai import Gemini
 from data import StockDataWorker, IndiaStockIndices
@@ -14,6 +15,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.setCentralWidget(self.tabWidget)
+        self.setWindowIcon(QIcon("ui/apexFlowIcon.png"))
+
         self.gemini = Gemini()  # Initialize the Gemini instance
         self.send_msg_to_ai_btn.clicked.connect(self.handle_send_button)  # Connect the button click to a handler
         self.clear_prompt_btn.clicked.connect(self.handle_ai_prompt_cler_btn)

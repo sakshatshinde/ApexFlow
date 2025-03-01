@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>ApexFlow - Financial Analytics</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>apexFlowIcon.png</normaloff>apexFlowIcon.png</iconset>
+  </property>
   <property name="styleSheet">
    <string>
             QMainWindow {

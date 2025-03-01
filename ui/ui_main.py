@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainGUAyvh.ui'
+## Form generated from reading UI file 'mainftXDwR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -26,16 +26,19 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1247, 800)
+        icon = QIcon()
+        icon.addFile(u"apexFlowIcon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        MainWindow.setWindowIcon(icon)
         self.actionExit = QAction(MainWindow)
         self.actionExit.setObjectName(u"actionExit")
-        icon = QIcon()
-        icon.addFile(u"exit_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.actionExit.setIcon(icon)
+        icon1 = QIcon()
+        icon1.addFile(u"exit_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.actionExit.setIcon(icon1)
         self.actionAbout = QAction(MainWindow)
         self.actionAbout.setObjectName(u"actionAbout")
-        icon1 = QIcon()
-        icon1.addFile(u"about_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.actionAbout.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u"about_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.actionAbout.setIcon(icon2)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout_34 = QHBoxLayout(self.centralwidget)
@@ -663,7 +666,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(5)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
