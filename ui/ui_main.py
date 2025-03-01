@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainftXDwR.ui'
+## Form generated from reading UI file 'mainzjUpmH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -126,7 +126,7 @@ class Ui_MainWindow(object):
         font = QFont()
         font.setFamilies([u"Segoe UI"])
         font.setPointSize(12)
-        font.setBold(True)
+        font.setWeight(QFont.DemiBold)
         self.majorIndicesHeader.setFont(font)
         self.majorIndicesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -137,7 +137,11 @@ class Ui_MainWindow(object):
         self.MSCIWorld_Label = QLabel(self.indices)
         self.MSCIWorld_Label.setObjectName(u"MSCIWorld_Label")
         self.MSCIWorld_Label.setMinimumSize(QSize(180, 0))
-        self.MSCIWorld_Label.setFont(font)
+        font1 = QFont()
+        font1.setFamilies([u"Segoe UI"])
+        font1.setPointSize(12)
+        font1.setBold(False)
+        self.MSCIWorld_Label.setFont(font1)
         self.MSCIWorld_Label.setFrameShape(QFrame.Shape.Box)
         self.MSCIWorld_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -157,7 +161,7 @@ class Ui_MainWindow(object):
         self.Nifty50_Label = QLabel(self.indices)
         self.Nifty50_Label.setObjectName(u"Nifty50_Label")
         self.Nifty50_Label.setMinimumSize(QSize(180, 0))
-        self.Nifty50_Label.setFont(font)
+        self.Nifty50_Label.setFont(font1)
         self.Nifty50_Label.setFrameShape(QFrame.Shape.Box)
         self.Nifty50_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -177,7 +181,7 @@ class Ui_MainWindow(object):
         self.Nasdaq100_Label = QLabel(self.indices)
         self.Nasdaq100_Label.setObjectName(u"Nasdaq100_Label")
         self.Nasdaq100_Label.setMinimumSize(QSize(180, 0))
-        self.Nasdaq100_Label.setFont(font)
+        self.Nasdaq100_Label.setFont(font1)
         self.Nasdaq100_Label.setFrameShape(QFrame.Shape.Box)
         self.Nasdaq100_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -197,7 +201,7 @@ class Ui_MainWindow(object):
         self.SP500_Label = QLabel(self.indices)
         self.SP500_Label.setObjectName(u"SP500_Label")
         self.SP500_Label.setMinimumSize(QSize(180, 0))
-        self.SP500_Label.setFont(font)
+        self.SP500_Label.setFont(font1)
         self.SP500_Label.setFrameShape(QFrame.Shape.Box)
         self.SP500_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -217,7 +221,7 @@ class Ui_MainWindow(object):
         self.Nikkei225_Label = QLabel(self.indices)
         self.Nikkei225_Label.setObjectName(u"Nikkei225_Label")
         self.Nikkei225_Label.setMinimumSize(QSize(180, 0))
-        self.Nikkei225_Label.setFont(font)
+        self.Nikkei225_Label.setFont(font1)
         self.Nikkei225_Label.setFrameShape(QFrame.Shape.Box)
         self.Nikkei225_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -237,7 +241,7 @@ class Ui_MainWindow(object):
         self.Hangseng_Label = QLabel(self.indices)
         self.Hangseng_Label.setObjectName(u"Hangseng_Label")
         self.Hangseng_Label.setMinimumSize(QSize(180, 0))
-        self.Hangseng_Label.setFont(font)
+        self.Hangseng_Label.setFont(font1)
         self.Hangseng_Label.setFrameShape(QFrame.Shape.Box)
         self.Hangseng_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -270,7 +274,7 @@ class Ui_MainWindow(object):
         self.Gold_Label = QLabel(self.indices)
         self.Gold_Label.setObjectName(u"Gold_Label")
         self.Gold_Label.setMinimumSize(QSize(180, 0))
-        self.Gold_Label.setFont(font)
+        self.Gold_Label.setFont(font1)
         self.Gold_Label.setFrameShape(QFrame.Shape.Box)
         self.Gold_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -290,7 +294,7 @@ class Ui_MainWindow(object):
         self.Silver_Label = QLabel(self.indices)
         self.Silver_Label.setObjectName(u"Silver_Label")
         self.Silver_Label.setMinimumSize(QSize(180, 0))
-        self.Silver_Label.setFont(font)
+        self.Silver_Label.setFont(font1)
         self.Silver_Label.setFrameShape(QFrame.Shape.Box)
         self.Silver_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -310,7 +314,7 @@ class Ui_MainWindow(object):
         self.BrentCrudeOil_Label = QLabel(self.indices)
         self.BrentCrudeOil_Label.setObjectName(u"BrentCrudeOil_Label")
         self.BrentCrudeOil_Label.setMinimumSize(QSize(180, 0))
-        self.BrentCrudeOil_Label.setFont(font)
+        self.BrentCrudeOil_Label.setFont(font1)
         self.BrentCrudeOil_Label.setFrameShape(QFrame.Shape.Box)
         self.BrentCrudeOil_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -330,7 +334,7 @@ class Ui_MainWindow(object):
         self.NaturalGas_Label = QLabel(self.indices)
         self.NaturalGas_Label.setObjectName(u"NaturalGas_Label")
         self.NaturalGas_Label.setMinimumSize(QSize(180, 0))
-        self.NaturalGas_Label.setFont(font)
+        self.NaturalGas_Label.setFont(font1)
         self.NaturalGas_Label.setFrameShape(QFrame.Shape.Box)
         self.NaturalGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -350,7 +354,7 @@ class Ui_MainWindow(object):
         self.USDINR_Label = QLabel(self.indices)
         self.USDINR_Label.setObjectName(u"USDINR_Label")
         self.USDINR_Label.setMinimumSize(QSize(180, 0))
-        self.USDINR_Label.setFont(font)
+        self.USDINR_Label.setFont(font1)
         self.USDINR_Label.setFrameShape(QFrame.Shape.Box)
         self.USDINR_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -370,7 +374,7 @@ class Ui_MainWindow(object):
         self.USVix_Label = QLabel(self.indices)
         self.USVix_Label.setObjectName(u"USVix_Label")
         self.USVix_Label.setMinimumSize(QSize(180, 0))
-        self.USVix_Label.setFont(font)
+        self.USVix_Label.setFont(font1)
         self.USVix_Label.setFrameShape(QFrame.Shape.Box)
         self.USVix_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -403,7 +407,7 @@ class Ui_MainWindow(object):
         self.IndiaRepoRate_Label = QLabel(self.indices)
         self.IndiaRepoRate_Label.setObjectName(u"IndiaRepoRate_Label")
         self.IndiaRepoRate_Label.setMinimumSize(QSize(180, 0))
-        self.IndiaRepoRate_Label.setFont(font)
+        self.IndiaRepoRate_Label.setFont(font1)
         self.IndiaRepoRate_Label.setFrameShape(QFrame.Shape.Box)
         self.IndiaRepoRate_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -423,7 +427,7 @@ class Ui_MainWindow(object):
         self.IndiaVix_Label = QLabel(self.indices)
         self.IndiaVix_Label.setObjectName(u"IndiaVix_Label")
         self.IndiaVix_Label.setMinimumSize(QSize(180, 0))
-        self.IndiaVix_Label.setFont(font)
+        self.IndiaVix_Label.setFont(font1)
         self.IndiaVix_Label.setFrameShape(QFrame.Shape.Box)
         self.IndiaVix_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -443,7 +447,7 @@ class Ui_MainWindow(object):
         self.NiftyIT_Label = QLabel(self.indices)
         self.NiftyIT_Label.setObjectName(u"NiftyIT_Label")
         self.NiftyIT_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyIT_Label.setFont(font)
+        self.NiftyIT_Label.setFont(font1)
         self.NiftyIT_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyIT_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -463,7 +467,7 @@ class Ui_MainWindow(object):
         self.NiftyBank_Label = QLabel(self.indices)
         self.NiftyBank_Label.setObjectName(u"NiftyBank_Label")
         self.NiftyBank_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyBank_Label.setFont(font)
+        self.NiftyBank_Label.setFont(font1)
         self.NiftyBank_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyBank_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -483,7 +487,7 @@ class Ui_MainWindow(object):
         self.NiftyFMCG_Label = QLabel(self.indices)
         self.NiftyFMCG_Label.setObjectName(u"NiftyFMCG_Label")
         self.NiftyFMCG_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyFMCG_Label.setFont(font)
+        self.NiftyFMCG_Label.setFont(font1)
         self.NiftyFMCG_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyFMCG_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -503,7 +507,7 @@ class Ui_MainWindow(object):
         self.NiftyIndiaDefence_Label = QLabel(self.indices)
         self.NiftyIndiaDefence_Label.setObjectName(u"NiftyIndiaDefence_Label")
         self.NiftyIndiaDefence_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyIndiaDefence_Label.setFont(font)
+        self.NiftyIndiaDefence_Label.setFont(font1)
         self.NiftyIndiaDefence_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyIndiaDefence_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -536,7 +540,7 @@ class Ui_MainWindow(object):
         self.NiftyMidcap150_Label = QLabel(self.indices)
         self.NiftyMidcap150_Label.setObjectName(u"NiftyMidcap150_Label")
         self.NiftyMidcap150_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyMidcap150_Label.setFont(font)
+        self.NiftyMidcap150_Label.setFont(font1)
         self.NiftyMidcap150_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyMidcap150_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -556,7 +560,7 @@ class Ui_MainWindow(object):
         self.NiftySmallCap250_Label = QLabel(self.indices)
         self.NiftySmallCap250_Label.setObjectName(u"NiftySmallCap250_Label")
         self.NiftySmallCap250_Label.setMinimumSize(QSize(180, 0))
-        self.NiftySmallCap250_Label.setFont(font)
+        self.NiftySmallCap250_Label.setFont(font1)
         self.NiftySmallCap250_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftySmallCap250_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -576,7 +580,7 @@ class Ui_MainWindow(object):
         self.NiftyAuto_Label = QLabel(self.indices)
         self.NiftyAuto_Label.setObjectName(u"NiftyAuto_Label")
         self.NiftyAuto_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyAuto_Label.setFont(font)
+        self.NiftyAuto_Label.setFont(font1)
         self.NiftyAuto_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyAuto_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -596,7 +600,7 @@ class Ui_MainWindow(object):
         self.NiftyPharma_Label = QLabel(self.indices)
         self.NiftyPharma_Label.setObjectName(u"NiftyPharma_Label")
         self.NiftyPharma_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyPharma_Label.setFont(font)
+        self.NiftyPharma_Label.setFont(font1)
         self.NiftyPharma_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyPharma_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -616,7 +620,7 @@ class Ui_MainWindow(object):
         self.NIftyOilGas_Label = QLabel(self.indices)
         self.NIftyOilGas_Label.setObjectName(u"NIftyOilGas_Label")
         self.NIftyOilGas_Label.setMinimumSize(QSize(180, 0))
-        self.NIftyOilGas_Label.setFont(font)
+        self.NIftyOilGas_Label.setFont(font1)
         self.NIftyOilGas_Label.setFrameShape(QFrame.Shape.Box)
         self.NIftyOilGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -636,7 +640,7 @@ class Ui_MainWindow(object):
         self.NiftyEnergy_Label = QLabel(self.indices)
         self.NiftyEnergy_Label.setObjectName(u"NiftyEnergy_Label")
         self.NiftyEnergy_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyEnergy_Label.setFont(font)
+        self.NiftyEnergy_Label.setFont(font1)
         self.NiftyEnergy_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyEnergy_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -661,7 +665,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1247, 33))
+        self.menubar.setGeometry(QRect(0, 0, 1247, 29))
         MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
@@ -675,97 +679,182 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"ApexFlow - Financial Analytics", None))
         MainWindow.setStyleSheet(QCoreApplication.translate("MainWindow", u"\n"
-"            QMainWindow {\n"
-"                background-color: #2D3250;\n"
-"                color: #F5F5F5;\n"
-"            }\n"
+"      /* Base colors and variables */\n"
+"QMainWindow {\n"
+"    background-color: #111827;\n"
+"    color: #F9FAFB;\n"
+"}\n"
 "\n"
-"            QTabWidget::pane {\n"
-"                border: 1px solid #424769;\n"
-"                background-color: #2D3250;\n"
-"                border-radius: 4px;\n"
-"            }\n"
+"/* Tab styling */\n"
+"QTabWidget::pane {\n"
+"    border: none;\n"
+"    background-color: #111827;\n"
+"    border-radius: 6px;\n"
+"}\n"
 "\n"
-"            QTabBar::tab {\n"
-"                background-color: #424769;\n"
-"                color: #F5F5F5;\n"
-"                padding: 8px 16px;\n"
-"                margin-right: 2px;\n"
-"                border-top-left-radius: 4px;\n"
-"                border-top-right-radius: 4px;\n"
-"            }\n"
+"QTabBar::tab {\n"
+"    background-color: #1F2937;\n"
+"    color: #F9FAFB;\n"
+"    padding: 8px 16px;\n"
+"    margin-right: 2px;\n"
+"    border-top-left-radius: 4px;\n"
+"    border-top-right-radius: 4px;\n"
+"    font-weight: 500;\n"
+"}\n"
 "\n"
-"            QTabBar::tab:selected {\n"
-"                background-color: #7077A1;\n"
-"                font-weight: bold;\n"
-"            }\n"
+"QTabBar::tab:selected {\n"
+"    background-color: #374151;\n"
+"    border-bottom: 2px solid #10B981;\n"
+"}\n"
 "\n"
-"            QTabBar::tab:hover:!selected {\n"
-"                background-color: #5D6487;\n"
-"            }\n"
+"QTabBar::tab:hover:!selected {\n"
+"    background-color: #2D3748;\n"
+"}\n"
 "\n"
-"            QLCDNumber {\n"
-"                background-color: #121420;\n"
-"                color: #00FF9F;\n"
-""
-                        "                border: 1px solid #424769;\n"
-"                border-radius: 4px;\n"
-"            }\n"
+"/* LCD styling */\n"
+"QLCDNumber {\n"
+"    background-color: #1F2937;\n"
+"    color: #10B981;\n"
+"    border: none;\n"
+"    border-radius: 4px;\n"
+"}\n"
 "\n"
-"            QLabel {\n"
-"                background-color: #424769;\n"
-"                color: #F5F5F5;\n"
-"                padding: 5px;\n"
-"                border-radius: 4px;\n"
-"            }\n"
+"/* Label styling */\n"
+"QLabel {\n"
+"    background-color: transparent;\n"
+"    color: #F9FAFB;\n"
+"    padding: 6px;\n"
+"    font-weight: 400;\n"
+"}"
+                        "\n"
 "\n"
-"            QPushButton {\n"
-"                background-color: #7077A1;\n"
-"                color: white;\n"
-"                border-radius: 4px;\n"
-"                padding: 8px 12px;\n"
-"                font-weight: bold;\n"
-"            }\n"
+"/* Header labels */\n"
+"QLabel[objectName*=\"Header\"] {\n"
+"    background-color: #374151;\n"
+"    color: white;\n"
+"    padding: 8px;\n"
+"    border-radius: 4px;\n"
+"    font-weight: 600;\n"
+"}\n"
 "\n"
-"            QPushButton:hover {\n"
-"                background-color: #5D6487;\n"
-"            }\n"
+"/* Button styling - Fixed contrast issues */\n"
+"QPushButton {\n"
+"    background-color: #3B82F6;\n"
+"    color: #FFFFFF;\n"
+"    border-radius: 4px;\n"
+"    padding: 10px 14px;\n"
+"    font-weight: 600;\n"
+"    font-size: 14px;\n"
+"    letter-spacing: 0.5px;\n"
+"    border: none;\n"
+"}\n"
 "\n"
-"            QPushButton:pressed {\n"
-"                background-color: #2D3250;\n"
-"            }\n"
+"QPushButton:hover {\n"
+"    background-color: #2563EB;\n"
+"}\n"
 "\n"
-"            QTextEdit, QTextBrowser {\n"
-"                background-color: #323855;\n"
-"                color: #F5F5F5;\n"
-"                border: 1px solid #424769;\n"
-"                border-radius: 4px;\n"
-"                padding: 5px;\n"
-""
-                        "            }\n"
+"QPushButton:pressed {\n"
+"    background-color: #1D4ED8;\n"
+"}\n"
 "\n"
-"            QMenuBar {\n"
-"                background-color: #424769;\n"
-"                color: #F5F5F5;\n"
-"            }\n"
+"QPushButton:disabled {\n"
+"    background-color: #374151;\n"
+"    color: #9CA3AF;\n"
+"}\n"
 "\n"
-"            QMenuBar::item {\n"
-"                background-color: transparent;\n"
-"            }\n"
+"/* Text components */\n"
+"QTextEdit, QTextBrowser {\n"
+"    background-color: #1F2937;\n"
+"    color: #F9FAFB;\n"
+"    border: none;\n"
+"    border-radius: 4px;\n"
+"    padding: 6px;\n"
+"    selection-background-color: #4F46E5;\n"
+"}\n"
 "\n"
-"            QMenuBar::item:selected {\n"
-"                background-color: #7077A1;\n"
-"            }\n"
+"/* Menu styling */\n"
+"QMenuBar"
+                        " {\n"
+"    background-color: #1F2937;\n"
+"    color: #F9FAFB;\n"
+"    border-bottom: 1px solid #374151;\n"
+"}\n"
 "\n"
-"            QMenu {\n"
-"                background-color: #424769;\n"
-"                color: #F5F5F5;\n"
-"                border: 1px solid #121420;\n"
-"            }\n"
+"QMenuBar::item {\n"
+"    background-color: transparent;\n"
+"    padding: 6px 8px;\n"
+"    border-radius: 2px;\n"
+"}\n"
 "\n"
-"            QMenu::item:selected {\n"
-"                background-color: #7077A1;\n"
-"            }\n"
+"QMenuBar::item:selected {\n"
+"    background-color: #374151;\n"
+"}\n"
+"\n"
+"QMenu {\n"
+"    background-color: #1F2937;\n"
+"    color: #F9FAFB;\n"
+"    border: 1px solid #111827;\n"
+"    border-radius: 4px;\n"
+"}\n"
+"\n"
+"QMenu::item {\n"
+"    padding: 6px 16px;\n"
+"    border-radius: 2px;\n"
+"}\n"
+"\n"
+"QMenu::item:selected {\n"
+"    background-color: #374151;\n"
+"}\n"
+"\n"
+"/* Scrollbar styling */\n"
+"QScrollBar:vertical {\n"
+"    border: none;\n"
+"    background: #1F2937;\n"
+"    width: 6px;\n"
+"    border-radius: 3px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"    background: #4F46E5;\n"
+"    min-height: 24px;\n"
+"    border-radius: 3px;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"    height: 0px;\n"
+"}\n"
+"\n"
+"QScrollBar:h"
+                        "orizontal {\n"
+"    border: none;\n"
+"    background: #1F2937;\n"
+"    height: 6px;\n"
+"    border-radius: 3px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal {\n"
+"    background: #4F46E5;\n"
+"    min-width: 24px;\n"
+"    border-radius: 3px;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {\n"
+"    width: 0px;\n"
+"}\n"
+"\n"
+"/* Triangle indicators */\n"
+"QLabel[class=\"up-triangle\"] {\n"
+"    color: #10B981; /* Green color for up movement */\n"
+"    font-family: Arial;\n"
+"    font-size: 16px;\n"
+"}\n"
+"\n"
+"QLabel[class=\"down-triangle\"] {\n"
+"    color: #EF4444; /* Red color for down movement */\n"
+"    font-family: Arial;\n"
+"    font-size: 16px;\n"
+"}\n"
+"\n"
 "            ", None))
         self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Quit", None))
         self.actionAbout.setText(QCoreApplication.translate("MainWindow", u"About", None))
@@ -782,7 +871,7 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.financials), QCoreApplication.translate("MainWindow", u"Financials", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.annualReports), QCoreApplication.translate("MainWindow", u"Annual Reports", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.sectoral), QCoreApplication.translate("MainWindow", u"Sectoral", None))
-        self.majorIndicesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"background-color: #7077A1; color: white; padding: 8px; border-radius: 4px;", None))
+        self.majorIndicesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"color: white; padding: 8px; border-radius: 4px;", None))
         self.majorIndicesHeader.setText(QCoreApplication.translate("MainWindow", u"MAJOR INDICES", None))
         self.MSCIWorld_Label.setText(QCoreApplication.translate("MainWindow", u"MSCI World", None))
         self.Nifty50_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty 50", None))
@@ -790,7 +879,7 @@ class Ui_MainWindow(object):
         self.SP500_Label.setText(QCoreApplication.translate("MainWindow", u"S&P 500", None))
         self.Nikkei225_Label.setText(QCoreApplication.translate("MainWindow", u"Nikkei 225", None))
         self.Hangseng_Label.setText(QCoreApplication.translate("MainWindow", u"Hang Seng", None))
-        self.commoditiesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"background-color: #7077A1; color: white; padding: 8px; border-radius: 4px;", None))
+        self.commoditiesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"color: white; padding: 8px; border-radius: 4px;", None))
         self.commoditiesHeader.setText(QCoreApplication.translate("MainWindow", u"COMMODITIES & FOREX", None))
         self.Gold_Label.setText(QCoreApplication.translate("MainWindow", u"Gold", None))
         self.Silver_Label.setText(QCoreApplication.translate("MainWindow", u"Silver", None))
@@ -798,7 +887,7 @@ class Ui_MainWindow(object):
         self.NaturalGas_Label.setText(QCoreApplication.translate("MainWindow", u"Natural Gas", None))
         self.USDINR_Label.setText(QCoreApplication.translate("MainWindow", u"USD INR", None))
         self.USVix_Label.setText(QCoreApplication.translate("MainWindow", u"US VIX", None))
-        self.indianIndicesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"background-color: #7077A1; color: white; padding: 8px; border-radius: 4px;", None))
+        self.indianIndicesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"color: white; padding: 8px; border-radius: 4px;", None))
         self.indianIndicesHeader.setText(QCoreApplication.translate("MainWindow", u"INDIAN RATES & INDICES", None))
         self.IndiaRepoRate_Label.setText(QCoreApplication.translate("MainWindow", u"India Repo Rate", None))
         self.IndiaVix_Label.setText(QCoreApplication.translate("MainWindow", u"India VIX", None))
@@ -806,7 +895,7 @@ class Ui_MainWindow(object):
         self.NiftyBank_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Bank", None))
         self.NiftyFMCG_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty FMCG", None))
         self.NiftyIndiaDefence_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty India Defence", None))
-        self.moreIndicesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"background-color: #7077A1; color: white; padding: 8px; border-radius: 4px;", None))
+        self.moreIndicesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"color: white; padding: 8px; border-radius: 4px;", None))
         self.moreIndicesHeader.setText(QCoreApplication.translate("MainWindow", u"MORE INDIAN INDICES", None))
         self.NiftyMidcap150_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Midcap 150", None))
         self.NiftySmallCap250_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Smallcap 250", None))

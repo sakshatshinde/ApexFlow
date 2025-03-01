@@ -19,95 +19,179 @@
   </property>
   <property name="styleSheet">
    <string>
-            QMainWindow {
-                background-color: #2D3250;
-                color: #F5F5F5;
-            }
+      /* Base colors and variables */
+QMainWindow {
+    background-color: #111827;
+    color: #F9FAFB;
+}
 
-            QTabWidget::pane {
-                border: 1px solid #424769;
-                background-color: #2D3250;
-                border-radius: 4px;
-            }
+/* Tab styling */
+QTabWidget::pane {
+    border: none;
+    background-color: #111827;
+    border-radius: 6px;
+}
 
-            QTabBar::tab {
-                background-color: #424769;
-                color: #F5F5F5;
-                padding: 8px 16px;
-                margin-right: 2px;
-                border-top-left-radius: 4px;
-                border-top-right-radius: 4px;
-            }
+QTabBar::tab {
+    background-color: #1F2937;
+    color: #F9FAFB;
+    padding: 8px 16px;
+    margin-right: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-weight: 500;
+}
 
-            QTabBar::tab:selected {
-                background-color: #7077A1;
-                font-weight: bold;
-            }
+QTabBar::tab:selected {
+    background-color: #374151;
+    border-bottom: 2px solid #10B981;
+}
 
-            QTabBar::tab:hover:!selected {
-                background-color: #5D6487;
-            }
+QTabBar::tab:hover:!selected {
+    background-color: #2D3748;
+}
 
-            QLCDNumber {
-                background-color: #121420;
-                color: #00FF9F;
-                border: 1px solid #424769;
-                border-radius: 4px;
-            }
+/* LCD styling */
+QLCDNumber {
+    background-color: #1F2937;
+    color: #10B981;
+    border: none;
+    border-radius: 4px;
+}
 
-            QLabel {
-                background-color: #424769;
-                color: #F5F5F5;
-                padding: 5px;
-                border-radius: 4px;
-            }
+/* Label styling */
+QLabel {
+    background-color: transparent;
+    color: #F9FAFB;
+    padding: 6px;
+    font-weight: 400;
+}
 
-            QPushButton {
-                background-color: #7077A1;
-                color: white;
-                border-radius: 4px;
-                padding: 8px 12px;
-                font-weight: bold;
-            }
+/* Header labels */
+QLabel[objectName*=&quot;Header&quot;] {
+    background-color: #374151;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
 
-            QPushButton:hover {
-                background-color: #5D6487;
-            }
+/* Button styling - Fixed contrast issues */
+QPushButton {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border: none;
+}
 
-            QPushButton:pressed {
-                background-color: #2D3250;
-            }
+QPushButton:hover {
+    background-color: #2563EB;
+}
 
-            QTextEdit, QTextBrowser {
-                background-color: #323855;
-                color: #F5F5F5;
-                border: 1px solid #424769;
-                border-radius: 4px;
-                padding: 5px;
-            }
+QPushButton:pressed {
+    background-color: #1D4ED8;
+}
 
-            QMenuBar {
-                background-color: #424769;
-                color: #F5F5F5;
-            }
+QPushButton:disabled {
+    background-color: #374151;
+    color: #9CA3AF;
+}
 
-            QMenuBar::item {
-                background-color: transparent;
-            }
+/* Text components */
+QTextEdit, QTextBrowser {
+    background-color: #1F2937;
+    color: #F9FAFB;
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    selection-background-color: #4F46E5;
+}
 
-            QMenuBar::item:selected {
-                background-color: #7077A1;
-            }
+/* Menu styling */
+QMenuBar {
+    background-color: #1F2937;
+    color: #F9FAFB;
+    border-bottom: 1px solid #374151;
+}
 
-            QMenu {
-                background-color: #424769;
-                color: #F5F5F5;
-                border: 1px solid #121420;
-            }
+QMenuBar::item {
+    background-color: transparent;
+    padding: 6px 8px;
+    border-radius: 2px;
+}
 
-            QMenu::item:selected {
-                background-color: #7077A1;
-            }
+QMenuBar::item:selected {
+    background-color: #374151;
+}
+
+QMenu {
+    background-color: #1F2937;
+    color: #F9FAFB;
+    border: 1px solid #111827;
+    border-radius: 4px;
+}
+
+QMenu::item {
+    padding: 6px 16px;
+    border-radius: 2px;
+}
+
+QMenu::item:selected {
+    background-color: #374151;
+}
+
+/* Scrollbar styling */
+QScrollBar:vertical {
+    border: none;
+    background: #1F2937;
+    width: 6px;
+    border-radius: 3px;
+}
+
+QScrollBar::handle:vertical {
+    background: #4F46E5;
+    min-height: 24px;
+    border-radius: 3px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: #1F2937;
+    height: 6px;
+    border-radius: 3px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #4F46E5;
+    min-width: 24px;
+    border-radius: 3px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* Triangle indicators */
+QLabel[class=&quot;up-triangle&quot;] {
+    color: #10B981; /* Green color for up movement */
+    font-family: Arial;
+    font-size: 16px;
+}
+
+QLabel[class=&quot;down-triangle&quot;] {
+    color: #EF4444; /* Red color for down movement */
+    font-family: Arial;
+    font-size: 16px;
+}
+
             </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -252,11 +336,11 @@
              <font>
               <family>Segoe UI</family>
               <pointsize>12</pointsize>
-              <bold>true</bold>
+              <fontweight>DemiBold</fontweight>
              </font>
             </property>
             <property name="styleSheet">
-             <string>background-color: #7077A1; color: white; padding: 8px; border-radius: 4px;</string>
+             <string>color: white; padding: 8px; border-radius: 4px;</string>
             </property>
             <property name="text">
              <string>MAJOR INDICES</string>
@@ -280,7 +364,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -317,7 +401,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -354,7 +438,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -391,7 +475,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -428,7 +512,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -465,7 +549,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -501,11 +585,11 @@
              <font>
               <family>Segoe UI</family>
               <pointsize>12</pointsize>
-              <bold>true</bold>
+              <fontweight>DemiBold</fontweight>
              </font>
             </property>
             <property name="styleSheet">
-             <string>background-color: #7077A1; color: white; padding: 8px; border-radius: 4px;</string>
+             <string>color: white; padding: 8px; border-radius: 4px;</string>
             </property>
             <property name="text">
              <string>COMMODITIES &amp; FOREX</string>
@@ -529,7 +613,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -566,7 +650,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -603,7 +687,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -640,7 +724,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -677,7 +761,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -714,7 +798,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -750,11 +834,11 @@
              <font>
               <family>Segoe UI</family>
               <pointsize>12</pointsize>
-              <bold>true</bold>
+              <fontweight>DemiBold</fontweight>
              </font>
             </property>
             <property name="styleSheet">
-             <string>background-color: #7077A1; color: white; padding: 8px; border-radius: 4px;</string>
+             <string>color: white; padding: 8px; border-radius: 4px;</string>
             </property>
             <property name="text">
              <string>INDIAN RATES &amp; INDICES</string>
@@ -778,7 +862,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -815,7 +899,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -852,7 +936,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -889,7 +973,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -926,7 +1010,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -963,7 +1047,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -999,11 +1083,11 @@
              <font>
               <family>Segoe UI</family>
               <pointsize>12</pointsize>
-              <bold>true</bold>
+              <fontweight>DemiBold</fontweight>
              </font>
             </property>
             <property name="styleSheet">
-             <string>background-color: #7077A1; color: white; padding: 8px; border-radius: 4px;</string>
+             <string>color: white; padding: 8px; border-radius: 4px;</string>
             </property>
             <property name="text">
              <string>MORE INDIAN INDICES</string>
@@ -1027,7 +1111,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -1064,7 +1148,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -1101,7 +1185,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -1138,7 +1222,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -1175,7 +1259,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -1212,7 +1296,7 @@
                <font>
                 <family>Segoe UI</family>
                 <pointsize>12</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="frameShape">
@@ -1249,7 +1333,7 @@
      <x>0</x>
      <y>0</y>
      <width>1247</width>
-     <height>33</height>
+     <height>29</height>
     </rect>
    </property>
   </widget>
