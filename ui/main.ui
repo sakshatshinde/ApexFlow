@@ -195,8 +195,8 @@ QLabel[class=&quot;down-triangle&quot;] {
             </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_34">
-    <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="tabPosition">
        <enum>QTabWidget::TabPosition::South</enum>
@@ -321,10 +321,7 @@ QLabel[class=&quot;down-triangle&quot;] {
        <attribute name="toolTip">
         <string>Indices all over the world</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout">
-        <property name="spacing">
-         <number>15</number>
-        </property>
+       <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="0">
          <layout class="QVBoxLayout" name="verticalLayout">
           <property name="spacing">
@@ -379,6 +376,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="MSCIWorld_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="MSCIWorld">
               <property name="digitCount">
                <number>8</number>
@@ -412,6 +416,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="Nifty50_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -453,6 +464,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="Nasdaq100_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="Nasdaq100">
               <property name="digitCount">
                <number>8</number>
@@ -486,6 +504,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="SP500_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -527,6 +552,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="SP500_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="Nikkei225">
               <property name="digitCount">
                <number>8</number>
@@ -560,6 +592,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="Hangseng_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -628,6 +667,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="Gold_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="Gold">
               <property name="digitCount">
                <number>8</number>
@@ -661,6 +707,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="Silver_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -702,6 +755,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="BrentCrudeOil_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="BrentCrudeOil">
               <property name="digitCount">
                <number>8</number>
@@ -735,6 +795,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="NaturalGas_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -776,6 +843,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="USDINR_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="USDINR">
               <property name="digitCount">
                <number>8</number>
@@ -809,6 +883,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="USVix_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -877,6 +958,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="IndiaRepoRate_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="IndiaRepoRate">
               <property name="digitCount">
                <number>8</number>
@@ -910,6 +998,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="IndiaVix_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -951,6 +1046,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="NiftyIT_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="NiftyIT">
               <property name="digitCount">
                <number>8</number>
@@ -984,6 +1086,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="NiftyBank_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -1025,6 +1134,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="NiftyFMCG_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="NiftyFMCG">
               <property name="digitCount">
                <number>8</number>
@@ -1058,6 +1174,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="NiftyIndiaDefence_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -1126,6 +1249,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="NiftyMidcap150_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="NiftyMidcap150">
               <property name="digitCount">
                <number>8</number>
@@ -1159,6 +1289,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="NiftySmallCap250_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -1200,6 +1337,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="NiftyAuto_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="NiftyAuto">
               <property name="digitCount">
                <number>8</number>
@@ -1233,6 +1377,13 @@ QLabel[class=&quot;down-triangle&quot;] {
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="NiftyPharma_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
               </property>
              </widget>
             </item>
@@ -1274,6 +1425,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="NIftyOilGas_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="NIftyOilGas">
               <property name="digitCount">
                <number>8</number>
@@ -1311,6 +1469,13 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
+             <widget class="QLabel" name="NiftyEnergy_Percentage">
+              <property name="text">
+               <string>+0.00%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLCDNumber" name="NiftyEnergy">
               <property name="digitCount">
                <number>8</number>
@@ -1320,6 +1485,15 @@ QLabel[class=&quot;down-triangle&quot;] {
            </layout>
           </item>
          </layout>
+        </item>
+        <item row="1" column="1" colspan="2">
+         <widget class="QWebEngineView" name="NiftyHeatmapWebView">
+          <property name="url">
+           <url>
+            <string>about:blank</string>
+           </url>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -1356,6 +1530,13 @@ QLabel[class=&quot;down-triangle&quot;] {
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header location="global">QtWebEngineWidgets/QWebEngineView</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

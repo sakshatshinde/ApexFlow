@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainzjUpmH.ui'
+## Form generated from reading UI file 'mainGEaoeM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -16,6 +16,7 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
+from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
     QLCDNumber, QLabel, QMainWindow, QMenuBar,
     QPushButton, QSizePolicy, QSpacerItem, QTabWidget,
@@ -41,8 +42,8 @@ class Ui_MainWindow(object):
         self.actionAbout.setIcon(icon2)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.horizontalLayout_34 = QHBoxLayout(self.centralwidget)
-        self.horizontalLayout_34.setObjectName(u"horizontalLayout_34")
+        self.gridLayout = QGridLayout(self.centralwidget)
+        self.gridLayout.setObjectName(u"gridLayout")
         self.tabWidget = QTabWidget(self.centralwidget)
         self.tabWidget.setObjectName(u"tabWidget")
         self.tabWidget.setTabPosition(QTabWidget.TabPosition.South)
@@ -115,9 +116,8 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.sectoral, "")
         self.indices = QWidget()
         self.indices.setObjectName(u"indices")
-        self.gridLayout = QGridLayout(self.indices)
-        self.gridLayout.setSpacing(15)
-        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout_3 = QGridLayout(self.indices)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setSpacing(8)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -147,6 +147,11 @@ class Ui_MainWindow(object):
 
         self.layout_MSCIWorld.addWidget(self.MSCIWorld_Label)
 
+        self.MSCIWorld_Percentage = QLabel(self.indices)
+        self.MSCIWorld_Percentage.setObjectName(u"MSCIWorld_Percentage")
+
+        self.layout_MSCIWorld.addWidget(self.MSCIWorld_Percentage)
+
         self.MSCIWorld = QLCDNumber(self.indices)
         self.MSCIWorld.setObjectName(u"MSCIWorld")
         self.MSCIWorld.setDigitCount(8)
@@ -166,6 +171,11 @@ class Ui_MainWindow(object):
         self.Nifty50_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.layout_Nifty50.addWidget(self.Nifty50_Label)
+
+        self.Nifty50_Percentage = QLabel(self.indices)
+        self.Nifty50_Percentage.setObjectName(u"Nifty50_Percentage")
+
+        self.layout_Nifty50.addWidget(self.Nifty50_Percentage)
 
         self.Nifty50 = QLCDNumber(self.indices)
         self.Nifty50.setObjectName(u"Nifty50")
@@ -187,6 +197,11 @@ class Ui_MainWindow(object):
 
         self.layout_Nasdaq100.addWidget(self.Nasdaq100_Label)
 
+        self.Nasdaq100_Percentage = QLabel(self.indices)
+        self.Nasdaq100_Percentage.setObjectName(u"Nasdaq100_Percentage")
+
+        self.layout_Nasdaq100.addWidget(self.Nasdaq100_Percentage)
+
         self.Nasdaq100 = QLCDNumber(self.indices)
         self.Nasdaq100.setObjectName(u"Nasdaq100")
         self.Nasdaq100.setDigitCount(8)
@@ -206,6 +221,11 @@ class Ui_MainWindow(object):
         self.SP500_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.layout_SP500.addWidget(self.SP500_Label)
+
+        self.SP500_Percentage = QLabel(self.indices)
+        self.SP500_Percentage.setObjectName(u"SP500_Percentage")
+
+        self.layout_SP500.addWidget(self.SP500_Percentage)
 
         self.SP500 = QLCDNumber(self.indices)
         self.SP500.setObjectName(u"SP500")
@@ -227,6 +247,11 @@ class Ui_MainWindow(object):
 
         self.layout_Nikkei225.addWidget(self.Nikkei225_Label)
 
+        self.SP500_Percentage1 = QLabel(self.indices)
+        self.SP500_Percentage1.setObjectName(u"SP500_Percentage1")
+
+        self.layout_Nikkei225.addWidget(self.SP500_Percentage1)
+
         self.Nikkei225 = QLCDNumber(self.indices)
         self.Nikkei225.setObjectName(u"Nikkei225")
         self.Nikkei225.setDigitCount(8)
@@ -247,6 +272,11 @@ class Ui_MainWindow(object):
 
         self.layout_Hangseng.addWidget(self.Hangseng_Label)
 
+        self.Hangseng_Percentage = QLabel(self.indices)
+        self.Hangseng_Percentage.setObjectName(u"Hangseng_Percentage")
+
+        self.layout_Hangseng.addWidget(self.Hangseng_Percentage)
+
         self.Hangseng = QLCDNumber(self.indices)
         self.Hangseng.setObjectName(u"Hangseng")
         self.Hangseng.setDigitCount(8)
@@ -257,7 +287,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addLayout(self.layout_Hangseng)
 
 
-        self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
+        self.gridLayout_3.addLayout(self.verticalLayout, 0, 0, 1, 1)
 
         self.verticalLayout_2 = QVBoxLayout()
         self.verticalLayout_2.setSpacing(8)
@@ -280,6 +310,11 @@ class Ui_MainWindow(object):
 
         self.layout_Gold.addWidget(self.Gold_Label)
 
+        self.Gold_Percentage = QLabel(self.indices)
+        self.Gold_Percentage.setObjectName(u"Gold_Percentage")
+
+        self.layout_Gold.addWidget(self.Gold_Percentage)
+
         self.Gold = QLCDNumber(self.indices)
         self.Gold.setObjectName(u"Gold")
         self.Gold.setDigitCount(8)
@@ -299,6 +334,11 @@ class Ui_MainWindow(object):
         self.Silver_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.layout_Silver.addWidget(self.Silver_Label)
+
+        self.Silver_Percentage = QLabel(self.indices)
+        self.Silver_Percentage.setObjectName(u"Silver_Percentage")
+
+        self.layout_Silver.addWidget(self.Silver_Percentage)
 
         self.Silver = QLCDNumber(self.indices)
         self.Silver.setObjectName(u"Silver")
@@ -320,6 +360,11 @@ class Ui_MainWindow(object):
 
         self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil_Label)
 
+        self.BrentCrudeOil_Percentage = QLabel(self.indices)
+        self.BrentCrudeOil_Percentage.setObjectName(u"BrentCrudeOil_Percentage")
+
+        self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil_Percentage)
+
         self.BrentCrudeOil = QLCDNumber(self.indices)
         self.BrentCrudeOil.setObjectName(u"BrentCrudeOil")
         self.BrentCrudeOil.setDigitCount(8)
@@ -339,6 +384,11 @@ class Ui_MainWindow(object):
         self.NaturalGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.layout_NaturalGas.addWidget(self.NaturalGas_Label)
+
+        self.NaturalGas_Percentage = QLabel(self.indices)
+        self.NaturalGas_Percentage.setObjectName(u"NaturalGas_Percentage")
+
+        self.layout_NaturalGas.addWidget(self.NaturalGas_Percentage)
 
         self.NaturalGas = QLCDNumber(self.indices)
         self.NaturalGas.setObjectName(u"NaturalGas")
@@ -360,6 +410,11 @@ class Ui_MainWindow(object):
 
         self.layout_USDINR.addWidget(self.USDINR_Label)
 
+        self.USDINR_Percentage = QLabel(self.indices)
+        self.USDINR_Percentage.setObjectName(u"USDINR_Percentage")
+
+        self.layout_USDINR.addWidget(self.USDINR_Percentage)
+
         self.USDINR = QLCDNumber(self.indices)
         self.USDINR.setObjectName(u"USDINR")
         self.USDINR.setDigitCount(8)
@@ -380,6 +435,11 @@ class Ui_MainWindow(object):
 
         self.layout_USVix.addWidget(self.USVix_Label)
 
+        self.USVix_Percentage = QLabel(self.indices)
+        self.USVix_Percentage.setObjectName(u"USVix_Percentage")
+
+        self.layout_USVix.addWidget(self.USVix_Percentage)
+
         self.USVix = QLCDNumber(self.indices)
         self.USVix.setObjectName(u"USVix")
         self.USVix.setDigitCount(8)
@@ -390,7 +450,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addLayout(self.layout_USVix)
 
 
-        self.gridLayout.addLayout(self.verticalLayout_2, 0, 1, 1, 1)
+        self.gridLayout_3.addLayout(self.verticalLayout_2, 0, 1, 1, 1)
 
         self.verticalLayout_3 = QVBoxLayout()
         self.verticalLayout_3.setSpacing(8)
@@ -413,6 +473,11 @@ class Ui_MainWindow(object):
 
         self.layout_IndiaRepoRate.addWidget(self.IndiaRepoRate_Label)
 
+        self.IndiaRepoRate_Percentage = QLabel(self.indices)
+        self.IndiaRepoRate_Percentage.setObjectName(u"IndiaRepoRate_Percentage")
+
+        self.layout_IndiaRepoRate.addWidget(self.IndiaRepoRate_Percentage)
+
         self.IndiaRepoRate = QLCDNumber(self.indices)
         self.IndiaRepoRate.setObjectName(u"IndiaRepoRate")
         self.IndiaRepoRate.setDigitCount(8)
@@ -432,6 +497,11 @@ class Ui_MainWindow(object):
         self.IndiaVix_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.layout_IndiaVix.addWidget(self.IndiaVix_Label)
+
+        self.IndiaVix_Percentage = QLabel(self.indices)
+        self.IndiaVix_Percentage.setObjectName(u"IndiaVix_Percentage")
+
+        self.layout_IndiaVix.addWidget(self.IndiaVix_Percentage)
 
         self.IndiaVix = QLCDNumber(self.indices)
         self.IndiaVix.setObjectName(u"IndiaVix")
@@ -453,6 +523,11 @@ class Ui_MainWindow(object):
 
         self.layout_NiftyIT.addWidget(self.NiftyIT_Label)
 
+        self.NiftyIT_Percentage = QLabel(self.indices)
+        self.NiftyIT_Percentage.setObjectName(u"NiftyIT_Percentage")
+
+        self.layout_NiftyIT.addWidget(self.NiftyIT_Percentage)
+
         self.NiftyIT = QLCDNumber(self.indices)
         self.NiftyIT.setObjectName(u"NiftyIT")
         self.NiftyIT.setDigitCount(8)
@@ -472,6 +547,11 @@ class Ui_MainWindow(object):
         self.NiftyBank_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.layout_NiftyBank.addWidget(self.NiftyBank_Label)
+
+        self.NiftyBank_Percentage = QLabel(self.indices)
+        self.NiftyBank_Percentage.setObjectName(u"NiftyBank_Percentage")
+
+        self.layout_NiftyBank.addWidget(self.NiftyBank_Percentage)
 
         self.NiftyBank = QLCDNumber(self.indices)
         self.NiftyBank.setObjectName(u"NiftyBank")
@@ -493,6 +573,11 @@ class Ui_MainWindow(object):
 
         self.layout_NiftyFMCG.addWidget(self.NiftyFMCG_Label)
 
+        self.NiftyFMCG_Percentage = QLabel(self.indices)
+        self.NiftyFMCG_Percentage.setObjectName(u"NiftyFMCG_Percentage")
+
+        self.layout_NiftyFMCG.addWidget(self.NiftyFMCG_Percentage)
+
         self.NiftyFMCG = QLCDNumber(self.indices)
         self.NiftyFMCG.setObjectName(u"NiftyFMCG")
         self.NiftyFMCG.setDigitCount(8)
@@ -513,6 +598,11 @@ class Ui_MainWindow(object):
 
         self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence_Label)
 
+        self.NiftyIndiaDefence_Percentage = QLabel(self.indices)
+        self.NiftyIndiaDefence_Percentage.setObjectName(u"NiftyIndiaDefence_Percentage")
+
+        self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence_Percentage)
+
         self.NiftyIndiaDefence = QLCDNumber(self.indices)
         self.NiftyIndiaDefence.setObjectName(u"NiftyIndiaDefence")
         self.NiftyIndiaDefence.setDigitCount(8)
@@ -523,7 +613,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addLayout(self.layout_NiftyIndiaDefence)
 
 
-        self.gridLayout.addLayout(self.verticalLayout_3, 0, 2, 1, 1)
+        self.gridLayout_3.addLayout(self.verticalLayout_3, 0, 2, 1, 1)
 
         self.verticalLayout_4 = QVBoxLayout()
         self.verticalLayout_4.setSpacing(8)
@@ -546,6 +636,11 @@ class Ui_MainWindow(object):
 
         self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150_Label)
 
+        self.NiftyMidcap150_Percentage = QLabel(self.indices)
+        self.NiftyMidcap150_Percentage.setObjectName(u"NiftyMidcap150_Percentage")
+
+        self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150_Percentage)
+
         self.NiftyMidcap150 = QLCDNumber(self.indices)
         self.NiftyMidcap150.setObjectName(u"NiftyMidcap150")
         self.NiftyMidcap150.setDigitCount(8)
@@ -565,6 +660,11 @@ class Ui_MainWindow(object):
         self.NiftySmallCap250_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250_Label)
+
+        self.NiftySmallCap250_Percentage = QLabel(self.indices)
+        self.NiftySmallCap250_Percentage.setObjectName(u"NiftySmallCap250_Percentage")
+
+        self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250_Percentage)
 
         self.NiftySmallCap250 = QLCDNumber(self.indices)
         self.NiftySmallCap250.setObjectName(u"NiftySmallCap250")
@@ -586,6 +686,11 @@ class Ui_MainWindow(object):
 
         self.layout_NiftyAuto.addWidget(self.NiftyAuto_Label)
 
+        self.NiftyAuto_Percentage = QLabel(self.indices)
+        self.NiftyAuto_Percentage.setObjectName(u"NiftyAuto_Percentage")
+
+        self.layout_NiftyAuto.addWidget(self.NiftyAuto_Percentage)
+
         self.NiftyAuto = QLCDNumber(self.indices)
         self.NiftyAuto.setObjectName(u"NiftyAuto")
         self.NiftyAuto.setDigitCount(8)
@@ -605,6 +710,11 @@ class Ui_MainWindow(object):
         self.NiftyPharma_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.layout_NiftyPharma.addWidget(self.NiftyPharma_Label)
+
+        self.NiftyPharma_Percentage = QLabel(self.indices)
+        self.NiftyPharma_Percentage.setObjectName(u"NiftyPharma_Percentage")
+
+        self.layout_NiftyPharma.addWidget(self.NiftyPharma_Percentage)
 
         self.NiftyPharma = QLCDNumber(self.indices)
         self.NiftyPharma.setObjectName(u"NiftyPharma")
@@ -626,6 +736,11 @@ class Ui_MainWindow(object):
 
         self.layout_NIftyOilGas.addWidget(self.NIftyOilGas_Label)
 
+        self.NIftyOilGas_Percentage = QLabel(self.indices)
+        self.NIftyOilGas_Percentage.setObjectName(u"NIftyOilGas_Percentage")
+
+        self.layout_NIftyOilGas.addWidget(self.NIftyOilGas_Percentage)
+
         self.NIftyOilGas = QLCDNumber(self.indices)
         self.NIftyOilGas.setObjectName(u"NIftyOilGas")
         self.NIftyOilGas.setDigitCount(8)
@@ -646,6 +761,11 @@ class Ui_MainWindow(object):
 
         self.layout_NiftyEnergy.addWidget(self.NiftyEnergy_Label)
 
+        self.NiftyEnergy_Percentage = QLabel(self.indices)
+        self.NiftyEnergy_Percentage.setObjectName(u"NiftyEnergy_Percentage")
+
+        self.layout_NiftyEnergy.addWidget(self.NiftyEnergy_Percentage)
+
         self.NiftyEnergy = QLCDNumber(self.indices)
         self.NiftyEnergy.setObjectName(u"NiftyEnergy")
         self.NiftyEnergy.setDigitCount(8)
@@ -656,11 +776,17 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.addLayout(self.layout_NiftyEnergy)
 
 
-        self.gridLayout.addLayout(self.verticalLayout_4, 1, 0, 1, 1)
+        self.gridLayout_3.addLayout(self.verticalLayout_4, 1, 0, 1, 1)
+
+        self.NiftyHeatmapWebView = QWebEngineView(self.indices)
+        self.NiftyHeatmapWebView.setObjectName(u"NiftyHeatmapWebView")
+        self.NiftyHeatmapWebView.setUrl(QUrl(u"about:blank"))
+
+        self.gridLayout_3.addWidget(self.NiftyHeatmapWebView, 1, 1, 1, 2)
 
         self.tabWidget.addTab(self.indices, "")
 
-        self.horizontalLayout_34.addWidget(self.tabWidget)
+        self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
@@ -874,35 +1000,59 @@ class Ui_MainWindow(object):
         self.majorIndicesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"color: white; padding: 8px; border-radius: 4px;", None))
         self.majorIndicesHeader.setText(QCoreApplication.translate("MainWindow", u"MAJOR INDICES", None))
         self.MSCIWorld_Label.setText(QCoreApplication.translate("MainWindow", u"MSCI World", None))
+        self.MSCIWorld_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.Nifty50_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty 50", None))
+        self.Nifty50_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.Nasdaq100_Label.setText(QCoreApplication.translate("MainWindow", u"Nasdaq 100", None))
+        self.Nasdaq100_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.SP500_Label.setText(QCoreApplication.translate("MainWindow", u"S&P 500", None))
+        self.SP500_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.Nikkei225_Label.setText(QCoreApplication.translate("MainWindow", u"Nikkei 225", None))
+        self.SP500_Percentage1.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.Hangseng_Label.setText(QCoreApplication.translate("MainWindow", u"Hang Seng", None))
+        self.Hangseng_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.commoditiesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"color: white; padding: 8px; border-radius: 4px;", None))
         self.commoditiesHeader.setText(QCoreApplication.translate("MainWindow", u"COMMODITIES & FOREX", None))
         self.Gold_Label.setText(QCoreApplication.translate("MainWindow", u"Gold", None))
+        self.Gold_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.Silver_Label.setText(QCoreApplication.translate("MainWindow", u"Silver", None))
+        self.Silver_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.BrentCrudeOil_Label.setText(QCoreApplication.translate("MainWindow", u"Brent Crude Oil", None))
+        self.BrentCrudeOil_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NaturalGas_Label.setText(QCoreApplication.translate("MainWindow", u"Natural Gas", None))
+        self.NaturalGas_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.USDINR_Label.setText(QCoreApplication.translate("MainWindow", u"USD INR", None))
+        self.USDINR_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.USVix_Label.setText(QCoreApplication.translate("MainWindow", u"US VIX", None))
+        self.USVix_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.indianIndicesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"color: white; padding: 8px; border-radius: 4px;", None))
         self.indianIndicesHeader.setText(QCoreApplication.translate("MainWindow", u"INDIAN RATES & INDICES", None))
         self.IndiaRepoRate_Label.setText(QCoreApplication.translate("MainWindow", u"India Repo Rate", None))
+        self.IndiaRepoRate_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.IndiaVix_Label.setText(QCoreApplication.translate("MainWindow", u"India VIX", None))
+        self.IndiaVix_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NiftyIT_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty IT", None))
+        self.NiftyIT_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NiftyBank_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Bank", None))
+        self.NiftyBank_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NiftyFMCG_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty FMCG", None))
+        self.NiftyFMCG_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NiftyIndiaDefence_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty India Defence", None))
+        self.NiftyIndiaDefence_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.moreIndicesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"color: white; padding: 8px; border-radius: 4px;", None))
         self.moreIndicesHeader.setText(QCoreApplication.translate("MainWindow", u"MORE INDIAN INDICES", None))
         self.NiftyMidcap150_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Midcap 150", None))
+        self.NiftyMidcap150_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NiftySmallCap250_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Smallcap 250", None))
+        self.NiftySmallCap250_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NiftyAuto_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Auto", None))
+        self.NiftyAuto_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NiftyPharma_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Pharma", None))
+        self.NiftyPharma_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NIftyOilGas_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Oil and Gas", None))
+        self.NIftyOilGas_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NiftyEnergy_Label.setText(QCoreApplication.translate("MainWindow", u"NIFTY ENERGY", None))
+        self.NiftyEnergy_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.indices), QCoreApplication.translate("MainWindow", u"Indices", None))
 #if QT_CONFIG(tooltip)
         self.tabWidget.setTabToolTip(self.tabWidget.indexOf(self.indices), QCoreApplication.translate("MainWindow", u"Indices all over the world", None))

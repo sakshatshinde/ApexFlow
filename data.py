@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 import nsepython as nsepy
 from PySide6.QtCore import Signal, QThread
+from PySide6.QtWebEngineCore import QWebEngineSettings
 
 
 @dataclass
@@ -177,3 +178,65 @@ class StockDataWorker(QThread):
             self.dataReady.emit(data)
         except Exception as e:
             print(f"Error in StockDataWorker: {e}")
+
+
+def setupNiftyHeatmap(wv):
+    """
+    Sets up the QWebEngineView with the Nifty 50 PE ratio chart.
+
+    Args:
+        webview: QWebEngineView instance to display the chart
+    """
+    html_content = '''
+     <style>
+            body {
+                background-color: #2b2b2b;  /* Dark background */
+                color: #ffffff;             /* Light text */
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
+  {
+  "exchanges": [],
+  "dataSource": "SENSEX",
+  "grouping": "sector",
+  "blockSize": "market_cap_basic",
+  "blockColor": "change",
+  "locale": "en",
+  "symbolUrl": "",
+  "colorTheme": "dark",
+  "hasTopBar": false,
+  "isDataSetEnabled": false,
+  "isZoomEnabled": true,
+  "hasSymbolTooltip": true,
+  "isMonoSize": false,
+  "width": "100%",
+  "height": "100%"
+}
+  </script>
+</div>
+
+
+<!-- TradingView Widget END -->
+
+
+
+    '''
+
+    settings = wv.settings()
+
+    # settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessRemoteUrls, True)
+    # settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessFileUrls, True)
+    # settings.setAttribute(QWebEngineSettings.WebAttribute.AllowWindowActivationFromJavaScript, True)
+
+    settings.setAttribute(QWebEngineSettings.WebAttribute.JavascriptEnabled, True)
+    settings.setAttribute(QWebEngineSettings.WebAttribute.ScrollAnimatorEnabled, True)
+    settings.setAttribute(QWebEngineSettings.WebAttribute.WebGLEnabled, True)
+
+    wv.setHtml(html_content)
