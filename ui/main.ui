@@ -205,7 +205,7 @@ QLabel[class=&quot;down-triangle&quot;] {
        <enum>QTabWidget::TabShape::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>0</number>
       </property>
       <property name="elideMode">
        <enum>Qt::TextElideMode::ElideNone</enum>
@@ -283,6 +283,9 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QPushButton" name="attach_ai_btn">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Attach</string>
               </property>

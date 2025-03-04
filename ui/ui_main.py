@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainGEaoeM.ui'
+## Form generated from reading UI file 'mainDodwbN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -92,6 +92,7 @@ class Ui_MainWindow(object):
 
         self.attach_ai_btn = QPushButton(self.aiTab)
         self.attach_ai_btn.setObjectName(u"attach_ai_btn")
+        self.attach_ai_btn.setEnabled(False)
 
         self.horizontalLayout.addWidget(self.attach_ai_btn)
 
@@ -796,7 +797,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(5)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
