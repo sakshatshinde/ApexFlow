@@ -205,7 +205,7 @@ QLabel[class=&quot;down-triangle&quot;] {
        <enum>QTabWidget::TabShape::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>5</number>
       </property>
       <property name="elideMode">
        <enum>Qt::TextElideMode::ElideNone</enum>
@@ -380,6 +380,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="MSCIWorld_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -424,6 +430,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="Nifty50_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -468,6 +480,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="Nasdaq100_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -512,6 +530,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="SP500_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -556,6 +580,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="SP500_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -600,6 +630,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="Hangseng_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -671,6 +707,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="Gold_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -715,6 +757,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="Silver_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -759,6 +807,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="BrentCrudeOil_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -803,6 +857,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NaturalGas_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -847,6 +907,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="USDINR_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -891,6 +957,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="USVix_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -962,6 +1034,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="IndiaRepoRate_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1006,6 +1084,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="IndiaVix_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1050,6 +1134,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NiftyIT_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1094,6 +1184,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NiftyBank_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1138,6 +1234,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NiftyFMCG_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1182,6 +1284,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NiftyIndiaDefence_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1253,6 +1361,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NiftyMidcap150_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1297,6 +1411,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NiftySmallCap250_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1341,6 +1461,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NiftyAuto_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1385,6 +1511,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NiftyPharma_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1429,6 +1561,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NIftyOilGas_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>
@@ -1473,6 +1611,12 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLabel" name="NiftyEnergy_Percentage">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>+0.00%</string>
               </property>

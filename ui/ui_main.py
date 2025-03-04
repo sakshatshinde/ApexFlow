@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainDodwbN.ui'
+## Form generated from reading UI file 'mainkMGxDm.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -150,6 +150,10 @@ class Ui_MainWindow(object):
 
         self.MSCIWorld_Percentage = QLabel(self.indices)
         self.MSCIWorld_Percentage.setObjectName(u"MSCIWorld_Percentage")
+        font2 = QFont()
+        font2.setPointSize(12)
+        font2.setBold(False)
+        self.MSCIWorld_Percentage.setFont(font2)
 
         self.layout_MSCIWorld.addWidget(self.MSCIWorld_Percentage)
 
@@ -175,6 +179,7 @@ class Ui_MainWindow(object):
 
         self.Nifty50_Percentage = QLabel(self.indices)
         self.Nifty50_Percentage.setObjectName(u"Nifty50_Percentage")
+        self.Nifty50_Percentage.setFont(font2)
 
         self.layout_Nifty50.addWidget(self.Nifty50_Percentage)
 
@@ -200,6 +205,7 @@ class Ui_MainWindow(object):
 
         self.Nasdaq100_Percentage = QLabel(self.indices)
         self.Nasdaq100_Percentage.setObjectName(u"Nasdaq100_Percentage")
+        self.Nasdaq100_Percentage.setFont(font2)
 
         self.layout_Nasdaq100.addWidget(self.Nasdaq100_Percentage)
 
@@ -225,6 +231,7 @@ class Ui_MainWindow(object):
 
         self.SP500_Percentage = QLabel(self.indices)
         self.SP500_Percentage.setObjectName(u"SP500_Percentage")
+        self.SP500_Percentage.setFont(font2)
 
         self.layout_SP500.addWidget(self.SP500_Percentage)
 
@@ -250,6 +257,7 @@ class Ui_MainWindow(object):
 
         self.SP500_Percentage1 = QLabel(self.indices)
         self.SP500_Percentage1.setObjectName(u"SP500_Percentage1")
+        self.SP500_Percentage1.setFont(font2)
 
         self.layout_Nikkei225.addWidget(self.SP500_Percentage1)
 
@@ -275,6 +283,7 @@ class Ui_MainWindow(object):
 
         self.Hangseng_Percentage = QLabel(self.indices)
         self.Hangseng_Percentage.setObjectName(u"Hangseng_Percentage")
+        self.Hangseng_Percentage.setFont(font2)
 
         self.layout_Hangseng.addWidget(self.Hangseng_Percentage)
 
@@ -313,6 +322,7 @@ class Ui_MainWindow(object):
 
         self.Gold_Percentage = QLabel(self.indices)
         self.Gold_Percentage.setObjectName(u"Gold_Percentage")
+        self.Gold_Percentage.setFont(font2)
 
         self.layout_Gold.addWidget(self.Gold_Percentage)
 
@@ -338,6 +348,7 @@ class Ui_MainWindow(object):
 
         self.Silver_Percentage = QLabel(self.indices)
         self.Silver_Percentage.setObjectName(u"Silver_Percentage")
+        self.Silver_Percentage.setFont(font2)
 
         self.layout_Silver.addWidget(self.Silver_Percentage)
 
@@ -363,6 +374,7 @@ class Ui_MainWindow(object):
 
         self.BrentCrudeOil_Percentage = QLabel(self.indices)
         self.BrentCrudeOil_Percentage.setObjectName(u"BrentCrudeOil_Percentage")
+        self.BrentCrudeOil_Percentage.setFont(font2)
 
         self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil_Percentage)
 
@@ -388,6 +400,7 @@ class Ui_MainWindow(object):
 
         self.NaturalGas_Percentage = QLabel(self.indices)
         self.NaturalGas_Percentage.setObjectName(u"NaturalGas_Percentage")
+        self.NaturalGas_Percentage.setFont(font2)
 
         self.layout_NaturalGas.addWidget(self.NaturalGas_Percentage)
 
@@ -413,6 +426,7 @@ class Ui_MainWindow(object):
 
         self.USDINR_Percentage = QLabel(self.indices)
         self.USDINR_Percentage.setObjectName(u"USDINR_Percentage")
+        self.USDINR_Percentage.setFont(font2)
 
         self.layout_USDINR.addWidget(self.USDINR_Percentage)
 
@@ -438,6 +452,7 @@ class Ui_MainWindow(object):
 
         self.USVix_Percentage = QLabel(self.indices)
         self.USVix_Percentage.setObjectName(u"USVix_Percentage")
+        self.USVix_Percentage.setFont(font2)
 
         self.layout_USVix.addWidget(self.USVix_Percentage)
 
@@ -476,6 +491,7 @@ class Ui_MainWindow(object):
 
         self.IndiaRepoRate_Percentage = QLabel(self.indices)
         self.IndiaRepoRate_Percentage.setObjectName(u"IndiaRepoRate_Percentage")
+        self.IndiaRepoRate_Percentage.setFont(font2)
 
         self.layout_IndiaRepoRate.addWidget(self.IndiaRepoRate_Percentage)
 
@@ -501,6 +517,7 @@ class Ui_MainWindow(object):
 
         self.IndiaVix_Percentage = QLabel(self.indices)
         self.IndiaVix_Percentage.setObjectName(u"IndiaVix_Percentage")
+        self.IndiaVix_Percentage.setFont(font2)
 
         self.layout_IndiaVix.addWidget(self.IndiaVix_Percentage)
 
@@ -526,6 +543,7 @@ class Ui_MainWindow(object):
 
         self.NiftyIT_Percentage = QLabel(self.indices)
         self.NiftyIT_Percentage.setObjectName(u"NiftyIT_Percentage")
+        self.NiftyIT_Percentage.setFont(font2)
 
         self.layout_NiftyIT.addWidget(self.NiftyIT_Percentage)
 
@@ -551,6 +569,7 @@ class Ui_MainWindow(object):
 
         self.NiftyBank_Percentage = QLabel(self.indices)
         self.NiftyBank_Percentage.setObjectName(u"NiftyBank_Percentage")
+        self.NiftyBank_Percentage.setFont(font2)
 
         self.layout_NiftyBank.addWidget(self.NiftyBank_Percentage)
 
@@ -576,6 +595,7 @@ class Ui_MainWindow(object):
 
         self.NiftyFMCG_Percentage = QLabel(self.indices)
         self.NiftyFMCG_Percentage.setObjectName(u"NiftyFMCG_Percentage")
+        self.NiftyFMCG_Percentage.setFont(font2)
 
         self.layout_NiftyFMCG.addWidget(self.NiftyFMCG_Percentage)
 
@@ -601,6 +621,7 @@ class Ui_MainWindow(object):
 
         self.NiftyIndiaDefence_Percentage = QLabel(self.indices)
         self.NiftyIndiaDefence_Percentage.setObjectName(u"NiftyIndiaDefence_Percentage")
+        self.NiftyIndiaDefence_Percentage.setFont(font2)
 
         self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence_Percentage)
 
@@ -639,6 +660,7 @@ class Ui_MainWindow(object):
 
         self.NiftyMidcap150_Percentage = QLabel(self.indices)
         self.NiftyMidcap150_Percentage.setObjectName(u"NiftyMidcap150_Percentage")
+        self.NiftyMidcap150_Percentage.setFont(font2)
 
         self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150_Percentage)
 
@@ -664,6 +686,7 @@ class Ui_MainWindow(object):
 
         self.NiftySmallCap250_Percentage = QLabel(self.indices)
         self.NiftySmallCap250_Percentage.setObjectName(u"NiftySmallCap250_Percentage")
+        self.NiftySmallCap250_Percentage.setFont(font2)
 
         self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250_Percentage)
 
@@ -689,6 +712,7 @@ class Ui_MainWindow(object):
 
         self.NiftyAuto_Percentage = QLabel(self.indices)
         self.NiftyAuto_Percentage.setObjectName(u"NiftyAuto_Percentage")
+        self.NiftyAuto_Percentage.setFont(font2)
 
         self.layout_NiftyAuto.addWidget(self.NiftyAuto_Percentage)
 
@@ -714,6 +738,7 @@ class Ui_MainWindow(object):
 
         self.NiftyPharma_Percentage = QLabel(self.indices)
         self.NiftyPharma_Percentage.setObjectName(u"NiftyPharma_Percentage")
+        self.NiftyPharma_Percentage.setFont(font2)
 
         self.layout_NiftyPharma.addWidget(self.NiftyPharma_Percentage)
 
@@ -739,6 +764,7 @@ class Ui_MainWindow(object):
 
         self.NIftyOilGas_Percentage = QLabel(self.indices)
         self.NIftyOilGas_Percentage.setObjectName(u"NIftyOilGas_Percentage")
+        self.NIftyOilGas_Percentage.setFont(font2)
 
         self.layout_NIftyOilGas.addWidget(self.NIftyOilGas_Percentage)
 
@@ -764,6 +790,7 @@ class Ui_MainWindow(object):
 
         self.NiftyEnergy_Percentage = QLabel(self.indices)
         self.NiftyEnergy_Percentage.setObjectName(u"NiftyEnergy_Percentage")
+        self.NiftyEnergy_Percentage.setFont(font2)
 
         self.layout_NiftyEnergy.addWidget(self.NiftyEnergy_Percentage)
 
@@ -797,7 +824,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(5)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
