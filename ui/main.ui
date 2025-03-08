@@ -396,6 +396,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -445,6 +448,9 @@ QLabel[class=&quot;down-triangle&quot;] {
              <widget class="QLCDNumber" name="Nifty50">
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>
@@ -496,6 +502,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -545,6 +554,9 @@ QLabel[class=&quot;down-triangle&quot;] {
              <widget class="QLCDNumber" name="SP500">
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>
@@ -596,6 +608,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -645,6 +660,9 @@ QLabel[class=&quot;down-triangle&quot;] {
              <widget class="QLCDNumber" name="Hangseng">
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>
@@ -723,6 +741,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -773,6 +794,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -820,8 +844,14 @@ QLabel[class=&quot;down-triangle&quot;] {
             </item>
             <item>
              <widget class="QLCDNumber" name="BrentCrudeOil">
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>
@@ -873,6 +903,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -923,6 +956,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -972,6 +1008,9 @@ QLabel[class=&quot;down-triangle&quot;] {
              <widget class="QLCDNumber" name="USVix">
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>
@@ -1050,6 +1089,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1099,6 +1141,9 @@ QLabel[class=&quot;down-triangle&quot;] {
              <widget class="QLCDNumber" name="IndiaVix">
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>
@@ -1150,6 +1195,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1199,6 +1247,9 @@ QLabel[class=&quot;down-triangle&quot;] {
              <widget class="QLCDNumber" name="NiftyBank">
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>
@@ -1250,6 +1301,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1299,6 +1353,9 @@ QLabel[class=&quot;down-triangle&quot;] {
              <widget class="QLCDNumber" name="NiftyIndiaDefence">
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>
@@ -1377,6 +1434,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1426,6 +1486,9 @@ QLabel[class=&quot;down-triangle&quot;] {
              <widget class="QLCDNumber" name="NiftySmallCap250">
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>
@@ -1477,6 +1540,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1527,6 +1593,9 @@ QLabel[class=&quot;down-triangle&quot;] {
               <property name="digitCount">
                <number>8</number>
               </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1534,7 +1603,7 @@ QLabel[class=&quot;down-triangle&quot;] {
           <item>
            <layout class="QHBoxLayout" name="layout_NIftyOilGas">
             <item>
-             <widget class="QLabel" name="NIftyOilGas_Label">
+             <widget class="QLabel" name="NiftyOilGas_Label">
               <property name="minimumSize">
                <size>
                 <width>180</width>
@@ -1560,7 +1629,7 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="NIftyOilGas_Percentage">
+             <widget class="QLabel" name="NiftyOilGas_Percentage">
               <property name="font">
                <font>
                 <pointsize>12</pointsize>
@@ -1573,9 +1642,12 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
-             <widget class="QLCDNumber" name="NIftyOilGas">
+             <widget class="QLCDNumber" name="NiftyOilGas">
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>
@@ -1626,6 +1698,9 @@ QLabel[class=&quot;down-triangle&quot;] {
              <widget class="QLCDNumber" name="NiftyEnergy">
               <property name="digitCount">
                <number>8</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
              </widget>
             </item>

@@ -21,6 +21,21 @@ class IndiaStockIndices:
     niftyIndiaDefence: str = 0
     niftyIT: str = 0
 
+    # Percent Changes from last value
+    nifty50Change: str = 0
+    niftyNext50Change: str = 0
+    nifty100Change: str = 0
+    niftyBankChange: str = 0
+    niftyAutoChange: str = 0
+    niftyPharmaChange: str = 0
+    niftyOilAndGasChange: str = 0
+    niftyEnergyChange: str = 0
+    niftyMidcap150Change: str = 0
+    niftyFmcgChange: str = 0
+    niftySmallCap250Change: str = 0
+    niftyIndiaDefenceChange: str = 0
+    niftyITChange: str = 0
+
 
 def refreshIndiaStockIndices() -> IndiaStockIndices:
     # Available indexes
@@ -72,96 +87,133 @@ def refreshIndiaStockIndices() -> IndiaStockIndices:
     try:
         try:
             nifty50 = resNifty50["last"].replace(',', '')
+            nifty50Change = resNifty50["percChange"]
         except Exception as e:
-            print(f"Error fetching Nifty50: {e}")
+            print(f"Error fetching Nifty50 data: {e}")
+            print(f"Response: {resNifty50}")
             nifty50 = 0
+            nifty50Change = 0
 
         try:
             niftyNext50 = resNiftyNext50["last"].replace(',', '')
+            niftyNext50Change = resNiftyNext50["percChange"]
         except Exception as e:
-            print(f"Error fetching NiftyNext50: {e}")
+            print(f"Error fetching NiftyNext50 data: {e}")
             niftyNext50 = 0
+            niftyNext50Change = 0
 
         try:
             nifty100 = resNifty100["last"].replace(',', '')
+            nifty100Change = resNifty100["percChange"]
         except Exception as e:
-            print(f"Error fetching Nifty100: {e}")
+            print(f"Error fetching Nifty100 data: {e}")
             nifty100 = 0
+            nifty100Change = 0
 
         try:
             niftyBank = resNiftyBank["last"].replace(',', '')
+            niftyBankChange = resNiftyBank["percChange"]
         except Exception as e:
-            print(f"Error fetching NiftyBank: {e}")
+            print(f"Error fetching NiftyBank data: {e}")
             niftyBank = 0
+            niftyBankChange = 0
 
         try:
             niftyAuto = resNiftyAuto["last"].replace(',', '')
+            niftyAutoChange = resNiftyAuto["percChange"]
         except Exception as e:
-            print(f"Error fetching NiftyAuto: {e}")
+            print(f"Error fetching NiftyAuto data: {e}")
             niftyAuto = 0
+            niftyAutoChange = 0
 
         try:
             niftyPharma = resNiftyPharma["last"].replace(',', '')
+            niftyPharmaChange = resNiftyPharma["percChange"]
         except Exception as e:
-            print(f"Error fetching NiftyPharma: {e}")
+            print(f"Error fetching NiftyPharma data: {e}")
             niftyPharma = 0
+            niftyPharmaChange = 0
 
         try:
             niftyOilAndGas = resNiftyOilAndGas["last"].replace(',', '')
+            niftyOilAndGasChange = resNiftyOilAndGas["percChange"]
         except Exception as e:
-            print(f"Error fetching NiftyOilAndGas: {e}")
+            print(f"Error fetching NiftyOilAndGas data: {e}")
             niftyOilAndGas = 0
+            niftyOilAndGasChange = 0
 
         try:
             niftyEnergy = resNiftyEnergy["last"].replace(',', '')
+            niftyEnergyChange = resNiftyEnergy["percChange"]
         except Exception as e:
-            print(f"Error fetching NiftyEnergy: {e}")
+            print(f"Error fetching NiftyEnergy data: {e}")
             niftyEnergy = 0
+            niftyEnergyChange = 0
 
         try:
             niftySmallCap250 = resNiftySmallCap250["last"].replace(',', '')
+            niftySmallCap250Change = resNiftySmallCap250["percChange"]
         except Exception as e:
-            print(f"Error fetching NiftySmallCap250: {e}")
+            print(f"Error fetching NiftySmallCap250 data: {e}")
             niftySmallCap250 = 0
-
+            niftySmallCap250Change = 0
         try:
             niftyMidcap150 = resNiftyMidcap150["last"].replace(',', '')
+            niftyMidcap150Change = resNiftyMidcap150["percChange"]
         except Exception as e:
-            print(f"Error fetching NiftyMidcap150: {e}")
+            print(f"Error fetching NiftyMidcap150 data: {e}")
             niftyMidcap150 = 0
-
+            niftyMidcap150Change = 0
         try:
             niftyIndiaDefence = resNiftyIndiaDefence["last"].replace(',', '')
+            niftyIndiaDefenceChange = resNiftyIndiaDefence["percChange"]
         except Exception as e:
-            print(f"Error fetching NiftyIndiaDefence: {e}")
+            print(f"Error fetching NiftyIndiaDefence data: {e}")
             niftyIndiaDefence = 0
-
+            niftyIndiaDefenceChange = 0
         try:
             niftyFmcg = resNiftyFmcg["last"].replace(',', '')
+            niftyFmcgChange = resNiftyFmcg["percChange"]
         except Exception as e:
-            print(f"Error fetching NiftyFmcg: {e}")
+            print(f"Error fetching NiftyFmcg data: {e}")
             niftyFmcg = 0
+            niftyFmcgChange = 0
 
         try:
             niftyIT = resNiftyIT["last"].replace(',', '')
+            niftyITChange = resNiftyIT["percChange"]
         except Exception as e:
-            print(f"Error fetching niftyIT: {e}")
-            resNiftyIT = 0
+            print(f"Error fetching niftyIT data: {e}")
+            niftyIT = 0
+            niftyITChange = 0
 
         return IndiaStockIndices(
             nifty50=nifty50,
+            nifty50Change=nifty50Change,
             niftyNext50=niftyNext50,
+            niftyNext50Change=niftyNext50Change,
             nifty100=nifty100,
+            nifty100Change=nifty100Change,
             niftyBank=niftyBank,
+            niftyBankChange=niftyBankChange,
             niftyAuto=niftyAuto,
+            niftyAutoChange=niftyAutoChange,
             niftyPharma=niftyPharma,
+            niftyPharmaChange=niftyPharmaChange,
             niftyOilAndGas=niftyOilAndGas,
+            niftyOilAndGasChange=niftyOilAndGasChange,
             niftyEnergy=niftyEnergy,
+            niftyEnergyChange=niftyEnergyChange,
             niftySmallCap250=niftySmallCap250,
+            niftySmallCap250Change=niftySmallCap250Change,
             niftyMidcap150=niftyMidcap150,
+            niftyMidcap150Change=niftyMidcap150Change,
             niftyIndiaDefence=niftyIndiaDefence,
+            niftyIndiaDefenceChange=niftyIndiaDefenceChange,
             niftyFmcg=niftyFmcg,
+            niftyFmcgChange=niftyFmcgChange,
             niftyIT=niftyIT,
+            niftyITChange=niftyITChange,
         )
     except Exception as e:
         print(f"Error creating IndiaStockIndices object: {e}")

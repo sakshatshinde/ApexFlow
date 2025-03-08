@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainkMGxDm.ui'
+## Form generated from reading UI file 'maingSOCYr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -160,6 +160,7 @@ class Ui_MainWindow(object):
         self.MSCIWorld = QLCDNumber(self.indices)
         self.MSCIWorld.setObjectName(u"MSCIWorld")
         self.MSCIWorld.setDigitCount(8)
+        self.MSCIWorld.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_MSCIWorld.addWidget(self.MSCIWorld)
 
@@ -186,6 +187,7 @@ class Ui_MainWindow(object):
         self.Nifty50 = QLCDNumber(self.indices)
         self.Nifty50.setObjectName(u"Nifty50")
         self.Nifty50.setDigitCount(8)
+        self.Nifty50.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_Nifty50.addWidget(self.Nifty50)
 
@@ -212,6 +214,7 @@ class Ui_MainWindow(object):
         self.Nasdaq100 = QLCDNumber(self.indices)
         self.Nasdaq100.setObjectName(u"Nasdaq100")
         self.Nasdaq100.setDigitCount(8)
+        self.Nasdaq100.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_Nasdaq100.addWidget(self.Nasdaq100)
 
@@ -238,6 +241,7 @@ class Ui_MainWindow(object):
         self.SP500 = QLCDNumber(self.indices)
         self.SP500.setObjectName(u"SP500")
         self.SP500.setDigitCount(8)
+        self.SP500.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_SP500.addWidget(self.SP500)
 
@@ -264,6 +268,7 @@ class Ui_MainWindow(object):
         self.Nikkei225 = QLCDNumber(self.indices)
         self.Nikkei225.setObjectName(u"Nikkei225")
         self.Nikkei225.setDigitCount(8)
+        self.Nikkei225.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_Nikkei225.addWidget(self.Nikkei225)
 
@@ -290,6 +295,7 @@ class Ui_MainWindow(object):
         self.Hangseng = QLCDNumber(self.indices)
         self.Hangseng.setObjectName(u"Hangseng")
         self.Hangseng.setDigitCount(8)
+        self.Hangseng.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_Hangseng.addWidget(self.Hangseng)
 
@@ -329,6 +335,7 @@ class Ui_MainWindow(object):
         self.Gold = QLCDNumber(self.indices)
         self.Gold.setObjectName(u"Gold")
         self.Gold.setDigitCount(8)
+        self.Gold.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_Gold.addWidget(self.Gold)
 
@@ -355,6 +362,7 @@ class Ui_MainWindow(object):
         self.Silver = QLCDNumber(self.indices)
         self.Silver.setObjectName(u"Silver")
         self.Silver.setDigitCount(8)
+        self.Silver.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_Silver.addWidget(self.Silver)
 
@@ -380,7 +388,9 @@ class Ui_MainWindow(object):
 
         self.BrentCrudeOil = QLCDNumber(self.indices)
         self.BrentCrudeOil.setObjectName(u"BrentCrudeOil")
+        self.BrentCrudeOil.setAutoFillBackground(False)
         self.BrentCrudeOil.setDigitCount(8)
+        self.BrentCrudeOil.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil)
 
@@ -407,6 +417,7 @@ class Ui_MainWindow(object):
         self.NaturalGas = QLCDNumber(self.indices)
         self.NaturalGas.setObjectName(u"NaturalGas")
         self.NaturalGas.setDigitCount(8)
+        self.NaturalGas.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_NaturalGas.addWidget(self.NaturalGas)
 
@@ -433,6 +444,7 @@ class Ui_MainWindow(object):
         self.USDINR = QLCDNumber(self.indices)
         self.USDINR.setObjectName(u"USDINR")
         self.USDINR.setDigitCount(8)
+        self.USDINR.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_USDINR.addWidget(self.USDINR)
 
@@ -459,6 +471,7 @@ class Ui_MainWindow(object):
         self.USVix = QLCDNumber(self.indices)
         self.USVix.setObjectName(u"USVix")
         self.USVix.setDigitCount(8)
+        self.USVix.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_USVix.addWidget(self.USVix)
 
@@ -498,6 +511,7 @@ class Ui_MainWindow(object):
         self.IndiaRepoRate = QLCDNumber(self.indices)
         self.IndiaRepoRate.setObjectName(u"IndiaRepoRate")
         self.IndiaRepoRate.setDigitCount(8)
+        self.IndiaRepoRate.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_IndiaRepoRate.addWidget(self.IndiaRepoRate)
 
@@ -524,6 +538,7 @@ class Ui_MainWindow(object):
         self.IndiaVix = QLCDNumber(self.indices)
         self.IndiaVix.setObjectName(u"IndiaVix")
         self.IndiaVix.setDigitCount(8)
+        self.IndiaVix.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_IndiaVix.addWidget(self.IndiaVix)
 
@@ -550,6 +565,7 @@ class Ui_MainWindow(object):
         self.NiftyIT = QLCDNumber(self.indices)
         self.NiftyIT.setObjectName(u"NiftyIT")
         self.NiftyIT.setDigitCount(8)
+        self.NiftyIT.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_NiftyIT.addWidget(self.NiftyIT)
 
@@ -576,6 +592,7 @@ class Ui_MainWindow(object):
         self.NiftyBank = QLCDNumber(self.indices)
         self.NiftyBank.setObjectName(u"NiftyBank")
         self.NiftyBank.setDigitCount(8)
+        self.NiftyBank.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_NiftyBank.addWidget(self.NiftyBank)
 
@@ -602,6 +619,7 @@ class Ui_MainWindow(object):
         self.NiftyFMCG = QLCDNumber(self.indices)
         self.NiftyFMCG.setObjectName(u"NiftyFMCG")
         self.NiftyFMCG.setDigitCount(8)
+        self.NiftyFMCG.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_NiftyFMCG.addWidget(self.NiftyFMCG)
 
@@ -628,6 +646,7 @@ class Ui_MainWindow(object):
         self.NiftyIndiaDefence = QLCDNumber(self.indices)
         self.NiftyIndiaDefence.setObjectName(u"NiftyIndiaDefence")
         self.NiftyIndiaDefence.setDigitCount(8)
+        self.NiftyIndiaDefence.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence)
 
@@ -667,6 +686,7 @@ class Ui_MainWindow(object):
         self.NiftyMidcap150 = QLCDNumber(self.indices)
         self.NiftyMidcap150.setObjectName(u"NiftyMidcap150")
         self.NiftyMidcap150.setDigitCount(8)
+        self.NiftyMidcap150.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150)
 
@@ -693,6 +713,7 @@ class Ui_MainWindow(object):
         self.NiftySmallCap250 = QLCDNumber(self.indices)
         self.NiftySmallCap250.setObjectName(u"NiftySmallCap250")
         self.NiftySmallCap250.setDigitCount(8)
+        self.NiftySmallCap250.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250)
 
@@ -719,6 +740,7 @@ class Ui_MainWindow(object):
         self.NiftyAuto = QLCDNumber(self.indices)
         self.NiftyAuto.setObjectName(u"NiftyAuto")
         self.NiftyAuto.setDigitCount(8)
+        self.NiftyAuto.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_NiftyAuto.addWidget(self.NiftyAuto)
 
@@ -745,6 +767,7 @@ class Ui_MainWindow(object):
         self.NiftyPharma = QLCDNumber(self.indices)
         self.NiftyPharma.setObjectName(u"NiftyPharma")
         self.NiftyPharma.setDigitCount(8)
+        self.NiftyPharma.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_NiftyPharma.addWidget(self.NiftyPharma)
 
@@ -753,26 +776,27 @@ class Ui_MainWindow(object):
 
         self.layout_NIftyOilGas = QHBoxLayout()
         self.layout_NIftyOilGas.setObjectName(u"layout_NIftyOilGas")
-        self.NIftyOilGas_Label = QLabel(self.indices)
-        self.NIftyOilGas_Label.setObjectName(u"NIftyOilGas_Label")
-        self.NIftyOilGas_Label.setMinimumSize(QSize(180, 0))
-        self.NIftyOilGas_Label.setFont(font1)
-        self.NIftyOilGas_Label.setFrameShape(QFrame.Shape.Box)
-        self.NIftyOilGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.NiftyOilGas_Label = QLabel(self.indices)
+        self.NiftyOilGas_Label.setObjectName(u"NiftyOilGas_Label")
+        self.NiftyOilGas_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyOilGas_Label.setFont(font1)
+        self.NiftyOilGas_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyOilGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.layout_NIftyOilGas.addWidget(self.NIftyOilGas_Label)
+        self.layout_NIftyOilGas.addWidget(self.NiftyOilGas_Label)
 
-        self.NIftyOilGas_Percentage = QLabel(self.indices)
-        self.NIftyOilGas_Percentage.setObjectName(u"NIftyOilGas_Percentage")
-        self.NIftyOilGas_Percentage.setFont(font2)
+        self.NiftyOilGas_Percentage = QLabel(self.indices)
+        self.NiftyOilGas_Percentage.setObjectName(u"NiftyOilGas_Percentage")
+        self.NiftyOilGas_Percentage.setFont(font2)
 
-        self.layout_NIftyOilGas.addWidget(self.NIftyOilGas_Percentage)
+        self.layout_NIftyOilGas.addWidget(self.NiftyOilGas_Percentage)
 
-        self.NIftyOilGas = QLCDNumber(self.indices)
-        self.NIftyOilGas.setObjectName(u"NIftyOilGas")
-        self.NIftyOilGas.setDigitCount(8)
+        self.NiftyOilGas = QLCDNumber(self.indices)
+        self.NiftyOilGas.setObjectName(u"NiftyOilGas")
+        self.NiftyOilGas.setDigitCount(8)
+        self.NiftyOilGas.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
-        self.layout_NIftyOilGas.addWidget(self.NIftyOilGas)
+        self.layout_NIftyOilGas.addWidget(self.NiftyOilGas)
 
 
         self.verticalLayout_4.addLayout(self.layout_NIftyOilGas)
@@ -797,6 +821,7 @@ class Ui_MainWindow(object):
         self.NiftyEnergy = QLCDNumber(self.indices)
         self.NiftyEnergy.setObjectName(u"NiftyEnergy")
         self.NiftyEnergy.setDigitCount(8)
+        self.NiftyEnergy.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self.layout_NiftyEnergy.addWidget(self.NiftyEnergy)
 
@@ -1077,8 +1102,8 @@ class Ui_MainWindow(object):
         self.NiftyAuto_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NiftyPharma_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Pharma", None))
         self.NiftyPharma_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
-        self.NIftyOilGas_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Oil and Gas", None))
-        self.NIftyOilGas_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
+        self.NiftyOilGas_Label.setText(QCoreApplication.translate("MainWindow", u"Nifty Oil and Gas", None))
+        self.NiftyOilGas_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.NiftyEnergy_Label.setText(QCoreApplication.translate("MainWindow", u"NIFTY ENERGY", None))
         self.NiftyEnergy_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.indices), QCoreApplication.translate("MainWindow", u"Indices", None))
