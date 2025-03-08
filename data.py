@@ -39,6 +39,8 @@ class IndiaStockIndices:
     indiaVixChange: str = 0
 
 
+# This might seem like a bloated function doing the same things over and over
+# But keeping every response seperate makes its maintainable
 def refreshIndiaStockIndices() -> IndiaStockIndices:
     # Available indexes
     # ['NIFTY 50', 'NIFTY NEXT 50', 'NIFTY IT', 'NIFTY BANK', 'INDIA VIX', 'NIFTY 100', 'NIFTY 500', 'NIFTY MIDCAP 100',
