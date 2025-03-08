@@ -20,6 +20,7 @@ class IndiaStockIndices:
     niftySmallCap250: str = 0
     niftyIndiaDefence: str = 0
     niftyIT: str = 0
+    indiaVix: str = 0
 
     # Percent Changes from last value
     nifty50Change: str = 0
@@ -35,6 +36,7 @@ class IndiaStockIndices:
     niftySmallCap250Change: str = 0
     niftyIndiaDefenceChange: str = 0
     niftyITChange: str = 0
+    indiaVixChange: str = 0
 
 
 def refreshIndiaStockIndices() -> IndiaStockIndices:
@@ -79,6 +81,7 @@ def refreshIndiaStockIndices() -> IndiaStockIndices:
         resNiftyFmcg = nsepy.nse_get_index_quote("NIFTY FMCG")
         resNifty100 = nsepy.nse_get_index_quote("NIFTY 100")
         resNiftyIT = nsepy.nse_get_index_quote("NIFTY IT")
+        resIndiaVix = nsepy.nse_get_index_quote("INDIA VIX")
 
     except Exception as e:
         print(f"Error fetching stock data: {e}")
@@ -187,6 +190,14 @@ def refreshIndiaStockIndices() -> IndiaStockIndices:
             niftyIT = 0
             niftyITChange = 0
 
+        try:
+            indiaVix = resIndiaVix["last"].replace(',', '')
+            indiaVixChange = resIndiaVix["percChange"]
+        except Exception as e:
+            print(f"Error fetching India VIX data: {e}")
+            indiaVix = 0
+            indiaVixChange = 0
+
         return IndiaStockIndices(
             nifty50=nifty50,
             nifty50Change=nifty50Change,
@@ -214,6 +225,8 @@ def refreshIndiaStockIndices() -> IndiaStockIndices:
             niftyFmcgChange=niftyFmcgChange,
             niftyIT=niftyIT,
             niftyITChange=niftyITChange,
+            indiaVix=indiaVix,
+            indiaVixChange=indiaVixChange
         )
     except Exception as e:
         print(f"Error creating IndiaStockIndices object: {e}")

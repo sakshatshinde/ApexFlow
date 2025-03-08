@@ -135,6 +135,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.NiftyIndiaDefence.display(data.niftyIndiaDefence)
         self.NiftyFMCG.display(data.niftyFmcg)
         self.NiftyIT.display(data.niftyIT)
+        self.IndiaVix.display(data.indiaVix)
 
         # Update each display with its corresponding value and percentage change
         self.update_display_with_percentage(self.Nifty50, 'Nifty50_Percentage', data.nifty50, data.nifty50Change)
@@ -157,6 +158,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.update_display_with_percentage(self.NiftyFMCG, 'NiftyFMCG_Percentage', data.niftyFmcg,
                                             data.niftyFmcgChange)
         self.update_display_with_percentage(self.NiftyIT, 'NiftyIT_Percentage', data.niftyIT, data.niftyITChange)
+        self.update_display_with_percentage(self.IndiaVix, 'IndiaVix_Percentage', data.indiaVix, data.indiaVixChange)
 
     def handle_ai_prompt_cler_btn(self):
         self.textEdit.clear()
