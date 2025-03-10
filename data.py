@@ -3,6 +3,7 @@ from dataclasses import dataclass
 import nsepython as nsepy
 from PySide6.QtCore import Signal, QThread
 from PySide6.QtWebEngineCore import QWebEngineSettings
+import yfinance as yf
 
 
 @dataclass
@@ -235,18 +236,6 @@ def refreshIndiaStockIndices() -> IndiaStockIndices:
         raise
 
 
-# Worker class to fetch data and send it as a signal to QT
-class StockDataWorker(QThread):
-    dataReady = Signal(IndiaStockIndices)
-
-    def run(self):
-        try:
-            data = refreshIndiaStockIndices()
-            self.dataReady.emit(data)
-        except Exception as e:
-            print(f"Error in StockDataWorker: {e}")
-
-
 def setupNiftyHeatmap(wv):
     """
     Sets up the QWebEngineView with the Nifty 50 PE ratio chart.
@@ -304,3 +293,66 @@ def setupNiftyHeatmap(wv):
     settings.setAttribute(QWebEngineSettings.WebAttribute.WebGLEnabled, True)
 
     wv.setHtml(html_content)
+
+
+@dataclass
+class OtherStockIndices:
+    msciWorld: str = 0
+    nasdaq100: str = 0
+    sp500: str = 0
+    nikkei225: str = 0
+    hangSeng: str = 0
+
+    msciWorldChange: str = 0
+    nasdaq100Change: str = 0
+    sp500Change: str = 0
+    nikkei225Change: str = 0
+    hangSengChange: str = 0
+
+
+def refreshOtherStockIndices() -> OtherStockIndices:
+    try:
+        resmsciWorld = yf.Ticker("^990100-GBP-NETR")
+        resnasdaq100 = yf.Ticker("^NDX")
+        resp500 = yf.Ticker("^GSPC")
+        resnikkei225 = yf.Ticker("^N225")
+        reshangSeng = yf.Ticker("^HSI")
+
+        return OtherStockIndices(
+            msciWorld=resmsciWorld.info['regularMarketPrice'],
+            nasdaq100=resnasdaq100.info['regularMarketPrice'],
+            sp500=resp500.info['regularMarketPrice'],
+            nikkei225=resnikkei225.info['regularMarketPrice'],
+            hangSeng=reshangSeng.info['regularMarketPrice'],
+            msciWorldChange=resmsciWorld.info['regularMarketChangePercent'],
+            nasdaq100Change=resnasdaq100.info['regularMarketChangePercent'],
+            sp500Change=resp500.info['regularMarketChangePercent'],
+            nikkei225Change=resnikkei225.info['regularMarketChangePercent'],
+            hangSengChange=reshangSeng.info['regularMarketChangePercent'],
+        )
+
+    except Exception as e:
+        print(f"Error fetching stock data: {e}")
+        raise
+
+
+@dataclass
+class IndicesTabData:
+    india: IndiaStockIndices
+    other: OtherStockIndices
+
+
+# Worker class to fetch data and send it as a signal to QT
+class StockDataWorker(QThread):
+    dataReady = Signal(IndicesTabData)
+
+    def run(self):
+        try:
+            indiaData = refreshIndiaStockIndices()
+            otherData = refreshOtherStockIndices()
+
+            data = IndicesTabData(india=indiaData, other=otherData)
+
+            self.dataReady.emit(data)
+        except Exception as e:
+            print(f"Error in StockDataWorker: {e}")

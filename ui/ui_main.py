@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'maingSOCYr.ui'
+## Form generated from reading UI file 'maineBFdOI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -259,11 +259,11 @@ class Ui_MainWindow(object):
 
         self.layout_Nikkei225.addWidget(self.Nikkei225_Label)
 
-        self.SP500_Percentage1 = QLabel(self.indices)
-        self.SP500_Percentage1.setObjectName(u"SP500_Percentage1")
-        self.SP500_Percentage1.setFont(font2)
+        self.Nikkei225_Percentage = QLabel(self.indices)
+        self.Nikkei225_Percentage.setObjectName(u"Nikkei225_Percentage")
+        self.Nikkei225_Percentage.setFont(font2)
 
-        self.layout_Nikkei225.addWidget(self.SP500_Percentage1)
+        self.layout_Nikkei225.addWidget(self.Nikkei225_Percentage)
 
         self.Nikkei225 = QLCDNumber(self.indices)
         self.Nikkei225.setObjectName(u"Nikkei225")
@@ -1061,7 +1061,7 @@ class Ui_MainWindow(object):
         self.SP500_Label.setText(QCoreApplication.translate("MainWindow", u"S&P 500", None))
         self.SP500_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.Nikkei225_Label.setText(QCoreApplication.translate("MainWindow", u"Nikkei 225", None))
-        self.SP500_Percentage1.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
+        self.Nikkei225_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.Hangseng_Label.setText(QCoreApplication.translate("MainWindow", u"Hang Seng", None))
         self.Hangseng_Percentage.setText(QCoreApplication.translate("MainWindow", u"+0.00%", None))
         self.commoditiesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"color: white; padding: 8px; border-radius: 4px;", None))

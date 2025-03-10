@@ -5,7 +5,7 @@ from PySide6.QtCore import QTimer
 from PySide6.QtGui import QIcon
 
 from ai import Gemini
-from data import StockDataWorker, IndiaStockIndices, setupNiftyHeatmap
+from data import StockDataWorker, IndiaStockIndices, setupNiftyHeatmap, IndicesTabData
 
 from ui.ui_main import Ui_MainWindow
 
@@ -121,44 +121,64 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             percentage_obj.setText(styleInfo["text"])
             percentage_obj.setStyleSheet(styleInfo["style"])
 
-    def update_stock_displays(self, data: IndiaStockIndices):
-        self.Nifty50.display(data.nifty50)
-        # self.NiftyNext50.display(data.niftyNext50)
-        # self.Nifty100.display(data.nifty100)
-        self.NiftyBank.display(data.niftyBank)
-        self.NiftyAuto.display(data.niftyAuto)
-        self.NiftyPharma.display(data.niftyPharma)
-        self.NiftyOilGas.display(data.niftyOilAndGas)
-        self.NiftyEnergy.display(data.niftyEnergy)
-        self.NiftySmallCap250.display(data.niftySmallCap250)
-        self.NiftyMidcap150.display(data.niftyMidcap150)
-        self.NiftyIndiaDefence.display(data.niftyIndiaDefence)
-        self.NiftyFMCG.display(data.niftyFmcg)
-        self.NiftyIT.display(data.niftyIT)
-        self.IndiaVix.display(data.indiaVix)
+    def update_stock_displays(self, data: IndicesTabData):
+        # Indian indices
+        self.Nifty50.display(data.india.nifty50)
+        self.NiftyBank.display(data.india.niftyBank)
+        self.NiftyAuto.display(data.india.niftyAuto)
+        self.NiftyPharma.display(data.india.niftyPharma)
+        self.NiftyOilGas.display(data.india.niftyOilAndGas)
+        self.NiftyEnergy.display(data.india.niftyEnergy)
+        self.NiftySmallCap250.display(data.india.niftySmallCap250)
+        self.NiftyMidcap150.display(data.india.niftyMidcap150)
+        self.NiftyIndiaDefence.display(data.india.niftyIndiaDefence)
+        self.NiftyFMCG.display(data.india.niftyFmcg)
+        self.NiftyIT.display(data.india.niftyIT)
+        self.IndiaVix.display(data.india.indiaVix)
+
+        # Other Indices
+        self.MSCIWorld.display(data.other.msciWorld)
+        self.Nasdaq100.display(data.other.nasdaq100)
+        self.SP500.display(data.other.sp500)
+        self.Nikkei225.display(data.other.nikkei225)
+        self.Hangseng.display(data.other.hangSeng)
 
         # Update each display with its corresponding value and percentage change
-        self.update_display_with_percentage(self.Nifty50, 'Nifty50_Percentage', data.nifty50, data.nifty50Change)
-        self.update_display_with_percentage(self.NiftyBank, 'NiftyBank_Percentage', data.niftyBank,
-                                            data.niftyBankChange)
-        self.update_display_with_percentage(self.NiftyAuto, 'NiftyAuto_Percentage', data.niftyAuto,
-                                            data.niftyAutoChange)
-        self.update_display_with_percentage(self.NiftyPharma, 'NiftyPharma_Percentage', data.niftyPharma,
-                                            data.niftyPharmaChange)
-        self.update_display_with_percentage(self.NiftyOilGas, 'NiftyOilGas_Percentage', data.niftyOilAndGas,
-                                            data.niftyOilAndGasChange)
-        self.update_display_with_percentage(self.NiftyEnergy, 'NiftyEnergy_Percentage', data.niftyEnergy,
-                                            data.niftyEnergyChange)
-        self.update_display_with_percentage(self.NiftySmallCap250, 'NiftySmallCap250_Percentage', data.niftySmallCap250,
-                                            data.niftySmallCap250Change)
-        self.update_display_with_percentage(self.NiftyMidcap150, 'NiftyMidcap150_Percentage', data.niftyMidcap150,
-                                            data.niftyMidcap150Change)
+        self.update_display_with_percentage(self.Nifty50, 'Nifty50_Percentage', data.india.nifty50,
+                                            data.india.nifty50Change)
+        self.update_display_with_percentage(self.NiftyBank, 'NiftyBank_Percentage', data.india.niftyBank,
+                                            data.india.niftyBankChange)
+        self.update_display_with_percentage(self.NiftyAuto, 'NiftyAuto_Percentage', data.india.niftyAuto,
+                                            data.india.niftyAutoChange)
+        self.update_display_with_percentage(self.NiftyPharma, 'NiftyPharma_Percentage', data.india.niftyPharma,
+                                            data.india.niftyPharmaChange)
+        self.update_display_with_percentage(self.NiftyOilGas, 'NiftyOilGas_Percentage', data.india.niftyOilAndGas,
+                                            data.india.niftyOilAndGasChange)
+        self.update_display_with_percentage(self.NiftyEnergy, 'NiftyEnergy_Percentage', data.india.niftyEnergy,
+                                            data.india.niftyEnergyChange)
+        self.update_display_with_percentage(self.NiftySmallCap250, 'NiftySmallCap250_Percentage',
+                                            data.india.niftySmallCap250,
+                                            data.india.niftySmallCap250Change)
+        self.update_display_with_percentage(self.NiftyMidcap150, 'NiftyMidcap150_Percentage', data.india.niftyMidcap150,
+                                            data.india.niftyMidcap150Change)
         self.update_display_with_percentage(self.NiftyIndiaDefence, 'NiftyIndiaDefence_Percentage',
-                                            data.niftyIndiaDefence, data.niftyIndiaDefenceChange)
-        self.update_display_with_percentage(self.NiftyFMCG, 'NiftyFMCG_Percentage', data.niftyFmcg,
-                                            data.niftyFmcgChange)
-        self.update_display_with_percentage(self.NiftyIT, 'NiftyIT_Percentage', data.niftyIT, data.niftyITChange)
-        self.update_display_with_percentage(self.IndiaVix, 'IndiaVix_Percentage', data.indiaVix, data.indiaVixChange)
+                                            data.india.niftyIndiaDefence, data.india.niftyIndiaDefenceChange)
+        self.update_display_with_percentage(self.NiftyFMCG, 'NiftyFMCG_Percentage', data.india.niftyFmcg,
+                                            data.india.niftyFmcgChange)
+        self.update_display_with_percentage(self.NiftyIT, 'NiftyIT_Percentage', data.india.niftyIT,
+                                            data.india.niftyITChange)
+        self.update_display_with_percentage(self.IndiaVix, 'IndiaVix_Percentage', data.india.indiaVix,
+                                            data.india.indiaVixChange)
+
+        self.update_display_with_percentage(self.MSCIWorld, 'MSCIWorld_Percentage', data.other.msciWorld,
+                                            data.other.msciWorldChange)
+        self.update_display_with_percentage(self.Nasdaq100, 'Nasdaq100_Percentage', data.other.nasdaq100,
+                                            data.other.nasdaq100Change)
+        self.update_display_with_percentage(self.SP500, 'SP500_Percentage', data.other.sp500, data.other.sp500Change)
+        self.update_display_with_percentage(self.Nikkei225, 'Nikkei225_Percentage', data.other.nikkei225,
+                                            data.other.nikkei225Change)
+        self.update_display_with_percentage(self.Hangseng, 'Hangseng_Percentage', data.other.hangSeng,
+                                            data.other.hangSengChange)
 
     def handle_ai_prompt_cler_btn(self):
         self.textEdit.clear()
@@ -190,5 +210,3 @@ app = QApplication(sys.argv)
 window = MainWindow()
 
 app.exec()
-
-

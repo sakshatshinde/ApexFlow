@@ -591,7 +591,7 @@ QLabel[class=&quot;down-triangle&quot;] {
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="SP500_Percentage">
+             <widget class="QLabel" name="Nikkei225_Percentage">
               <property name="font">
                <font>
                 <pointsize>12</pointsize>
