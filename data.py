@@ -337,9 +337,71 @@ def refreshOtherStockIndices() -> OtherStockIndices:
 
 
 @dataclass
+class Commodities:
+    gold: str = 0
+    silver: str = 0
+    brentCrudeOil: str = 0
+    naturalGas: str = 0
+
+    goldChange: str = 0
+    silverChange: str = 0
+    brentCrudeOilChange: str = 0
+    naturalGasChange: str = 0
+
+
+@dataclass
+class Forex:
+    PairUsdInr: str = 0
+    usVix: str = 0
+    PairUsdInrChange: str = 0
+    usVixChange: str = 0
+
+
+@dataclass
 class IndicesTabData:
     india: IndiaStockIndices
     other: OtherStockIndices
+    commodities: Commodities
+    forex: Forex
+
+
+def refreshCommodities() -> Commodities:
+    try:
+        resGold = yf.Ticker("GC=F")
+        resSilver = yf.Ticker("SI=F")
+        resBrentCrudeOil = yf.Ticker("BZ=F")
+        resNaturalGas = yf.Ticker("NG=F")
+    except Exception as e:
+        print(f"Error fetching commodities data: {e}")
+        raise
+
+    return Commodities(
+        gold=resGold.info['regularMarketPrice'],
+        silver=resSilver.info['regularMarketPrice'],
+        brentCrudeOil=resBrentCrudeOil.info['regularMarketPrice'],
+        naturalGas=resNaturalGas.info['regularMarketPrice'],
+        goldChange=resGold.info['regularMarketChangePercent'],
+        silverChange=resSilver.info['regularMarketChangePercent'],
+        brentCrudeOilChange=resBrentCrudeOil.info['regularMarketChangePercent'],
+        naturalGasChange=resNaturalGas.info['regularMarketChangePercent'],
+    )
+
+
+def refreshForex() -> Forex:
+    try:
+        resUsdInr = yf.Ticker("INR=X")
+        resUsVix = yf.Ticker("^VIX")
+
+        return Forex(
+            PairUsdInr=resUsdInr.info['regularMarketPrice'],
+            PairUsdInrChange=resUsdInr.info['regularMarketChangePercent'],
+            usVix=resUsVix.info['regularMarketPrice'],
+            usVixChange=resUsVix.info['regularMarketChangePercent'],
+        )
+
+    except Exception as e:
+        print(f"Error fetching forex data: {e}")
+        raise
 
 
 # Worker class to fetch data and send it as a signal to QT
@@ -350,9 +412,11 @@ class StockDataWorker(QThread):
         try:
             indiaData = refreshIndiaStockIndices()
             otherData = refreshOtherStockIndices()
+            commoditiesData = refreshCommodities()
+            forexData = refreshForex()
 
-            data = IndicesTabData(india=indiaData, other=otherData)
-
+            data = IndicesTabData(india=indiaData, other=otherData, commodities=commoditiesData, forex=forexData)
             self.dataReady.emit(data)
+
         except Exception as e:
             print(f"Error in StockDataWorker: {e}")

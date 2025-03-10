@@ -143,6 +143,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.Nikkei225.display(data.other.nikkei225)
         self.Hangseng.display(data.other.hangSeng)
 
+        # Commodities
+        self.Gold.display(data.commodities.gold)
+        self.Silver.display(data.commodities.silver)
+        self.BrentCrudeOil.display(data.commodities.brentCrudeOil)
+        self.NaturalGas.display(data.commodities.naturalGas)
+
+        # Forex
+        self.USDINR.display(data.forex.PairUsdInr)
+        self.USVix.display(data.forex.usVix)
+
         # Update each display with its corresponding value and percentage change
         self.update_display_with_percentage(self.Nifty50, 'Nifty50_Percentage', data.india.nifty50,
                                             data.india.nifty50Change)
@@ -179,6 +189,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                             data.other.nikkei225Change)
         self.update_display_with_percentage(self.Hangseng, 'Hangseng_Percentage', data.other.hangSeng,
                                             data.other.hangSengChange)
+        self.update_display_with_percentage(self.Gold, 'Gold_Percentage', data.commodities.gold,
+                                            data.commodities.goldChange)
+        self.update_display_with_percentage(self.Silver, 'Silver_Percentage', data.commodities.silver,
+                                            data.commodities.silverChange)
+        self.update_display_with_percentage(self.BrentCrudeOil, 'BrentCrudeOil_Percentage',
+                                            data.commodities.brentCrudeOil,
+                                            data.commodities.brentCrudeOilChange)
+        self.update_display_with_percentage(self.NaturalGas, 'NaturalGas_Percentage', data.commodities.naturalGas,
+                                            data.commodities.naturalGasChange)
+        self.update_display_with_percentage(self.USDINR, 'USDINR_Percentage', data.forex.PairUsdInr,
+                                            data.forex.PairUsdInrChange)
+        self.update_display_with_percentage(self.USVix, 'USVix_Percentage', data.forex.usVix, data.forex.usVixChange)
 
     def handle_ai_prompt_cler_btn(self):
         self.textEdit.clear()
