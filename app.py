@@ -156,6 +156,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Update each display with its corresponding value and percentage change
         self.update_display_with_percentage(self.Nifty50, 'Nifty50_Percentage', data.india.nifty50,
                                             data.india.nifty50Change)
+        self.update_display_with_percentage(self.NiftyNext50, 'NiftyNext50_Percentage', data.india.niftyNext50, data.india.niftyNext50Change)
         self.update_display_with_percentage(self.NiftyBank, 'NiftyBank_Percentage', data.india.niftyBank,
                                             data.india.niftyBankChange)
         self.update_display_with_percentage(self.NiftyAuto, 'NiftyAuto_Percentage', data.india.niftyAuto,
