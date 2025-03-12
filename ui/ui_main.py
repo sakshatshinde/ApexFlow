@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainvrbjAE.ui'
+## Form generated from reading UI file 'mainGMxVfU.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -105,6 +105,14 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.aiTab, "")
         self.macro = QWidget()
         self.macro.setObjectName(u"macro")
+        self.gridLayout_4 = QGridLayout(self.macro)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.macroWebView = QWebEngineView(self.macro)
+        self.macroWebView.setObjectName(u"macroWebView")
+        self.macroWebView.setUrl(QUrl(u"https://tradingeconomics.com/"))
+
+        self.gridLayout_4.addWidget(self.macroWebView, 0, 0, 1, 1)
+
         self.tabWidget.addTab(self.macro, "")
         self.financials = QWidget()
         self.financials.setObjectName(u"financials")
@@ -849,7 +857,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(5)
+        self.tabWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

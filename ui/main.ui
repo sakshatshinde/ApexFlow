@@ -205,7 +205,7 @@ QLabel[class=&quot;down-triangle&quot;] {
        <enum>QTabWidget::TabShape::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>1</number>
       </property>
       <property name="elideMode">
        <enum>Qt::TextElideMode::ElideNone</enum>
@@ -301,6 +301,17 @@ QLabel[class=&quot;down-triangle&quot;] {
        <attribute name="title">
         <string>Macro</string>
        </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QWebEngineView" name="macroWebView">
+          <property name="url">
+           <url>
+            <string>https://tradingeconomics.com/</string>
+           </url>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="financials">
        <attribute name="title">
