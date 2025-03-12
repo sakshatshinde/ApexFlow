@@ -306,7 +306,7 @@ QLabel[class=&quot;down-triangle&quot;] {
          <widget class="QWebEngineView" name="macroWebView">
           <property name="url">
            <url>
-            <string>https://tradingeconomics.com/</string>
+            <string>https://fred.stlouisfed.org/</string>
            </url>
           </property>
          </widget>

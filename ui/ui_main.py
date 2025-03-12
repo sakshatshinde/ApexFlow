@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainGMxVfU.ui'
+## Form generated from reading UI file 'mainJCAJMH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -109,7 +109,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.setObjectName(u"gridLayout_4")
         self.macroWebView = QWebEngineView(self.macro)
         self.macroWebView.setObjectName(u"macroWebView")
-        self.macroWebView.setUrl(QUrl(u"https://tradingeconomics.com/"))
+        self.macroWebView.setUrl(QUrl(u"https://fred.stlouisfed.org/"))
 
         self.gridLayout_4.addWidget(self.macroWebView, 0, 0, 1, 1)
 
