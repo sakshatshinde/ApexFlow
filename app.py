@@ -6,72 +6,9 @@ from PySide6.QtGui import QIcon
 
 from ai import Gemini
 from data import StockDataWorker, IndiaStockIndices, setupNiftyHeatmap, IndicesTabData
+from ui.style import getPercentageStyle
 
 from ui.ui_main import Ui_MainWindow
-
-
-def getPercentageStyle(change_value):
-    """Generate stylesheet for percentage labels based on the change value."""
-    try:
-        change = float(change_value)
-
-        # Common style properties
-        base_style = """
-            font-family: 'Segoe UI', Arial;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin: 2px;
-        """
-
-        if change < 0:
-            # Red theme for negative values
-            return {
-                "text": f"{change:.2f}%",
-                "style": f"""
-                    QLabel {{ 
-                        {base_style}
-                        color: #FF3B30; 
-                        background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                                    stop:0 rgba(255, 59, 48, 0.2), 
-                                    stop:1 rgba(255, 59, 48, 0.1));
-                        border: 1px solid rgba(255, 59, 48, 0.3);
-                    }}
-                """,
-                "lcd_style": "QLCDNumber { color: red; }"
-            }
-        else:
-            # Green theme for positive values
-            return {
-                "text": f"+{change:.2f}%",
-                "style": f"""
-                    QLabel {{ 
-                        {base_style}
-                        color: #34C759; 
-                        background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                                    stop:0 rgba(52, 199, 89, 0.2), 
-                                    stop:1 rgba(52, 199, 89, 0.1));
-                        border: 1px solid rgba(52, 199, 89, 0.3);
-                    }}
-                """,
-                "lcd_style": "QLCDNumber { color: #34C759; }"
-            }
-
-    except (ValueError, TypeError):
-        # Handle cases where change_value isn't a valid float
-        return {
-            "text": "N/A",
-            "style": f"""
-                QLabel {{ 
-                    {base_style}
-                    color: #CCCCCC;
-                    background-color: rgba(150, 150, 150, 0.2);
-                    border: 1px solid rgba(150, 150, 150, 0.3);
-                }}
-            """,
-            "lcd_style": "QLCDNumber { color: white; }"
-        }
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -156,7 +93,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Update each display with its corresponding value and percentage change
         self.update_display_with_percentage(self.Nifty50, 'Nifty50_Percentage', data.india.nifty50,
                                             data.india.nifty50Change)
-        self.update_display_with_percentage(self.NiftyNext50, 'NiftyNext50_Percentage', data.india.niftyNext50, data.india.niftyNext50Change)
+        self.update_display_with_percentage(self.NiftyNext50, 'NiftyNext50_Percentage', data.india.niftyNext50,
+                                            data.india.niftyNext50Change)
         self.update_display_with_percentage(self.NiftyBank, 'NiftyBank_Percentage', data.india.niftyBank,
                                             data.india.niftyBankChange)
         self.update_display_with_percentage(self.NiftyAuto, 'NiftyAuto_Percentage', data.india.niftyAuto,
