@@ -6,7 +6,7 @@ from PySide6.QtGui import QIcon
 
 from ai import Gemini
 from data import StockDataWorker, setupNiftyHeatmap, IndicesTabData, setupSectoralWebViewOne, \
-    setupSectoralWebViewTwo, setupSectoralWebViewFive
+    setupSectoralWebViewTwo, setupSectoralWebViewFour, setupSectoralWebViewThree
 from ui.style import getPercentageStyle
 
 from ui.ui_main import Ui_MainWindow
@@ -41,7 +41,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Insert data in to sectoral tab
         setupSectoralWebViewOne(self.sectoralWebViewOne)
         setupSectoralWebViewTwo(self.sectoralWebViewTwo)
-        setupSectoralWebViewFive(self.sectoralWebViewFive)
+        setupSectoralWebViewThree(self.sectoralWebViewThree)
+        setupSectoralWebViewFour(self.sectoralWebViewFour)
 
         self.show()
 

@@ -327,47 +327,7 @@ QLabel[class=&quot;down-triangle&quot;] {
        <attribute name="title">
         <string>Sectoral</string>
        </attribute>
-          <layout class="QGridLayout" name="gridLayout_6">
-              <item row="0" column="1">
-                  <layout class="QGridLayout" name="gridLayout_5">
-                      <item row="0" column="1">
-                          <widget class="QWebEngineView" name="sectoralWebViewFour">
-                              <property name="url">
-                                  <url>
-                                      <string>about:blank</string>
-                                  </url>
-                              </property>
-                          </widget>
-                      </item>
-                      <item row="1" column="1">
-                          <widget class="QWebEngineView" name="sectoralWebViewFive">
-                              <property name="url">
-                                  <url>
-                                      <string>about:blank</string>
-                                  </url>
-                              </property>
-                          </widget>
-                      </item>
-                      <item row="1" column="0">
-                          <widget class="QWebEngineView" name="sectoralWebViewThree">
-                              <property name="url">
-                                  <url>
-                                      <string>about:blank</string>
-                                  </url>
-                              </property>
-                          </widget>
-                      </item>
-                      <item row="0" column="0">
-                          <widget class="QWebEngineView" name="sectoralWebViewTwo">
-                              <property name="url">
-                                  <url>
-                                      <string>about:blank</string>
-                                  </url>
-                              </property>
-                          </widget>
-                      </item>
-                  </layout>
-              </item>
+          <layout class="QGridLayout" name="gridLayout_5">
               <item row="0" column="0">
                   <widget class="QWebEngineView" name="sectoralWebViewOne">
                       <property name="url">
@@ -376,6 +336,41 @@ QLabel[class=&quot;down-triangle&quot;] {
                           </url>
                       </property>
                   </widget>
+              </item>
+              <item row="0" column="1">
+                  <layout class="QVBoxLayout" name="verticalLayout_6">
+                      <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_2">
+                              <item>
+                                  <widget class="QWebEngineView" name="sectoralWebViewTwo">
+                                      <property name="url">
+                                          <url>
+                                              <string>about:blank</string>
+                                          </url>
+                                      </property>
+                                  </widget>
+                              </item>
+                              <item>
+                                  <widget class="QWebEngineView" name="sectoralWebViewFour">
+                                      <property name="url">
+                                          <url>
+                                              <string>about:blank</string>
+                                          </url>
+                                      </property>
+                                  </widget>
+                              </item>
+                          </layout>
+                      </item>
+                      <item>
+                          <widget class="QWebEngineView" name="NiftyHeatmapWebView">
+                              <property name="url">
+                                  <url>
+                                      <string>about:blank</string>
+                                  </url>
+                              </property>
+                          </widget>
+                      </item>
+                  </layout>
               </item>
           </layout>
       </widget>
@@ -1771,7 +1766,7 @@ QLabel[class=&quot;down-triangle&quot;] {
          </layout>
         </item>
         <item row="1" column="1" colspan="2">
-         <widget class="QWebEngineView" name="NiftyHeatmapWebView">
+            <widget class="QWebEngineView" name="sectoralWebViewThree">
           <property name="url">
            <url>
             <string>about:blank</string>

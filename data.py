@@ -435,8 +435,6 @@ def setupSectoralWebViewTwo(wv):
     
     <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright">News</a></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
   {
   "feedMode": "all_symbols",
@@ -595,6 +593,43 @@ def setupSectoralWebViewThree(wv):
                 padding: 0;
             }
     </style>
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "BSE:SENSEX",
+  "interval": "D",
+  "timezone": "Asia/Kolkata",
+  "theme": "dark",
+  "style": "3",
+  "locale": "en",
+  "allow_symbol_change": true,
+  "compareSymbols": [
+    {
+      "symbol": "NASDAQ:NDX",
+      "position": "SameScale"
+    },
+    {
+      "symbol": "FRED:SP500",
+      "position": "SameScale"
+    },
+    {
+      "symbol": "HSI:HSI",
+      "position": "SameScale"
+    },
+    {
+      "symbol": "ICMARKETS:JP225",
+      "position": "SameScale"
+    }
+  ],
+  "details": true,
+  "calendar": false,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
 
 
@@ -615,26 +650,59 @@ def setupSectoralWebViewFour(wv):
             }
     </style>
 
-
-
-    '''
-
-    _settings = wvSettings(wv)
-    wv.setHtml(html_content)
-
-
-def setupSectoralWebViewFive(wv):
-    html_content = '''
-    <style>
-            body {
-                background-color: #2b2b2b;  /* Dark background */
-                color: #ffffff;             /* Light text */
-                margin: 0;
-                padding: 0;
-            }
-    </style>
-
-
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+  {
+  "symbols": [
+    [
+      "BSE:SMLCAP|3M"
+    ],
+    [
+      "BSE:MIDCAP|3M"
+    ],
+    [
+      "BSE:IT|3M"
+    ],
+    [
+      "Banks",
+      "BSE:BSEPBI|1D"
+    ]
+  ],
+  "chartOnly": false,
+  "width": "100%",
+  "height": "100%",
+  "locale": "en",
+  "colorTheme": "dark",
+  "autosize": true,
+  "showVolume": true,
+  "showMA": false,
+  "hideDateRanges": false,
+  "hideMarketStatus": false,
+  "hideSymbolLogo": false,
+  "scalePosition": "right",
+  "scaleMode": "Normal",
+  "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+  "fontSize": "10",
+  "noTimeScale": false,
+  "valuesTracking": "1",
+  "changeMode": "price-and-percent",
+  "chartType": "area",
+  "headerFontSize": "medium",
+  "lineWidth": 2,
+  "lineType": 0,
+  "dateRanges": [
+    "1d|1",
+    "1m|30",
+    "3m|60",
+    "12m|1D",
+    "60m|1W",
+    "all|1M"
+  ]
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
     '''
 
