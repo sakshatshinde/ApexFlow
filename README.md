@@ -4,6 +4,6 @@ All in one AI powered financial markets app
 
 ![image](https://github.com/user-attachments/assets/8adcab56-6058-4802-a2b8-98444f22a0a1)
 
-![{15283C4F-735F-4E76-B7FD-A29A45E08B31}](https://github.com/user-attachments/assets/27ceec0f-8550-4607-b141-e3a6ec22442a)
+![{D6BE5D43-6189-444F-AD6A-7570907A80CD}](https://github.com/user-attachments/assets/9b07fb21-3574-4cf2-91a9-72d21542b8fc)
 
-![{B1CE897C-26FC-493E-A59F-C3A811C1AB81}](https://github.com/user-attachments/assets/56d11196-8d92-497f-b803-16535fd6d8aa)
+![{BCAA11B3-B6C0-4449-866B-3668FDE5FD75}](https://github.com/user-attachments/assets/feeb9354-0f90-4a35-ae95-2ccd3ee931c6)
