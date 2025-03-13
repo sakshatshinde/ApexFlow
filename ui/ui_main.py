@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainJCAJMH.ui'
+## Form generated from reading UI file 'mainYXkvRn.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -122,6 +122,42 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.annualReports, "")
         self.sectoral = QWidget()
         self.sectoral.setObjectName(u"sectoral")
+        self.gridLayout_6 = QGridLayout(self.sectoral)
+        self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.gridLayout_5 = QGridLayout()
+        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.sectoralWebViewFour = QWebEngineView(self.sectoral)
+        self.sectoralWebViewFour.setObjectName(u"sectoralWebViewFour")
+        self.sectoralWebViewFour.setUrl(QUrl(u"about:blank"))
+
+        self.gridLayout_5.addWidget(self.sectoralWebViewFour, 0, 1, 1, 1)
+
+        self.sectoralWebViewFive = QWebEngineView(self.sectoral)
+        self.sectoralWebViewFive.setObjectName(u"sectoralWebViewFive")
+        self.sectoralWebViewFive.setUrl(QUrl(u"about:blank"))
+
+        self.gridLayout_5.addWidget(self.sectoralWebViewFive, 1, 1, 1, 1)
+
+        self.sectoralWebViewThree = QWebEngineView(self.sectoral)
+        self.sectoralWebViewThree.setObjectName(u"sectoralWebViewThree")
+        self.sectoralWebViewThree.setUrl(QUrl(u"about:blank"))
+
+        self.gridLayout_5.addWidget(self.sectoralWebViewThree, 1, 0, 1, 1)
+
+        self.sectoralWebViewTwo = QWebEngineView(self.sectoral)
+        self.sectoralWebViewTwo.setObjectName(u"sectoralWebViewTwo")
+        self.sectoralWebViewTwo.setUrl(QUrl(u"about:blank"))
+
+        self.gridLayout_5.addWidget(self.sectoralWebViewTwo, 0, 0, 1, 1)
+
+        self.gridLayout_6.addLayout(self.gridLayout_5, 0, 1, 1, 1)
+
+        self.sectoralWebViewOne = QWebEngineView(self.sectoral)
+        self.sectoralWebViewOne.setObjectName(u"sectoralWebViewOne")
+        self.sectoralWebViewOne.setUrl(QUrl(u"about:blank"))
+
+        self.gridLayout_6.addWidget(self.sectoralWebViewOne, 0, 0, 1, 1)
+
         self.tabWidget.addTab(self.sectoral, "")
         self.indices = QWidget()
         self.indices.setObjectName(u"indices")
@@ -857,7 +893,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

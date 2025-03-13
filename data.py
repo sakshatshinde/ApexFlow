@@ -236,65 +236,6 @@ def refreshIndiaStockIndices() -> IndiaStockIndices:
         raise
 
 
-def setupNiftyHeatmap(wv):
-    """
-    Sets up the QWebEngineView with the Nifty 50 PE ratio chart.
-
-    Args:
-        webview: QWebEngineView instance to display the chart
-    """
-    html_content = '''
-     <style>
-            body {
-                background-color: #2b2b2b;  /* Dark background */
-                color: #ffffff;             /* Light text */
-                margin: 0;
-                padding: 0;
-            }
-        </style>
-
-    <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright">ApexFlow Indian Markets HeatMap - Powered by TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
-  {
-  "exchanges": [],
-  "dataSource": "SENSEX",
-  "grouping": "sector",
-  "blockSize": "market_cap_basic",
-  "blockColor": "change",
-  "locale": "en",
-  "symbolUrl": "",
-  "colorTheme": "dark",
-  "hasTopBar": false,
-  "isDataSetEnabled": false,
-  "isZoomEnabled": true,
-  "hasSymbolTooltip": true,
-  "isMonoSize": false,
-  "width": "100%",
-  "height": "100%"
-}
-  </script>
-</div>
-
-
-<!-- TradingView Widget END -->
-'''
-
-    settings = wv.settings()
-
-    # settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessRemoteUrls, True)
-    # settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessFileUrls, True)
-    # settings.setAttribute(QWebEngineSettings.WebAttribute.AllowWindowActivationFromJavaScript, True)
-
-    settings.setAttribute(QWebEngineSettings.WebAttribute.JavascriptEnabled, True)
-    settings.setAttribute(QWebEngineSettings.WebAttribute.ScrollAnimatorEnabled, True)
-    settings.setAttribute(QWebEngineSettings.WebAttribute.WebGLEnabled, True)
-
-    wv.setHtml(html_content)
-
-
 @dataclass
 class OtherStockIndices:
     msciWorld: str = 0
@@ -420,3 +361,282 @@ class StockDataWorker(QThread):
 
         except Exception as e:
             print(f"Error in StockDataWorker: {e}")
+
+
+def wvSettings(wv) -> QWebEngineSettings:
+    settings = wv.settings()
+    settings.setAttribute(QWebEngineSettings.WebAttribute.JavascriptEnabled, True)
+    settings.setAttribute(QWebEngineSettings.WebAttribute.ScrollAnimatorEnabled, True)
+    settings.setAttribute(QWebEngineSettings.WebAttribute.WebGLEnabled, True)
+
+    return settings
+
+
+def setupNiftyHeatmap(wv):
+    """
+    Sets up the QWebEngineView with the Nifty 50 PE ratio chart.
+
+    Args:
+        webview: QWebEngineView instance to display the chart
+    """
+    html_content = '''
+     <style>
+            body {
+                background-color: #2b2b2b;  /* Dark background */
+                color: #ffffff;             /* Light text */
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright">ApexFlow Indian Markets HeatMap - Powered by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
+  {
+  "exchanges": [],
+  "dataSource": "SENSEX",
+  "grouping": "sector",
+  "blockSize": "market_cap_basic",
+  "blockColor": "change",
+  "locale": "en",
+  "symbolUrl": "",
+  "colorTheme": "dark",
+  "hasTopBar": false,
+  "isDataSetEnabled": false,
+  "isZoomEnabled": true,
+  "hasSymbolTooltip": true,
+  "isMonoSize": false,
+  "width": "100%",
+  "height": "100%"
+}
+  </script>
+</div>
+
+
+<!-- TradingView Widget END -->
+'''
+
+    _settings = wvSettings(wv)
+    wv.setHtml(html_content)
+
+
+def setupSectoralWebViewTwo(wv):
+    html_content = '''
+    <style>
+            body {
+                background-color: #2b2b2b;  /* Dark background */
+                color: #ffffff;             /* Light text */
+                margin: 0;
+                padding: 0;
+            }
+    </style>
+    
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright">News</a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+  {
+  "feedMode": "all_symbols",
+  "isTransparent": false,
+  "displayMode": "regular",
+  "width": "100%",
+  "height": "100%",
+  "colorTheme": "dark",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+    
+    '''
+
+    _settings = wvSettings(wv)
+    wv.setHtml(html_content)
+
+
+def setupSectoralWebViewOne(wv):
+    html_content = '''
+    <style>
+            body {
+                background-color: #2b2b2b;  /* Dark background */
+                color: #ffffff;             /* Light text */
+                margin: 0;
+                padding: 0;
+            }
+    </style>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright">ApexFlow Sectoral Overview</a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+  {
+  "width": "100%",
+  "height": "100%",
+  "symbolsGroups": [
+    {
+      "name": "Sector Indices",
+      "symbols": [
+        {
+          "name": "BSE:IT",
+          "displayName": "BSE IT"
+        },
+        {
+          "name": "BSE:IPO",
+          "displayName": "BSE IPO"
+        },
+        {
+          "name": "BSE:BSEPBI",
+          "displayName": "BSE Private Banks"
+        },
+        {
+          "name": "BSE:PSU",
+          "displayName": "BSE PSU"
+        },
+        {
+          "name": "BSE:FMCG",
+          "displayName": "BSE FMCG"
+        },
+        {
+          "name": "BSE:INFRASTRUCTURE",
+          "displayName": "BSE Infra"
+        },
+        {
+          "name": "BSE:HC",
+          "displayName": "BSE Healthcare"
+        },
+        {
+          "name": "BSE:REALTY",
+          "displayName": "BSE Realty"
+        },
+        {
+          "name": "BSE:PRECON",
+          "displayName": "BSE Premium Consumption"
+        },
+        {
+          "name": "BSE:POWENE",
+          "displayName": "BSE Power & Energy"
+        },
+        {
+          "name": "BSE:OILGAS",
+          "displayName": "BSE Oil & Gas"
+        },
+        {
+          "name": "BSE:METAL",
+          "displayName": "BSE Metals"
+        },
+        {
+          "name": "BSE:MFG",
+          "displayName": "BSE Manufacturing"
+        }
+      ]
+    },
+    {
+      "name": "Metals",
+      "symbols": [
+        {
+          "name": "TVC:GOLD",
+          "displayName": "Gold"
+        },
+        {
+          "name": "TVC:SILVER",
+          "displayName": "Silver"
+        }
+      ]
+    },
+    {
+      "name": "Major Indices",
+      "symbols": [
+        {
+          "name": "BSE:SENSEX",
+          "displayName": "Sensex"
+        },
+        {
+          "name": "BSE:BSEMOI",
+          "displayName": "BSE Momentum"
+        },
+        {
+          "name": "BSE:SMLCAP",
+          "displayName": "BSE Smallcap"
+        },
+        {
+          "name": "BSE:MIDCAP",
+          "displayName": "BSE Midcap"
+        }
+      ]
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "colorTheme": "dark",
+  "locale": "en",
+  "backgroundColor": "#131722"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+'''
+
+    _settings = wvSettings(wv)
+
+    wv.setHtml(html_content)
+
+
+def setupSectoralWebViewThree(wv):
+    html_content = '''
+    <style>
+            body {
+                background-color: #2b2b2b;  /* Dark background */
+                color: #ffffff;             /* Light text */
+                margin: 0;
+                padding: 0;
+            }
+    </style>
+
+
+
+    '''
+
+    _settings = wvSettings(wv)
+    wv.setHtml(html_content)
+
+
+def setupSectoralWebViewFour(wv):
+    html_content = '''
+    <style>
+            body {
+                background-color: #2b2b2b;  /* Dark background */
+                color: #ffffff;             /* Light text */
+                margin: 0;
+                padding: 0;
+            }
+    </style>
+
+
+
+    '''
+
+    _settings = wvSettings(wv)
+    wv.setHtml(html_content)
+
+
+def setupSectoralWebViewFive(wv):
+    html_content = '''
+    <style>
+            body {
+                background-color: #2b2b2b;  /* Dark background */
+                color: #ffffff;             /* Light text */
+                margin: 0;
+                padding: 0;
+            }
+    </style>
+
+
+
+    '''
+
+    _settings = wvSettings(wv)
+    wv.setHtml(html_content)

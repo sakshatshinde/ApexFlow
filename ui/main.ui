@@ -205,7 +205,7 @@ QLabel[class=&quot;down-triangle&quot;] {
        <enum>QTabWidget::TabShape::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+          <number>4</number>
       </property>
       <property name="elideMode">
        <enum>Qt::TextElideMode::ElideNone</enum>
@@ -327,6 +327,57 @@ QLabel[class=&quot;down-triangle&quot;] {
        <attribute name="title">
         <string>Sectoral</string>
        </attribute>
+          <layout class="QGridLayout" name="gridLayout_6">
+              <item row="0" column="1">
+                  <layout class="QGridLayout" name="gridLayout_5">
+                      <item row="0" column="1">
+                          <widget class="QWebEngineView" name="sectoralWebViewFour">
+                              <property name="url">
+                                  <url>
+                                      <string>about:blank</string>
+                                  </url>
+                              </property>
+                          </widget>
+                      </item>
+                      <item row="1" column="1">
+                          <widget class="QWebEngineView" name="sectoralWebViewFive">
+                              <property name="url">
+                                  <url>
+                                      <string>about:blank</string>
+                                  </url>
+                              </property>
+                          </widget>
+                      </item>
+                      <item row="1" column="0">
+                          <widget class="QWebEngineView" name="sectoralWebViewThree">
+                              <property name="url">
+                                  <url>
+                                      <string>about:blank</string>
+                                  </url>
+                              </property>
+                          </widget>
+                      </item>
+                      <item row="0" column="0">
+                          <widget class="QWebEngineView" name="sectoralWebViewTwo">
+                              <property name="url">
+                                  <url>
+                                      <string>about:blank</string>
+                                  </url>
+                              </property>
+                          </widget>
+                      </item>
+                  </layout>
+              </item>
+              <item row="0" column="0">
+                  <widget class="QWebEngineView" name="sectoralWebViewOne">
+                      <property name="url">
+                          <url>
+                              <string>about:blank</string>
+                          </url>
+                      </property>
+                  </widget>
+              </item>
+          </layout>
       </widget>
       <widget class="QWidget" name="indices">
        <attribute name="title">
