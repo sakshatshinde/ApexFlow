@@ -1,1836 +1,1845 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>1247</width>
-    <height>800</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>ApexFlow - Financial Analytics</string>
-  </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>apexFlowIcon.png</normaloff>apexFlowIcon.png</iconset>
-  </property>
-  <property name="styleSheet">
-   <string>
-      /* Base colors and variables */
-QMainWindow {
-    background-color: #111827;
-    color: #F9FAFB;
-}
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1247</width>
+                <height>800</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>ApexFlow - Financial Analytics</string>
+        </property>
+        <property name="windowIcon">
+            <iconset>
+                <normaloff>apexFlowIcon.png</normaloff>apexFlowIcon.png
+            </iconset>
+        </property>
+        <property name="styleSheet">
+            <string>
+                /* Base colors and variables */
+                QMainWindow {
+                background-color: #111827;
+                color: #F9FAFB;
+                }
 
-/* Tab styling */
-QTabWidget::pane {
-    border: none;
-    background-color: #111827;
-    border-radius: 6px;
-}
+                /* Tab styling */
+                QTabWidget::pane {
+                border: none;
+                background-color: #111827;
+                border-radius: 6px;
+                }
 
-QTabBar::tab {
-    background-color: #1F2937;
-    color: #F9FAFB;
-    padding: 8px 16px;
-    margin-right: 2px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    font-weight: 500;
-}
+                QTabBar::tab {
+                background-color: #1F2937;
+                color: #F9FAFB;
+                padding: 8px 16px;
+                margin-right: 2px;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                font-weight: 500;
+                }
 
-QTabBar::tab:selected {
-    background-color: #374151;
-    border-bottom: 2px solid #10B981;
-}
+                QTabBar::tab:selected {
+                background-color: #374151;
+                border-bottom: 2px solid #10B981;
+                }
 
-QTabBar::tab:hover:!selected {
-    background-color: #2D3748;
-}
+                QTabBar::tab:hover:!selected {
+                background-color: #2D3748;
+                }
 
-/* LCD styling */
-QLCDNumber {
-    background-color: #1F2937;
-    color: #10B981;
-    border: none;
-    border-radius: 4px;
-}
+                /* LCD styling */
+                QLCDNumber {
+                background-color: #1F2937;
+                color: #10B981;
+                border: none;
+                border-radius: 4px;
+                }
 
-/* Label styling */
-QLabel {
-    background-color: transparent;
-    color: #F9FAFB;
-    padding: 6px;
-    font-weight: 400;
-}
+                /* Label styling */
+                QLabel {
+                background-color: transparent;
+                color: #F9FAFB;
+                padding: 6px;
+                font-weight: 400;
+                }
 
-/* Header labels */
-QLabel[objectName*=&quot;Header&quot;] {
-    background-color: #374151;
-    color: white;
-    padding: 8px;
-    border-radius: 4px;
-    font-weight: 600;
-}
+                /* Header labels */
+                QLabel[objectName*=&quot;Header&quot;] {
+                background-color: #374151;
+                color: white;
+                padding: 8px;
+                border-radius: 4px;
+                font-weight: 600;
+                }
 
-/* Button styling - Fixed contrast issues */
-QPushButton {
-    background-color: #3B82F6;
-    color: #FFFFFF;
-    border-radius: 4px;
-    padding: 10px 14px;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    border: none;
-}
+                /* Button styling - Fixed contrast issues */
+                QPushButton {
+                background-color: #3B82F6;
+                color: #FFFFFF;
+                border-radius: 4px;
+                padding: 10px 14px;
+                font-weight: 600;
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                border: none;
+                }
 
-QPushButton:hover {
-    background-color: #2563EB;
-}
+                QPushButton:hover {
+                background-color: #2563EB;
+                }
 
-QPushButton:pressed {
-    background-color: #1D4ED8;
-}
+                QPushButton:pressed {
+                background-color: #1D4ED8;
+                }
 
-QPushButton:disabled {
-    background-color: #374151;
-    color: #9CA3AF;
-}
+                QPushButton:disabled {
+                background-color: #374151;
+                color: #9CA3AF;
+                }
 
-/* Text components */
-QTextEdit, QTextBrowser {
-    background-color: #1F2937;
-    color: #F9FAFB;
-    border: none;
-    border-radius: 4px;
-    padding: 6px;
-    selection-background-color: #4F46E5;
-}
+                /* Text components */
+                QTextEdit, QTextBrowser {
+                background-color: #1F2937;
+                color: #F9FAFB;
+                border: none;
+                border-radius: 4px;
+                padding: 6px;
+                selection-background-color: #4F46E5;
+                }
 
-/* Menu styling */
-QMenuBar {
-    background-color: #1F2937;
-    color: #F9FAFB;
-    border-bottom: 1px solid #374151;
-}
+                /* Menu styling */
+                QMenuBar {
+                background-color: #1F2937;
+                color: #F9FAFB;
+                border-bottom: 1px solid #374151;
+                }
 
-QMenuBar::item {
-    background-color: transparent;
-    padding: 6px 8px;
-    border-radius: 2px;
-}
+                QMenuBar::item {
+                background-color: transparent;
+                padding: 6px 8px;
+                border-radius: 2px;
+                }
 
-QMenuBar::item:selected {
-    background-color: #374151;
-}
+                QMenuBar::item:selected {
+                background-color: #374151;
+                }
 
-QMenu {
-    background-color: #1F2937;
-    color: #F9FAFB;
-    border: 1px solid #111827;
-    border-radius: 4px;
-}
+                QMenu {
+                background-color: #1F2937;
+                color: #F9FAFB;
+                border: 1px solid #111827;
+                border-radius: 4px;
+                }
 
-QMenu::item {
-    padding: 6px 16px;
-    border-radius: 2px;
-}
+                QMenu::item {
+                padding: 6px 16px;
+                border-radius: 2px;
+                }
 
-QMenu::item:selected {
-    background-color: #374151;
-}
+                QMenu::item:selected {
+                background-color: #374151;
+                }
 
-/* Scrollbar styling */
-QScrollBar:vertical {
-    border: none;
-    background: #1F2937;
-    width: 6px;
-    border-radius: 3px;
-}
+                /* Scrollbar styling */
+                QScrollBar:vertical {
+                border: none;
+                background: #1F2937;
+                width: 6px;
+                border-radius: 3px;
+                }
 
-QScrollBar::handle:vertical {
-    background: #4F46E5;
-    min-height: 24px;
-    border-radius: 3px;
-}
+                QScrollBar::handle:vertical {
+                background: #4F46E5;
+                min-height: 24px;
+                border-radius: 3px;
+                }
 
-QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-    height: 0px;
-}
+                QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                height: 0px;
+                }
 
-QScrollBar:horizontal {
-    border: none;
-    background: #1F2937;
-    height: 6px;
-    border-radius: 3px;
-}
+                QScrollBar:horizontal {
+                border: none;
+                background: #1F2937;
+                height: 6px;
+                border-radius: 3px;
+                }
 
-QScrollBar::handle:horizontal {
-    background: #4F46E5;
-    min-width: 24px;
-    border-radius: 3px;
-}
+                QScrollBar::handle:horizontal {
+                background: #4F46E5;
+                min-width: 24px;
+                border-radius: 3px;
+                }
 
-QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
-    width: 0px;
-}
+                QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+                width: 0px;
+                }
 
-/* Triangle indicators */
-QLabel[class=&quot;up-triangle&quot;] {
-    color: #10B981; /* Green color for up movement */
-    font-family: Arial;
-    font-size: 16px;
-}
+                /* Triangle indicators */
+                QLabel[class=&quot;up-triangle&quot;] {
+                color: #10B981; /* Green color for up movement */
+                font-family: Arial;
+                font-size: 16px;
+                }
 
-QLabel[class=&quot;down-triangle&quot;] {
-    color: #EF4444; /* Red color for down movement */
-    font-family: Arial;
-    font-size: 16px;
-}
+                QLabel[class=&quot;down-triangle&quot;] {
+                color: #EF4444; /* Red color for down movement */
+                font-family: Arial;
+                font-size: 16px;
+                }
 
             </string>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QTabWidget" name="tabWidget">
-      <property name="tabPosition">
-       <enum>QTabWidget::TabPosition::South</enum>
-      </property>
-      <property name="tabShape">
-       <enum>QTabWidget::TabShape::Rounded</enum>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="elideMode">
-       <enum>Qt::TextElideMode::ElideNone</enum>
-      </property>
-      <property name="documentMode">
-       <bool>true</bool>
-      </property>
-      <property name="movable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="aiTab">
-       <attribute name="title">
-        <string>Ask AI</string>
-       </attribute>
-       <attribute name="toolTip">
-        <string>Here you can send a message to Gemini and ask for it's input</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_2">
-        <item row="0" column="0">
-         <widget class="QTextBrowser" name="textBrowser">
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="textInteractionFlags">
-           <set>
-            Qt::TextInteractionFlag::LinksAccessibleByKeyboard|Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextBrowserInteraction|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse
-           </set>
-          </property>
-          <property name="placeholderText">
-           <string>AI assistant will reply here... Please note this is not a chat, no history of your messages will be kept in the context.</string>
-          </property>
-          <property name="openExternalLinks">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <layout class="QVBoxLayout" name="verticalLayout_5">
-          <item>
-           <widget class="QTextEdit" name="textEdit">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QGridLayout" name="gridLayout">
+                <item row="0" column="0">
+                    <widget class="QTabWidget" name="tabWidget">
+                        <property name="tabPosition">
+                            <enum>QTabWidget::TabPosition::South</enum>
+                        </property>
+                        <property name="tabShape">
+                            <enum>QTabWidget::TabShape::Rounded</enum>
+                        </property>
+                        <property name="currentIndex">
+                            <number>4</number>
+                        </property>
+                        <property name="elideMode">
+                            <enum>Qt::TextElideMode::ElideNone</enum>
+                        </property>
+                        <property name="documentMode">
+                            <bool>true</bool>
+                        </property>
+                        <property name="movable">
+                            <bool>true</bool>
+                        </property>
+                        <widget class="QWidget" name="indices">
+                            <attribute name="title">
+                                <string>Indices</string>
+                            </attribute>
+                            <attribute name="toolTip">
+                                <string>Indices all over the world</string>
+                            </attribute>
+                            <layout class="QGridLayout" name="gridLayout_3">
+                                <item row="0" column="0">
+                                    <layout class="QVBoxLayout" name="verticalLayout">
+                                        <property name="spacing">
+                                            <number>8</number>
+                                        </property>
+                                        <item>
+                                            <widget class="QLabel" name="majorIndicesHeader">
+                                                <property name="font">
+                                                    <font>
+                                                        <family>Segoe UI</family>
+                                                        <pointsize>12</pointsize>
+                                                        <fontweight>DemiBold</fontweight>
+                                                    </font>
+                                                </property>
+                                                <property name="styleSheet">
+                                                    <string>color: white; padding: 8px; border-radius: 4px;</string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>MAJOR INDICES</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_MSCIWorld">
+                                                <item>
+                                                    <widget class="QLabel" name="MSCIWorld_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>MSCI World</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="MSCIWorld_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="MSCIWorld">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_Nifty50">
+                                                <item>
+                                                    <widget class="QLabel" name="Nifty50_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nifty 50</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="Nifty50_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="Nifty50">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_Nasdaq100">
+                                                <item>
+                                                    <widget class="QLabel" name="Nasdaq100_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nasdaq 100</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="Nasdaq100_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="Nasdaq100">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_SP500">
+                                                <item>
+                                                    <widget class="QLabel" name="SP500_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>S&amp;P 500</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="SP500_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="SP500">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_Nikkei225">
+                                                <item>
+                                                    <widget class="QLabel" name="Nikkei225_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nikkei 225</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="Nikkei225_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="Nikkei225">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_Hangseng">
+                                                <item>
+                                                    <widget class="QLabel" name="Hangseng_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Hang Seng</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="Hangseng_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="Hangseng">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                    </layout>
+                                </item>
+                                <item row="0" column="2">
+                                    <layout class="QVBoxLayout" name="verticalLayout_3">
+                                        <property name="spacing">
+                                            <number>8</number>
+                                        </property>
+                                        <item>
+                                            <widget class="QLabel" name="indianIndicesHeader">
+                                                <property name="font">
+                                                    <font>
+                                                        <family>Segoe UI</family>
+                                                        <pointsize>12</pointsize>
+                                                        <fontweight>DemiBold</fontweight>
+                                                    </font>
+                                                </property>
+                                                <property name="styleSheet">
+                                                    <string>color: white; padding: 8px; border-radius: 4px;</string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>INDIAN RATES &amp; INDICES</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_IndiaVix">
+                                                <item>
+                                                    <widget class="QLabel" name="IndiaVix_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>India VIX</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="IndiaVix_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="IndiaVix">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NiftyNext50">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyNext50_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>NiftyNext50</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyNext50_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftyNext50">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NiftyIT">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyIT_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nifty IT</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyIT_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftyIT">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NiftyBank">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyBank_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nifty Bank</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyBank_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftyBank">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NiftySmallCap250">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftySmallCap250_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nifty Smallcap 250</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftySmallCap250_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftySmallCap250">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NiftyMidcap150">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyMidcap150_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nifty Midcap 150</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyMidcap150_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftyMidcap150">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                    </layout>
+                                </item>
+                                <item row="0" column="1">
+                                    <layout class="QVBoxLayout" name="verticalLayout_2">
+                                        <property name="spacing">
+                                            <number>8</number>
+                                        </property>
+                                        <item>
+                                            <widget class="QLabel" name="commoditiesHeader">
+                                                <property name="font">
+                                                    <font>
+                                                        <family>Segoe UI</family>
+                                                        <pointsize>12</pointsize>
+                                                        <fontweight>DemiBold</fontweight>
+                                                    </font>
+                                                </property>
+                                                <property name="styleSheet">
+                                                    <string>color: white; padding: 8px; border-radius: 4px;</string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>COMMODITIES &amp; FOREX</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_Gold">
+                                                <item>
+                                                    <widget class="QLabel" name="Gold_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Gold</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="Gold_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="Gold">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_Silver">
+                                                <item>
+                                                    <widget class="QLabel" name="Silver_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Silver</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="Silver_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="Silver">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_BrentCrudeOil">
+                                                <item>
+                                                    <widget class="QLabel" name="BrentCrudeOil_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Brent Crude Oil</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="BrentCrudeOil_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="BrentCrudeOil">
+                                                        <property name="autoFillBackground">
+                                                            <bool>false</bool>
+                                                        </property>
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NaturalGas">
+                                                <item>
+                                                    <widget class="QLabel" name="NaturalGas_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Natural Gas</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NaturalGas_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NaturalGas">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_USDINR">
+                                                <item>
+                                                    <widget class="QLabel" name="USDINR_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>USD INR</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="USDINR_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="USDINR">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_USVix">
+                                                <item>
+                                                    <widget class="QLabel" name="USVix_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>US VIX</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="USVix_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="USVix">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                    </layout>
+                                </item>
+                                <item row="1" column="0">
+                                    <layout class="QVBoxLayout" name="verticalLayout_4">
+                                        <property name="spacing">
+                                            <number>8</number>
+                                        </property>
+                                        <item>
+                                            <widget class="QLabel" name="moreIndicesHeader">
+                                                <property name="font">
+                                                    <font>
+                                                        <family>Segoe UI</family>
+                                                        <pointsize>12</pointsize>
+                                                        <fontweight>DemiBold</fontweight>
+                                                    </font>
+                                                </property>
+                                                <property name="styleSheet">
+                                                    <string>color: white; padding: 8px; border-radius: 4px;</string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>MORE INDIAN INDICES</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NiftyFMCG">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyFMCG_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nifty FMCG</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyFMCG_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftyFMCG">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NiftyAuto">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyAuto_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nifty Auto</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyAuto_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftyAuto">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NiftyPharma">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyPharma_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nifty Pharma</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyPharma_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftyPharma">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NIftyOilGas">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyOilGas_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nifty Oil and Gas</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyOilGas_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftyOilGas">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NiftyIndiaDefence">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyIndiaDefence_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Nifty India Defence</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyIndiaDefence_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftyIndiaDefence">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="layout_NiftyEnergy">
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyEnergy_Label">
+                                                        <property name="minimumSize">
+                                                            <size>
+                                                                <width>180</width>
+                                                                <height>0</height>
+                                                            </size>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <family>Segoe UI</family>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                            <enum>QFrame::Shape::Box</enum>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>NIFTY ENERGY</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLabel" name="NiftyEnergy_Percentage">
+                                                        <property name="font">
+                                                            <font>
+                                                                <pointsize>12</pointsize>
+                                                                <bold>false</bold>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>+0.00%</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QLCDNumber" name="NiftyEnergy">
+                                                        <property name="digitCount">
+                                                            <number>8</number>
+                                                        </property>
+                                                        <property name="segmentStyle">
+                                                            <enum>QLCDNumber::SegmentStyle::Flat</enum>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                    </layout>
+                                </item>
+                                <item row="1" column="1" colspan="2">
+                                    <widget class="QWebEngineView" name="sectoralWebViewThree">
+                                        <property name="url">
+                                            <url>
+                                                <string>about:blank</string>
+                                            </url>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="sectoral">
+                            <attribute name="title">
+                                <string>Sectoral</string>
+                            </attribute>
+                            <layout class="QGridLayout" name="gridLayout_5">
+                                <item row="0" column="0">
+                                    <widget class="QWebEngineView" name="sectoralWebViewOne">
+                                        <property name="url">
+                                            <url>
+                                                <string>about:blank</string>
+                                            </url>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item row="0" column="1">
+                                    <layout class="QVBoxLayout" name="verticalLayout_6">
+                                        <item>
+                                            <layout class="QHBoxLayout" name="horizontalLayout_2">
+                                                <item>
+                                                    <widget class="QWebEngineView" name="sectoralWebViewTwo">
+                                                        <property name="url">
+                                                            <url>
+                                                                <string>about:blank</string>
+                                                            </url>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QWebEngineView" name="sectoralWebViewFour">
+                                                        <property name="url">
+                                                            <url>
+                                                                <string>about:blank</string>
+                                                            </url>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                        <item>
+                                            <widget class="QWebEngineView" name="NiftyHeatmapWebView">
+                                                <property name="url">
+                                                    <url>
+                                                        <string>about:blank</string>
+                                                    </url>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="macro">
+                            <attribute name="title">
+                                <string>Macro</string>
+                            </attribute>
+                            <layout class="QGridLayout" name="gridLayout_4">
+                                <item row="0" column="0">
+                                    <widget class="QWebEngineView" name="macroWebView">
+                                        <property name="url">
+                                            <url>
+                                                <string>https://fred.stlouisfed.org/</string>
+                                            </url>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="aiTab">
+                            <attribute name="title">
+                                <string>Ask AI</string>
+                            </attribute>
+                            <attribute name="toolTip">
+                                <string>Here you can send a message to Gemini and ask for it's input</string>
+                            </attribute>
+                            <layout class="QGridLayout" name="gridLayout_2">
+                                <item row="0" column="0">
+                                    <widget class="QTextBrowser" name="textBrowser">
+                                        <property name="font">
+                                            <font>
+                                                <pointsize>14</pointsize>
+                                            </font>
+                                        </property>
+                                        <property name="textInteractionFlags">
+                                            <set>Qt::TextInteractionFlag::NoTextInteraction</set>
+                                        </property>
+                                        <property name="placeholderText">
+                                            <string>AI assistant will reply here... Please note this is not a chat, no
+                                                history of your messages will be kept in the context.
+                                            </string>
+                                        </property>
+                                        <property name="openExternalLinks">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item row="1" column="0">
+                                    <layout class="QVBoxLayout" name="verticalLayout_5">
+                                        <item>
+                                            <widget class="QTextEdit" name="textEdit">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="font">
+                                                    <font>
+                                                        <pointsize>14</pointsize>
+                                                    </font>
+                                                </property>
+                                                <property name="tabChangesFocus">
+                                                    <bool>true</bool>
+                                                </property>
+                                                <property name="placeholderText">
+                                                    <string>Enter your prompt here...</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <layout class="QHBoxLayout" name="horizontalLayout">
+                                                <item>
+                                                    <spacer name="horizontalSpacer">
+                                                        <property name="orientation">
+                                                            <enum>Qt::Orientation::Horizontal</enum>
+                                                        </property>
+                                                        <property name="sizeHint" stdset="0">
+                                                            <size>
+                                                                <width>40</width>
+                                                                <height>20</height>
+                                                            </size>
+                                                        </property>
+                                                    </spacer>
+                                                </item>
+                                                <item>
+                                                    <widget class="QPushButton" name="send_msg_to_ai_btn">
+                                                        <property name="text">
+                                                            <string>Send</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QPushButton" name="clear_prompt_btn">
+                                                        <property name="text">
+                                                            <string>Clear</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QPushButton" name="attach_ai_btn">
+                                                        <property name="enabled">
+                                                            <bool>false</bool>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Attach</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </item>
+                                    </layout>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="aboutTab">
+                            <attribute name="title">
+                                <string>About</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="verticalLayout_7">
+                                <item>
+                                    <widget class="QWebEngineView" name="aboutTabWebView">
+                                        <property name="url">
+                                            <url>
+                                                <string>about:blank</string>
+                                            </url>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QMenuBar" name="menubar">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>1247</width>
+                    <height>29</height>
+                </rect>
             </property>
-            <property name="font">
-             <font>
-              <pointsize>14</pointsize>
-             </font>
-            </property>
-            <property name="tabChangesFocus">
-             <bool>true</bool>
-            </property>
-            <property name="placeholderText">
-             <string>Enter your prompt here...</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
-             <spacer name="horizontalSpacer">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="send_msg_to_ai_btn">
-              <property name="text">
-               <string>Send</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="clear_prompt_btn">
-              <property name="text">
-               <string>Clear</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="attach_ai_btn">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="text">
-               <string>Attach</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="macro">
-       <attribute name="title">
-        <string>Macro</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_4">
-        <item row="0" column="0">
-         <widget class="QWebEngineView" name="macroWebView">
-          <property name="url">
-           <url>
-            <string>https://fred.stlouisfed.org/</string>
-           </url>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="financials">
-       <attribute name="title">
-        <string>Financials</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="annualReports">
-       <attribute name="title">
-        <string>Annual Reports</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="sectoral">
-       <attribute name="title">
-        <string>Sectoral</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_5">
-        <item row="0" column="0">
-         <widget class="QWebEngineView" name="sectoralWebViewOne">
-          <property name="url">
-           <url>
-            <string>about:blank</string>
-           </url>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <layout class="QVBoxLayout" name="verticalLayout_6">
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QWebEngineView" name="sectoralWebViewTwo">
-              <property name="url">
-               <url>
-                <string>about:blank</string>
-               </url>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWebEngineView" name="sectoralWebViewFour">
-              <property name="url">
-               <url>
-                <string>about:blank</string>
-               </url>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QWebEngineView" name="NiftyHeatmapWebView">
-            <property name="url">
-             <url>
-              <string>about:blank</string>
-             </url>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="indices">
-       <attribute name="title">
-        <string>Indices</string>
-       </attribute>
-       <attribute name="toolTip">
-        <string>Indices all over the world</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="0">
-         <layout class="QVBoxLayout" name="verticalLayout">
-          <property name="spacing">
-           <number>8</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="majorIndicesHeader">
-            <property name="font">
-             <font>
-              <family>Segoe UI</family>
-              <pointsize>12</pointsize>
-              <fontweight>DemiBold</fontweight>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string>color: white; padding: 8px; border-radius: 4px;</string>
+        </widget>
+        <action name="actionExit">
+            <property name="icon">
+                <iconset>
+                    <normaloff>exit_icon.png</normaloff>exit_icon.png
+                </iconset>
             </property>
             <property name="text">
-             <string>MAJOR INDICES</string>
+                <string>Quit</string>
             </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_MSCIWorld">
-            <item>
-             <widget class="QLabel" name="MSCIWorld_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>MSCI World</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="MSCIWorld_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="MSCIWorld">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_Nifty50">
-            <item>
-             <widget class="QLabel" name="Nifty50_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nifty 50</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="Nifty50_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="Nifty50">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_Nasdaq100">
-            <item>
-             <widget class="QLabel" name="Nasdaq100_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nasdaq 100</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="Nasdaq100_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="Nasdaq100">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_SP500">
-            <item>
-             <widget class="QLabel" name="SP500_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>S&amp;P 500</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="SP500_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="SP500">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_Nikkei225">
-            <item>
-             <widget class="QLabel" name="Nikkei225_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nikkei 225</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="Nikkei225_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="Nikkei225">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_Hangseng">
-            <item>
-             <widget class="QLabel" name="Hangseng_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Hang Seng</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="Hangseng_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="Hangseng">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item row="0" column="2">
-         <layout class="QVBoxLayout" name="verticalLayout_3">
-          <property name="spacing">
-           <number>8</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="indianIndicesHeader">
-            <property name="font">
-             <font>
-              <family>Segoe UI</family>
-              <pointsize>12</pointsize>
-              <fontweight>DemiBold</fontweight>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string>color: white; padding: 8px; border-radius: 4px;</string>
+        </action>
+        <action name="actionAbout">
+            <property name="icon">
+                <iconset>
+                    <normaloff>about_icon.png</normaloff>about_icon.png
+                </iconset>
             </property>
             <property name="text">
-             <string>INDIAN RATES &amp; INDICES</string>
+                <string>About</string>
             </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_IndiaVix">
-            <item>
-             <widget class="QLabel" name="IndiaVix_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>India VIX</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="IndiaVix_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="IndiaVix">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NiftyNext50">
-            <item>
-             <widget class="QLabel" name="NiftyNext50_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>NiftyNext50</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftyNext50_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftyNext50">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NiftyIT">
-            <item>
-             <widget class="QLabel" name="NiftyIT_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nifty IT</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftyIT_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftyIT">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NiftyBank">
-            <item>
-             <widget class="QLabel" name="NiftyBank_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nifty Bank</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftyBank_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftyBank">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NiftySmallCap250">
-            <item>
-             <widget class="QLabel" name="NiftySmallCap250_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nifty Smallcap 250</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftySmallCap250_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftySmallCap250">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NiftyMidcap150">
-            <item>
-             <widget class="QLabel" name="NiftyMidcap150_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nifty Midcap 150</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftyMidcap150_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftyMidcap150">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item row="0" column="1">
-         <layout class="QVBoxLayout" name="verticalLayout_2">
-          <property name="spacing">
-           <number>8</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="commoditiesHeader">
-            <property name="font">
-             <font>
-              <family>Segoe UI</family>
-              <pointsize>12</pointsize>
-              <fontweight>DemiBold</fontweight>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string>color: white; padding: 8px; border-radius: 4px;</string>
-            </property>
-            <property name="text">
-             <string>COMMODITIES &amp; FOREX</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_Gold">
-            <item>
-             <widget class="QLabel" name="Gold_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Gold</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="Gold_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="Gold">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_Silver">
-            <item>
-             <widget class="QLabel" name="Silver_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Silver</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="Silver_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="Silver">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_BrentCrudeOil">
-            <item>
-             <widget class="QLabel" name="BrentCrudeOil_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Brent Crude Oil</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="BrentCrudeOil_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="BrentCrudeOil">
-              <property name="autoFillBackground">
-               <bool>false</bool>
-              </property>
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NaturalGas">
-            <item>
-             <widget class="QLabel" name="NaturalGas_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Natural Gas</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NaturalGas_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NaturalGas">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_USDINR">
-            <item>
-             <widget class="QLabel" name="USDINR_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>USD INR</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="USDINR_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="USDINR">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_USVix">
-            <item>
-             <widget class="QLabel" name="USVix_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>US VIX</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="USVix_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="USVix">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item row="1" column="0">
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <property name="spacing">
-           <number>8</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="moreIndicesHeader">
-            <property name="font">
-             <font>
-              <family>Segoe UI</family>
-              <pointsize>12</pointsize>
-              <fontweight>DemiBold</fontweight>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string>color: white; padding: 8px; border-radius: 4px;</string>
-            </property>
-            <property name="text">
-             <string>MORE INDIAN INDICES</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NiftyFMCG">
-            <item>
-             <widget class="QLabel" name="NiftyFMCG_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nifty FMCG</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftyFMCG_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftyFMCG">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NiftyAuto">
-            <item>
-             <widget class="QLabel" name="NiftyAuto_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nifty Auto</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftyAuto_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftyAuto">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NiftyPharma">
-            <item>
-             <widget class="QLabel" name="NiftyPharma_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nifty Pharma</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftyPharma_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftyPharma">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NIftyOilGas">
-            <item>
-             <widget class="QLabel" name="NiftyOilGas_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nifty Oil and Gas</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftyOilGas_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftyOilGas">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NiftyIndiaDefence">
-            <item>
-             <widget class="QLabel" name="NiftyIndiaDefence_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>Nifty India Defence</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftyIndiaDefence_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftyIndiaDefence">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_NiftyEnergy">
-            <item>
-             <widget class="QLabel" name="NiftyEnergy_Label">
-              <property name="minimumSize">
-               <size>
-                <width>180</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Shape::Box</enum>
-              </property>
-              <property name="text">
-               <string>NIFTY ENERGY</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="NiftyEnergy_Percentage">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>+0.00%</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="NiftyEnergy">
-              <property name="digitCount">
-               <number>8</number>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::SegmentStyle::Flat</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item row="1" column="1" colspan="2">
-         <widget class="QWebEngineView" name="sectoralWebViewThree">
-          <property name="url">
-           <url>
-            <string>about:blank</string>
-           </url>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1247</width>
-     <height>29</height>
-    </rect>
-   </property>
-  </widget>
-  <action name="actionExit">
-   <property name="icon">
-    <iconset>
-     <normaloff>exit_icon.png</normaloff>exit_icon.png</iconset>
-   </property>
-   <property name="text">
-    <string>Quit</string>
-   </property>
-  </action>
-  <action name="actionAbout">
-   <property name="icon">
-    <iconset>
-     <normaloff>about_icon.png</normaloff>about_icon.png</iconset>
-   </property>
-   <property name="text">
-    <string>About</string>
-   </property>
-  </action>
- </widget>
- <customwidgets>
-  <customwidget>
-   <class>QWebEngineView</class>
-   <extends>QWidget</extends>
-   <header location="global">QtWebEngineWidgets/QWebEngineView</header>
-  </customwidget>
- </customwidgets>
- <resources/>
- <connections/>
+        </action>
+    </widget>
+    <customwidgets>
+        <customwidget>
+            <class>QWebEngineView</class>
+            <extends>QWidget</extends>
+            <header location="global">QtWebEngineWidgets/QWebEngineView</header>
+        </customwidget>
+    </customwidgets>
+    <resources/>
+    <connections/>
 </ui>

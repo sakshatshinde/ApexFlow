@@ -6,7 +6,7 @@ from PySide6.QtGui import QIcon
 
 from ai import Gemini
 from data import StockDataWorker, setupNiftyHeatmap, IndicesTabData, setupSectoralWebViewOne, \
-    setupSectoralWebViewTwo, setupSectoralWebViewFour, setupSectoralWebViewThree
+    setupSectoralWebViewTwo, setupSectoralWebViewFour, setupSectoralWebViewThree, aboutTabWebView
 from ui.style import getPercentageStyle
 
 from ui.ui_main import Ui_MainWindow
@@ -43,6 +43,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         setupSectoralWebViewTwo(self.sectoralWebViewTwo)
         setupSectoralWebViewThree(self.sectoralWebViewThree)
         setupSectoralWebViewFour(self.sectoralWebViewFour)
+
+        # About tab
+        aboutTabWebView(self.aboutTabWebView)
 
         self.show()
 

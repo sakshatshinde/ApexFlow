@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainSIfxwg.ui'
+## Form generated from reading UI file 'mainZfOMrW.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -51,81 +51,729 @@ class Ui_MainWindow(object):
         self.tabWidget.setElideMode(Qt.TextElideMode.ElideNone)
         self.tabWidget.setDocumentMode(True)
         self.tabWidget.setMovable(True)
-        self.aiTab = QWidget()
-        self.aiTab.setObjectName(u"aiTab")
-        self.gridLayout_2 = QGridLayout(self.aiTab)
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.textBrowser = QTextBrowser(self.aiTab)
-        self.textBrowser.setObjectName(u"textBrowser")
+        self.indices = QWidget()
+        self.indices.setObjectName(u"indices")
+        self.gridLayout_3 = QGridLayout(self.indices)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.verticalLayout = QVBoxLayout()
+        self.verticalLayout.setSpacing(8)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.majorIndicesHeader = QLabel(self.indices)
+        self.majorIndicesHeader.setObjectName(u"majorIndicesHeader")
         font = QFont()
-        font.setPointSize(14)
-        self.textBrowser.setFont(font)
-        self.textBrowser.setTextInteractionFlags(
-            Qt.TextInteractionFlag.LinksAccessibleByKeyboard | Qt.TextInteractionFlag.LinksAccessibleByMouse | Qt.TextInteractionFlag.TextBrowserInteraction | Qt.TextInteractionFlag.TextSelectableByKeyboard | Qt.TextInteractionFlag.TextSelectableByMouse)
-        self.textBrowser.setOpenExternalLinks(True)
+        font.setFamilies([u"Segoe UI"])
+        font.setPointSize(12)
+        font.setWeight(QFont.DemiBold)
+        self.majorIndicesHeader.setFont(font)
+        self.majorIndicesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.gridLayout_2.addWidget(self.textBrowser, 0, 0, 1, 1)
+        self.verticalLayout.addWidget(self.majorIndicesHeader)
 
-        self.verticalLayout_5 = QVBoxLayout()
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.textEdit = QTextEdit(self.aiTab)
-        self.textEdit.setObjectName(u"textEdit")
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
-        self.textEdit.setSizePolicy(sizePolicy)
-        self.textEdit.setFont(font)
-        self.textEdit.setTabChangesFocus(True)
+        self.layout_MSCIWorld = QHBoxLayout()
+        self.layout_MSCIWorld.setObjectName(u"layout_MSCIWorld")
+        self.MSCIWorld_Label = QLabel(self.indices)
+        self.MSCIWorld_Label.setObjectName(u"MSCIWorld_Label")
+        self.MSCIWorld_Label.setMinimumSize(QSize(180, 0))
+        font1 = QFont()
+        font1.setFamilies([u"Segoe UI"])
+        font1.setPointSize(12)
+        font1.setBold(False)
+        self.MSCIWorld_Label.setFont(font1)
+        self.MSCIWorld_Label.setFrameShape(QFrame.Shape.Box)
+        self.MSCIWorld_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.verticalLayout_5.addWidget(self.textEdit)
+        self.layout_MSCIWorld.addWidget(self.MSCIWorld_Label)
 
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.MSCIWorld_Percentage = QLabel(self.indices)
+        self.MSCIWorld_Percentage.setObjectName(u"MSCIWorld_Percentage")
+        font2 = QFont()
+        font2.setPointSize(12)
+        font2.setBold(False)
+        self.MSCIWorld_Percentage.setFont(font2)
 
-        self.horizontalLayout.addItem(self.horizontalSpacer)
+        self.layout_MSCIWorld.addWidget(self.MSCIWorld_Percentage)
 
-        self.send_msg_to_ai_btn = QPushButton(self.aiTab)
-        self.send_msg_to_ai_btn.setObjectName(u"send_msg_to_ai_btn")
+        self.MSCIWorld = QLCDNumber(self.indices)
+        self.MSCIWorld.setObjectName(u"MSCIWorld")
+        self.MSCIWorld.setDigitCount(8)
+        self.MSCIWorld.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
-        self.horizontalLayout.addWidget(self.send_msg_to_ai_btn)
-
-        self.clear_prompt_btn = QPushButton(self.aiTab)
-        self.clear_prompt_btn.setObjectName(u"clear_prompt_btn")
-
-        self.horizontalLayout.addWidget(self.clear_prompt_btn)
-
-        self.attach_ai_btn = QPushButton(self.aiTab)
-        self.attach_ai_btn.setObjectName(u"attach_ai_btn")
-        self.attach_ai_btn.setEnabled(False)
-
-        self.horizontalLayout.addWidget(self.attach_ai_btn)
+        self.layout_MSCIWorld.addWidget(self.MSCIWorld)
 
 
-        self.verticalLayout_5.addLayout(self.horizontalLayout)
+        self.verticalLayout.addLayout(self.layout_MSCIWorld)
+
+        self.layout_Nifty50 = QHBoxLayout()
+        self.layout_Nifty50.setObjectName(u"layout_Nifty50")
+        self.Nifty50_Label = QLabel(self.indices)
+        self.Nifty50_Label.setObjectName(u"Nifty50_Label")
+        self.Nifty50_Label.setMinimumSize(QSize(180, 0))
+        self.Nifty50_Label.setFont(font1)
+        self.Nifty50_Label.setFrameShape(QFrame.Shape.Box)
+        self.Nifty50_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_Nifty50.addWidget(self.Nifty50_Label)
+
+        self.Nifty50_Percentage = QLabel(self.indices)
+        self.Nifty50_Percentage.setObjectName(u"Nifty50_Percentage")
+        self.Nifty50_Percentage.setFont(font2)
+
+        self.layout_Nifty50.addWidget(self.Nifty50_Percentage)
+
+        self.Nifty50 = QLCDNumber(self.indices)
+        self.Nifty50.setObjectName(u"Nifty50")
+        self.Nifty50.setDigitCount(8)
+        self.Nifty50.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_Nifty50.addWidget(self.Nifty50)
 
 
-        self.gridLayout_2.addLayout(self.verticalLayout_5, 1, 0, 1, 1)
+        self.verticalLayout.addLayout(self.layout_Nifty50)
 
-        self.tabWidget.addTab(self.aiTab, "")
-        self.macro = QWidget()
-        self.macro.setObjectName(u"macro")
-        self.gridLayout_4 = QGridLayout(self.macro)
-        self.gridLayout_4.setObjectName(u"gridLayout_4")
-        self.macroWebView = QWebEngineView(self.macro)
-        self.macroWebView.setObjectName(u"macroWebView")
-        self.macroWebView.setUrl(QUrl(u"https://fred.stlouisfed.org/"))
+        self.layout_Nasdaq100 = QHBoxLayout()
+        self.layout_Nasdaq100.setObjectName(u"layout_Nasdaq100")
+        self.Nasdaq100_Label = QLabel(self.indices)
+        self.Nasdaq100_Label.setObjectName(u"Nasdaq100_Label")
+        self.Nasdaq100_Label.setMinimumSize(QSize(180, 0))
+        self.Nasdaq100_Label.setFont(font1)
+        self.Nasdaq100_Label.setFrameShape(QFrame.Shape.Box)
+        self.Nasdaq100_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.gridLayout_4.addWidget(self.macroWebView, 0, 0, 1, 1)
+        self.layout_Nasdaq100.addWidget(self.Nasdaq100_Label)
 
-        self.tabWidget.addTab(self.macro, "")
-        self.financials = QWidget()
-        self.financials.setObjectName(u"financials")
-        self.tabWidget.addTab(self.financials, "")
-        self.annualReports = QWidget()
-        self.annualReports.setObjectName(u"annualReports")
-        self.tabWidget.addTab(self.annualReports, "")
+        self.Nasdaq100_Percentage = QLabel(self.indices)
+        self.Nasdaq100_Percentage.setObjectName(u"Nasdaq100_Percentage")
+        self.Nasdaq100_Percentage.setFont(font2)
+
+        self.layout_Nasdaq100.addWidget(self.Nasdaq100_Percentage)
+
+        self.Nasdaq100 = QLCDNumber(self.indices)
+        self.Nasdaq100.setObjectName(u"Nasdaq100")
+        self.Nasdaq100.setDigitCount(8)
+        self.Nasdaq100.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_Nasdaq100.addWidget(self.Nasdaq100)
+
+
+        self.verticalLayout.addLayout(self.layout_Nasdaq100)
+
+        self.layout_SP500 = QHBoxLayout()
+        self.layout_SP500.setObjectName(u"layout_SP500")
+        self.SP500_Label = QLabel(self.indices)
+        self.SP500_Label.setObjectName(u"SP500_Label")
+        self.SP500_Label.setMinimumSize(QSize(180, 0))
+        self.SP500_Label.setFont(font1)
+        self.SP500_Label.setFrameShape(QFrame.Shape.Box)
+        self.SP500_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_SP500.addWidget(self.SP500_Label)
+
+        self.SP500_Percentage = QLabel(self.indices)
+        self.SP500_Percentage.setObjectName(u"SP500_Percentage")
+        self.SP500_Percentage.setFont(font2)
+
+        self.layout_SP500.addWidget(self.SP500_Percentage)
+
+        self.SP500 = QLCDNumber(self.indices)
+        self.SP500.setObjectName(u"SP500")
+        self.SP500.setDigitCount(8)
+        self.SP500.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_SP500.addWidget(self.SP500)
+
+
+        self.verticalLayout.addLayout(self.layout_SP500)
+
+        self.layout_Nikkei225 = QHBoxLayout()
+        self.layout_Nikkei225.setObjectName(u"layout_Nikkei225")
+        self.Nikkei225_Label = QLabel(self.indices)
+        self.Nikkei225_Label.setObjectName(u"Nikkei225_Label")
+        self.Nikkei225_Label.setMinimumSize(QSize(180, 0))
+        self.Nikkei225_Label.setFont(font1)
+        self.Nikkei225_Label.setFrameShape(QFrame.Shape.Box)
+        self.Nikkei225_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_Nikkei225.addWidget(self.Nikkei225_Label)
+
+        self.Nikkei225_Percentage = QLabel(self.indices)
+        self.Nikkei225_Percentage.setObjectName(u"Nikkei225_Percentage")
+        self.Nikkei225_Percentage.setFont(font2)
+
+        self.layout_Nikkei225.addWidget(self.Nikkei225_Percentage)
+
+        self.Nikkei225 = QLCDNumber(self.indices)
+        self.Nikkei225.setObjectName(u"Nikkei225")
+        self.Nikkei225.setDigitCount(8)
+        self.Nikkei225.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_Nikkei225.addWidget(self.Nikkei225)
+
+
+        self.verticalLayout.addLayout(self.layout_Nikkei225)
+
+        self.layout_Hangseng = QHBoxLayout()
+        self.layout_Hangseng.setObjectName(u"layout_Hangseng")
+        self.Hangseng_Label = QLabel(self.indices)
+        self.Hangseng_Label.setObjectName(u"Hangseng_Label")
+        self.Hangseng_Label.setMinimumSize(QSize(180, 0))
+        self.Hangseng_Label.setFont(font1)
+        self.Hangseng_Label.setFrameShape(QFrame.Shape.Box)
+        self.Hangseng_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_Hangseng.addWidget(self.Hangseng_Label)
+
+        self.Hangseng_Percentage = QLabel(self.indices)
+        self.Hangseng_Percentage.setObjectName(u"Hangseng_Percentage")
+        self.Hangseng_Percentage.setFont(font2)
+
+        self.layout_Hangseng.addWidget(self.Hangseng_Percentage)
+
+        self.Hangseng = QLCDNumber(self.indices)
+        self.Hangseng.setObjectName(u"Hangseng")
+        self.Hangseng.setDigitCount(8)
+        self.Hangseng.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_Hangseng.addWidget(self.Hangseng)
+
+
+        self.verticalLayout.addLayout(self.layout_Hangseng)
+
+
+        self.gridLayout_3.addLayout(self.verticalLayout, 0, 0, 1, 1)
+
+        self.verticalLayout_3 = QVBoxLayout()
+        self.verticalLayout_3.setSpacing(8)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.indianIndicesHeader = QLabel(self.indices)
+        self.indianIndicesHeader.setObjectName(u"indianIndicesHeader")
+        self.indianIndicesHeader.setFont(font)
+        self.indianIndicesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.indianIndicesHeader)
+
+        self.layout_IndiaVix = QHBoxLayout()
+        self.layout_IndiaVix.setObjectName(u"layout_IndiaVix")
+        self.IndiaVix_Label = QLabel(self.indices)
+        self.IndiaVix_Label.setObjectName(u"IndiaVix_Label")
+        self.IndiaVix_Label.setMinimumSize(QSize(180, 0))
+        self.IndiaVix_Label.setFont(font1)
+        self.IndiaVix_Label.setFrameShape(QFrame.Shape.Box)
+        self.IndiaVix_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_IndiaVix.addWidget(self.IndiaVix_Label)
+
+        self.IndiaVix_Percentage = QLabel(self.indices)
+        self.IndiaVix_Percentage.setObjectName(u"IndiaVix_Percentage")
+        self.IndiaVix_Percentage.setFont(font2)
+
+        self.layout_IndiaVix.addWidget(self.IndiaVix_Percentage)
+
+        self.IndiaVix = QLCDNumber(self.indices)
+        self.IndiaVix.setObjectName(u"IndiaVix")
+        self.IndiaVix.setDigitCount(8)
+        self.IndiaVix.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_IndiaVix.addWidget(self.IndiaVix)
+
+
+        self.verticalLayout_3.addLayout(self.layout_IndiaVix)
+
+        self.layout_NiftyNext50 = QHBoxLayout()
+        self.layout_NiftyNext50.setObjectName(u"layout_NiftyNext50")
+        self.NiftyNext50_Label = QLabel(self.indices)
+        self.NiftyNext50_Label.setObjectName(u"NiftyNext50_Label")
+        self.NiftyNext50_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyNext50_Label.setFont(font1)
+        self.NiftyNext50_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyNext50_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NiftyNext50.addWidget(self.NiftyNext50_Label)
+
+        self.NiftyNext50_Percentage = QLabel(self.indices)
+        self.NiftyNext50_Percentage.setObjectName(u"NiftyNext50_Percentage")
+        self.NiftyNext50_Percentage.setFont(font2)
+
+        self.layout_NiftyNext50.addWidget(self.NiftyNext50_Percentage)
+
+        self.NiftyNext50 = QLCDNumber(self.indices)
+        self.NiftyNext50.setObjectName(u"NiftyNext50")
+        self.NiftyNext50.setDigitCount(8)
+        self.NiftyNext50.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NiftyNext50.addWidget(self.NiftyNext50)
+
+
+        self.verticalLayout_3.addLayout(self.layout_NiftyNext50)
+
+        self.layout_NiftyIT = QHBoxLayout()
+        self.layout_NiftyIT.setObjectName(u"layout_NiftyIT")
+        self.NiftyIT_Label = QLabel(self.indices)
+        self.NiftyIT_Label.setObjectName(u"NiftyIT_Label")
+        self.NiftyIT_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyIT_Label.setFont(font1)
+        self.NiftyIT_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyIT_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NiftyIT.addWidget(self.NiftyIT_Label)
+
+        self.NiftyIT_Percentage = QLabel(self.indices)
+        self.NiftyIT_Percentage.setObjectName(u"NiftyIT_Percentage")
+        self.NiftyIT_Percentage.setFont(font2)
+
+        self.layout_NiftyIT.addWidget(self.NiftyIT_Percentage)
+
+        self.NiftyIT = QLCDNumber(self.indices)
+        self.NiftyIT.setObjectName(u"NiftyIT")
+        self.NiftyIT.setDigitCount(8)
+        self.NiftyIT.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NiftyIT.addWidget(self.NiftyIT)
+
+
+        self.verticalLayout_3.addLayout(self.layout_NiftyIT)
+
+        self.layout_NiftyBank = QHBoxLayout()
+        self.layout_NiftyBank.setObjectName(u"layout_NiftyBank")
+        self.NiftyBank_Label = QLabel(self.indices)
+        self.NiftyBank_Label.setObjectName(u"NiftyBank_Label")
+        self.NiftyBank_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyBank_Label.setFont(font1)
+        self.NiftyBank_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyBank_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NiftyBank.addWidget(self.NiftyBank_Label)
+
+        self.NiftyBank_Percentage = QLabel(self.indices)
+        self.NiftyBank_Percentage.setObjectName(u"NiftyBank_Percentage")
+        self.NiftyBank_Percentage.setFont(font2)
+
+        self.layout_NiftyBank.addWidget(self.NiftyBank_Percentage)
+
+        self.NiftyBank = QLCDNumber(self.indices)
+        self.NiftyBank.setObjectName(u"NiftyBank")
+        self.NiftyBank.setDigitCount(8)
+        self.NiftyBank.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NiftyBank.addWidget(self.NiftyBank)
+
+
+        self.verticalLayout_3.addLayout(self.layout_NiftyBank)
+
+        self.layout_NiftySmallCap250 = QHBoxLayout()
+        self.layout_NiftySmallCap250.setObjectName(u"layout_NiftySmallCap250")
+        self.NiftySmallCap250_Label = QLabel(self.indices)
+        self.NiftySmallCap250_Label.setObjectName(u"NiftySmallCap250_Label")
+        self.NiftySmallCap250_Label.setMinimumSize(QSize(180, 0))
+        self.NiftySmallCap250_Label.setFont(font1)
+        self.NiftySmallCap250_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftySmallCap250_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250_Label)
+
+        self.NiftySmallCap250_Percentage = QLabel(self.indices)
+        self.NiftySmallCap250_Percentage.setObjectName(u"NiftySmallCap250_Percentage")
+        self.NiftySmallCap250_Percentage.setFont(font2)
+
+        self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250_Percentage)
+
+        self.NiftySmallCap250 = QLCDNumber(self.indices)
+        self.NiftySmallCap250.setObjectName(u"NiftySmallCap250")
+        self.NiftySmallCap250.setDigitCount(8)
+        self.NiftySmallCap250.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250)
+
+
+        self.verticalLayout_3.addLayout(self.layout_NiftySmallCap250)
+
+        self.layout_NiftyMidcap150 = QHBoxLayout()
+        self.layout_NiftyMidcap150.setObjectName(u"layout_NiftyMidcap150")
+        self.NiftyMidcap150_Label = QLabel(self.indices)
+        self.NiftyMidcap150_Label.setObjectName(u"NiftyMidcap150_Label")
+        self.NiftyMidcap150_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyMidcap150_Label.setFont(font1)
+        self.NiftyMidcap150_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyMidcap150_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150_Label)
+
+        self.NiftyMidcap150_Percentage = QLabel(self.indices)
+        self.NiftyMidcap150_Percentage.setObjectName(u"NiftyMidcap150_Percentage")
+        self.NiftyMidcap150_Percentage.setFont(font2)
+
+        self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150_Percentage)
+
+        self.NiftyMidcap150 = QLCDNumber(self.indices)
+        self.NiftyMidcap150.setObjectName(u"NiftyMidcap150")
+        self.NiftyMidcap150.setDigitCount(8)
+        self.NiftyMidcap150.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150)
+
+
+        self.verticalLayout_3.addLayout(self.layout_NiftyMidcap150)
+
+
+        self.gridLayout_3.addLayout(self.verticalLayout_3, 0, 2, 1, 1)
+
+        self.verticalLayout_2 = QVBoxLayout()
+        self.verticalLayout_2.setSpacing(8)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.commoditiesHeader = QLabel(self.indices)
+        self.commoditiesHeader.setObjectName(u"commoditiesHeader")
+        self.commoditiesHeader.setFont(font)
+        self.commoditiesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_2.addWidget(self.commoditiesHeader)
+
+        self.layout_Gold = QHBoxLayout()
+        self.layout_Gold.setObjectName(u"layout_Gold")
+        self.Gold_Label = QLabel(self.indices)
+        self.Gold_Label.setObjectName(u"Gold_Label")
+        self.Gold_Label.setMinimumSize(QSize(180, 0))
+        self.Gold_Label.setFont(font1)
+        self.Gold_Label.setFrameShape(QFrame.Shape.Box)
+        self.Gold_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_Gold.addWidget(self.Gold_Label)
+
+        self.Gold_Percentage = QLabel(self.indices)
+        self.Gold_Percentage.setObjectName(u"Gold_Percentage")
+        self.Gold_Percentage.setFont(font2)
+
+        self.layout_Gold.addWidget(self.Gold_Percentage)
+
+        self.Gold = QLCDNumber(self.indices)
+        self.Gold.setObjectName(u"Gold")
+        self.Gold.setDigitCount(8)
+        self.Gold.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_Gold.addWidget(self.Gold)
+
+
+        self.verticalLayout_2.addLayout(self.layout_Gold)
+
+        self.layout_Silver = QHBoxLayout()
+        self.layout_Silver.setObjectName(u"layout_Silver")
+        self.Silver_Label = QLabel(self.indices)
+        self.Silver_Label.setObjectName(u"Silver_Label")
+        self.Silver_Label.setMinimumSize(QSize(180, 0))
+        self.Silver_Label.setFont(font1)
+        self.Silver_Label.setFrameShape(QFrame.Shape.Box)
+        self.Silver_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_Silver.addWidget(self.Silver_Label)
+
+        self.Silver_Percentage = QLabel(self.indices)
+        self.Silver_Percentage.setObjectName(u"Silver_Percentage")
+        self.Silver_Percentage.setFont(font2)
+
+        self.layout_Silver.addWidget(self.Silver_Percentage)
+
+        self.Silver = QLCDNumber(self.indices)
+        self.Silver.setObjectName(u"Silver")
+        self.Silver.setDigitCount(8)
+        self.Silver.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_Silver.addWidget(self.Silver)
+
+
+        self.verticalLayout_2.addLayout(self.layout_Silver)
+
+        self.layout_BrentCrudeOil = QHBoxLayout()
+        self.layout_BrentCrudeOil.setObjectName(u"layout_BrentCrudeOil")
+        self.BrentCrudeOil_Label = QLabel(self.indices)
+        self.BrentCrudeOil_Label.setObjectName(u"BrentCrudeOil_Label")
+        self.BrentCrudeOil_Label.setMinimumSize(QSize(180, 0))
+        self.BrentCrudeOil_Label.setFont(font1)
+        self.BrentCrudeOil_Label.setFrameShape(QFrame.Shape.Box)
+        self.BrentCrudeOil_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil_Label)
+
+        self.BrentCrudeOil_Percentage = QLabel(self.indices)
+        self.BrentCrudeOil_Percentage.setObjectName(u"BrentCrudeOil_Percentage")
+        self.BrentCrudeOil_Percentage.setFont(font2)
+
+        self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil_Percentage)
+
+        self.BrentCrudeOil = QLCDNumber(self.indices)
+        self.BrentCrudeOil.setObjectName(u"BrentCrudeOil")
+        self.BrentCrudeOil.setAutoFillBackground(False)
+        self.BrentCrudeOil.setDigitCount(8)
+        self.BrentCrudeOil.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil)
+
+
+        self.verticalLayout_2.addLayout(self.layout_BrentCrudeOil)
+
+        self.layout_NaturalGas = QHBoxLayout()
+        self.layout_NaturalGas.setObjectName(u"layout_NaturalGas")
+        self.NaturalGas_Label = QLabel(self.indices)
+        self.NaturalGas_Label.setObjectName(u"NaturalGas_Label")
+        self.NaturalGas_Label.setMinimumSize(QSize(180, 0))
+        self.NaturalGas_Label.setFont(font1)
+        self.NaturalGas_Label.setFrameShape(QFrame.Shape.Box)
+        self.NaturalGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NaturalGas.addWidget(self.NaturalGas_Label)
+
+        self.NaturalGas_Percentage = QLabel(self.indices)
+        self.NaturalGas_Percentage.setObjectName(u"NaturalGas_Percentage")
+        self.NaturalGas_Percentage.setFont(font2)
+
+        self.layout_NaturalGas.addWidget(self.NaturalGas_Percentage)
+
+        self.NaturalGas = QLCDNumber(self.indices)
+        self.NaturalGas.setObjectName(u"NaturalGas")
+        self.NaturalGas.setDigitCount(8)
+        self.NaturalGas.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NaturalGas.addWidget(self.NaturalGas)
+
+
+        self.verticalLayout_2.addLayout(self.layout_NaturalGas)
+
+        self.layout_USDINR = QHBoxLayout()
+        self.layout_USDINR.setObjectName(u"layout_USDINR")
+        self.USDINR_Label = QLabel(self.indices)
+        self.USDINR_Label.setObjectName(u"USDINR_Label")
+        self.USDINR_Label.setMinimumSize(QSize(180, 0))
+        self.USDINR_Label.setFont(font1)
+        self.USDINR_Label.setFrameShape(QFrame.Shape.Box)
+        self.USDINR_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_USDINR.addWidget(self.USDINR_Label)
+
+        self.USDINR_Percentage = QLabel(self.indices)
+        self.USDINR_Percentage.setObjectName(u"USDINR_Percentage")
+        self.USDINR_Percentage.setFont(font2)
+
+        self.layout_USDINR.addWidget(self.USDINR_Percentage)
+
+        self.USDINR = QLCDNumber(self.indices)
+        self.USDINR.setObjectName(u"USDINR")
+        self.USDINR.setDigitCount(8)
+        self.USDINR.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_USDINR.addWidget(self.USDINR)
+
+
+        self.verticalLayout_2.addLayout(self.layout_USDINR)
+
+        self.layout_USVix = QHBoxLayout()
+        self.layout_USVix.setObjectName(u"layout_USVix")
+        self.USVix_Label = QLabel(self.indices)
+        self.USVix_Label.setObjectName(u"USVix_Label")
+        self.USVix_Label.setMinimumSize(QSize(180, 0))
+        self.USVix_Label.setFont(font1)
+        self.USVix_Label.setFrameShape(QFrame.Shape.Box)
+        self.USVix_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_USVix.addWidget(self.USVix_Label)
+
+        self.USVix_Percentage = QLabel(self.indices)
+        self.USVix_Percentage.setObjectName(u"USVix_Percentage")
+        self.USVix_Percentage.setFont(font2)
+
+        self.layout_USVix.addWidget(self.USVix_Percentage)
+
+        self.USVix = QLCDNumber(self.indices)
+        self.USVix.setObjectName(u"USVix")
+        self.USVix.setDigitCount(8)
+        self.USVix.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_USVix.addWidget(self.USVix)
+
+
+        self.verticalLayout_2.addLayout(self.layout_USVix)
+
+
+        self.gridLayout_3.addLayout(self.verticalLayout_2, 0, 1, 1, 1)
+
+        self.verticalLayout_4 = QVBoxLayout()
+        self.verticalLayout_4.setSpacing(8)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.moreIndicesHeader = QLabel(self.indices)
+        self.moreIndicesHeader.setObjectName(u"moreIndicesHeader")
+        self.moreIndicesHeader.setFont(font)
+        self.moreIndicesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_4.addWidget(self.moreIndicesHeader)
+
+        self.layout_NiftyFMCG = QHBoxLayout()
+        self.layout_NiftyFMCG.setObjectName(u"layout_NiftyFMCG")
+        self.NiftyFMCG_Label = QLabel(self.indices)
+        self.NiftyFMCG_Label.setObjectName(u"NiftyFMCG_Label")
+        self.NiftyFMCG_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyFMCG_Label.setFont(font1)
+        self.NiftyFMCG_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyFMCG_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NiftyFMCG.addWidget(self.NiftyFMCG_Label)
+
+        self.NiftyFMCG_Percentage = QLabel(self.indices)
+        self.NiftyFMCG_Percentage.setObjectName(u"NiftyFMCG_Percentage")
+        self.NiftyFMCG_Percentage.setFont(font2)
+
+        self.layout_NiftyFMCG.addWidget(self.NiftyFMCG_Percentage)
+
+        self.NiftyFMCG = QLCDNumber(self.indices)
+        self.NiftyFMCG.setObjectName(u"NiftyFMCG")
+        self.NiftyFMCG.setDigitCount(8)
+        self.NiftyFMCG.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NiftyFMCG.addWidget(self.NiftyFMCG)
+
+
+        self.verticalLayout_4.addLayout(self.layout_NiftyFMCG)
+
+        self.layout_NiftyAuto = QHBoxLayout()
+        self.layout_NiftyAuto.setObjectName(u"layout_NiftyAuto")
+        self.NiftyAuto_Label = QLabel(self.indices)
+        self.NiftyAuto_Label.setObjectName(u"NiftyAuto_Label")
+        self.NiftyAuto_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyAuto_Label.setFont(font1)
+        self.NiftyAuto_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyAuto_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NiftyAuto.addWidget(self.NiftyAuto_Label)
+
+        self.NiftyAuto_Percentage = QLabel(self.indices)
+        self.NiftyAuto_Percentage.setObjectName(u"NiftyAuto_Percentage")
+        self.NiftyAuto_Percentage.setFont(font2)
+
+        self.layout_NiftyAuto.addWidget(self.NiftyAuto_Percentage)
+
+        self.NiftyAuto = QLCDNumber(self.indices)
+        self.NiftyAuto.setObjectName(u"NiftyAuto")
+        self.NiftyAuto.setDigitCount(8)
+        self.NiftyAuto.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NiftyAuto.addWidget(self.NiftyAuto)
+
+
+        self.verticalLayout_4.addLayout(self.layout_NiftyAuto)
+
+        self.layout_NiftyPharma = QHBoxLayout()
+        self.layout_NiftyPharma.setObjectName(u"layout_NiftyPharma")
+        self.NiftyPharma_Label = QLabel(self.indices)
+        self.NiftyPharma_Label.setObjectName(u"NiftyPharma_Label")
+        self.NiftyPharma_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyPharma_Label.setFont(font1)
+        self.NiftyPharma_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyPharma_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NiftyPharma.addWidget(self.NiftyPharma_Label)
+
+        self.NiftyPharma_Percentage = QLabel(self.indices)
+        self.NiftyPharma_Percentage.setObjectName(u"NiftyPharma_Percentage")
+        self.NiftyPharma_Percentage.setFont(font2)
+
+        self.layout_NiftyPharma.addWidget(self.NiftyPharma_Percentage)
+
+        self.NiftyPharma = QLCDNumber(self.indices)
+        self.NiftyPharma.setObjectName(u"NiftyPharma")
+        self.NiftyPharma.setDigitCount(8)
+        self.NiftyPharma.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NiftyPharma.addWidget(self.NiftyPharma)
+
+
+        self.verticalLayout_4.addLayout(self.layout_NiftyPharma)
+
+        self.layout_NIftyOilGas = QHBoxLayout()
+        self.layout_NIftyOilGas.setObjectName(u"layout_NIftyOilGas")
+        self.NiftyOilGas_Label = QLabel(self.indices)
+        self.NiftyOilGas_Label.setObjectName(u"NiftyOilGas_Label")
+        self.NiftyOilGas_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyOilGas_Label.setFont(font1)
+        self.NiftyOilGas_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyOilGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NIftyOilGas.addWidget(self.NiftyOilGas_Label)
+
+        self.NiftyOilGas_Percentage = QLabel(self.indices)
+        self.NiftyOilGas_Percentage.setObjectName(u"NiftyOilGas_Percentage")
+        self.NiftyOilGas_Percentage.setFont(font2)
+
+        self.layout_NIftyOilGas.addWidget(self.NiftyOilGas_Percentage)
+
+        self.NiftyOilGas = QLCDNumber(self.indices)
+        self.NiftyOilGas.setObjectName(u"NiftyOilGas")
+        self.NiftyOilGas.setDigitCount(8)
+        self.NiftyOilGas.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NIftyOilGas.addWidget(self.NiftyOilGas)
+
+
+        self.verticalLayout_4.addLayout(self.layout_NIftyOilGas)
+
+        self.layout_NiftyIndiaDefence = QHBoxLayout()
+        self.layout_NiftyIndiaDefence.setObjectName(u"layout_NiftyIndiaDefence")
+        self.NiftyIndiaDefence_Label = QLabel(self.indices)
+        self.NiftyIndiaDefence_Label.setObjectName(u"NiftyIndiaDefence_Label")
+        self.NiftyIndiaDefence_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyIndiaDefence_Label.setFont(font1)
+        self.NiftyIndiaDefence_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyIndiaDefence_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence_Label)
+
+        self.NiftyIndiaDefence_Percentage = QLabel(self.indices)
+        self.NiftyIndiaDefence_Percentage.setObjectName(u"NiftyIndiaDefence_Percentage")
+        self.NiftyIndiaDefence_Percentage.setFont(font2)
+
+        self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence_Percentage)
+
+        self.NiftyIndiaDefence = QLCDNumber(self.indices)
+        self.NiftyIndiaDefence.setObjectName(u"NiftyIndiaDefence")
+        self.NiftyIndiaDefence.setDigitCount(8)
+        self.NiftyIndiaDefence.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence)
+
+
+        self.verticalLayout_4.addLayout(self.layout_NiftyIndiaDefence)
+
+        self.layout_NiftyEnergy = QHBoxLayout()
+        self.layout_NiftyEnergy.setObjectName(u"layout_NiftyEnergy")
+        self.NiftyEnergy_Label = QLabel(self.indices)
+        self.NiftyEnergy_Label.setObjectName(u"NiftyEnergy_Label")
+        self.NiftyEnergy_Label.setMinimumSize(QSize(180, 0))
+        self.NiftyEnergy_Label.setFont(font1)
+        self.NiftyEnergy_Label.setFrameShape(QFrame.Shape.Box)
+        self.NiftyEnergy_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.layout_NiftyEnergy.addWidget(self.NiftyEnergy_Label)
+
+        self.NiftyEnergy_Percentage = QLabel(self.indices)
+        self.NiftyEnergy_Percentage.setObjectName(u"NiftyEnergy_Percentage")
+        self.NiftyEnergy_Percentage.setFont(font2)
+
+        self.layout_NiftyEnergy.addWidget(self.NiftyEnergy_Percentage)
+
+        self.NiftyEnergy = QLCDNumber(self.indices)
+        self.NiftyEnergy.setObjectName(u"NiftyEnergy")
+        self.NiftyEnergy.setDigitCount(8)
+        self.NiftyEnergy.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        self.layout_NiftyEnergy.addWidget(self.NiftyEnergy)
+
+
+        self.verticalLayout_4.addLayout(self.layout_NiftyEnergy)
+
+
+        self.gridLayout_3.addLayout(self.verticalLayout_4, 1, 0, 1, 1)
+
+        self.sectoralWebViewThree = QWebEngineView(self.indices)
+        self.sectoralWebViewThree.setObjectName(u"sectoralWebViewThree")
+        self.sectoralWebViewThree.setUrl(QUrl(u"about:blank"))
+
+        self.gridLayout_3.addWidget(self.sectoralWebViewThree, 1, 1, 1, 2)
+
+        self.tabWidget.addTab(self.indices, "")
         self.sectoral = QWidget()
         self.sectoral.setObjectName(u"sectoral")
         self.gridLayout_5 = QGridLayout(self.sectoral)
@@ -152,7 +800,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2.addWidget(self.sectoralWebViewFour)
 
-
         self.verticalLayout_6.addLayout(self.horizontalLayout_2)
 
         self.NiftyHeatmapWebView = QWebEngineView(self.sectoral)
@@ -161,733 +808,86 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_6.addWidget(self.NiftyHeatmapWebView)
 
-
         self.gridLayout_5.addLayout(self.verticalLayout_6, 0, 1, 1, 1)
 
         self.tabWidget.addTab(self.sectoral, "")
-        self.indices = QWidget()
-        self.indices.setObjectName(u"indices")
-        self.gridLayout_3 = QGridLayout(self.indices)
-        self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.verticalLayout = QVBoxLayout()
-        self.verticalLayout.setSpacing(8)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.majorIndicesHeader = QLabel(self.indices)
-        self.majorIndicesHeader.setObjectName(u"majorIndicesHeader")
-        font1 = QFont()
-        font1.setFamilies([u"Segoe UI"])
-        font1.setPointSize(12)
-        font1.setWeight(QFont.DemiBold)
-        self.majorIndicesHeader.setFont(font1)
-        self.majorIndicesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.macro = QWidget()
+        self.macro.setObjectName(u"macro")
+        self.gridLayout_4 = QGridLayout(self.macro)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.macroWebView = QWebEngineView(self.macro)
+        self.macroWebView.setObjectName(u"macroWebView")
+        self.macroWebView.setUrl(QUrl(u"https://fred.stlouisfed.org/"))
 
-        self.verticalLayout.addWidget(self.majorIndicesHeader)
+        self.gridLayout_4.addWidget(self.macroWebView, 0, 0, 1, 1)
 
-        self.layout_MSCIWorld = QHBoxLayout()
-        self.layout_MSCIWorld.setObjectName(u"layout_MSCIWorld")
-        self.MSCIWorld_Label = QLabel(self.indices)
-        self.MSCIWorld_Label.setObjectName(u"MSCIWorld_Label")
-        self.MSCIWorld_Label.setMinimumSize(QSize(180, 0))
-        font2 = QFont()
-        font2.setFamilies([u"Segoe UI"])
-        font2.setPointSize(12)
-        font2.setBold(False)
-        self.MSCIWorld_Label.setFont(font2)
-        self.MSCIWorld_Label.setFrameShape(QFrame.Shape.Box)
-        self.MSCIWorld_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_MSCIWorld.addWidget(self.MSCIWorld_Label)
-
-        self.MSCIWorld_Percentage = QLabel(self.indices)
-        self.MSCIWorld_Percentage.setObjectName(u"MSCIWorld_Percentage")
+        self.tabWidget.addTab(self.macro, "")
+        self.aiTab = QWidget()
+        self.aiTab.setObjectName(u"aiTab")
+        self.gridLayout_2 = QGridLayout(self.aiTab)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.textBrowser = QTextBrowser(self.aiTab)
+        self.textBrowser.setObjectName(u"textBrowser")
         font3 = QFont()
-        font3.setPointSize(12)
-        font3.setBold(False)
-        self.MSCIWorld_Percentage.setFont(font3)
+        font3.setPointSize(14)
+        self.textBrowser.setFont(font3)
+        self.textBrowser.setTextInteractionFlags(Qt.TextInteractionFlag.NoTextInteraction)
+        self.textBrowser.setOpenExternalLinks(True)
 
-        self.layout_MSCIWorld.addWidget(self.MSCIWorld_Percentage)
+        self.gridLayout_2.addWidget(self.textBrowser, 0, 0, 1, 1)
 
-        self.MSCIWorld = QLCDNumber(self.indices)
-        self.MSCIWorld.setObjectName(u"MSCIWorld")
-        self.MSCIWorld.setDigitCount(8)
-        self.MSCIWorld.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.verticalLayout_5 = QVBoxLayout()
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.textEdit = QTextEdit(self.aiTab)
+        self.textEdit.setObjectName(u"textEdit")
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
+        self.textEdit.setSizePolicy(sizePolicy)
+        self.textEdit.setFont(font3)
+        self.textEdit.setTabChangesFocus(True)
 
-        self.layout_MSCIWorld.addWidget(self.MSCIWorld)
+        self.verticalLayout_5.addWidget(self.textEdit)
 
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
-        self.verticalLayout.addLayout(self.layout_MSCIWorld)
+        self.horizontalLayout.addItem(self.horizontalSpacer)
 
-        self.layout_Nifty50 = QHBoxLayout()
-        self.layout_Nifty50.setObjectName(u"layout_Nifty50")
-        self.Nifty50_Label = QLabel(self.indices)
-        self.Nifty50_Label.setObjectName(u"Nifty50_Label")
-        self.Nifty50_Label.setMinimumSize(QSize(180, 0))
-        self.Nifty50_Label.setFont(font2)
-        self.Nifty50_Label.setFrameShape(QFrame.Shape.Box)
-        self.Nifty50_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.send_msg_to_ai_btn = QPushButton(self.aiTab)
+        self.send_msg_to_ai_btn.setObjectName(u"send_msg_to_ai_btn")
 
-        self.layout_Nifty50.addWidget(self.Nifty50_Label)
+        self.horizontalLayout.addWidget(self.send_msg_to_ai_btn)
 
-        self.Nifty50_Percentage = QLabel(self.indices)
-        self.Nifty50_Percentage.setObjectName(u"Nifty50_Percentage")
-        self.Nifty50_Percentage.setFont(font3)
+        self.clear_prompt_btn = QPushButton(self.aiTab)
+        self.clear_prompt_btn.setObjectName(u"clear_prompt_btn")
 
-        self.layout_Nifty50.addWidget(self.Nifty50_Percentage)
+        self.horizontalLayout.addWidget(self.clear_prompt_btn)
 
-        self.Nifty50 = QLCDNumber(self.indices)
-        self.Nifty50.setObjectName(u"Nifty50")
-        self.Nifty50.setDigitCount(8)
-        self.Nifty50.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.attach_ai_btn = QPushButton(self.aiTab)
+        self.attach_ai_btn.setObjectName(u"attach_ai_btn")
+        self.attach_ai_btn.setEnabled(False)
 
-        self.layout_Nifty50.addWidget(self.Nifty50)
+        self.horizontalLayout.addWidget(self.attach_ai_btn)
 
+        self.verticalLayout_5.addLayout(self.horizontalLayout)
 
-        self.verticalLayout.addLayout(self.layout_Nifty50)
+        self.gridLayout_2.addLayout(self.verticalLayout_5, 1, 0, 1, 1)
 
-        self.layout_Nasdaq100 = QHBoxLayout()
-        self.layout_Nasdaq100.setObjectName(u"layout_Nasdaq100")
-        self.Nasdaq100_Label = QLabel(self.indices)
-        self.Nasdaq100_Label.setObjectName(u"Nasdaq100_Label")
-        self.Nasdaq100_Label.setMinimumSize(QSize(180, 0))
-        self.Nasdaq100_Label.setFont(font2)
-        self.Nasdaq100_Label.setFrameShape(QFrame.Shape.Box)
-        self.Nasdaq100_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.tabWidget.addTab(self.aiTab, "")
+        self.aboutTab = QWidget()
+        self.aboutTab.setObjectName(u"aboutTab")
+        self.verticalLayout_7 = QVBoxLayout(self.aboutTab)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.aboutTabWebView = QWebEngineView(self.aboutTab)
+        self.aboutTabWebView.setObjectName(u"aboutTabWebView")
+        self.aboutTabWebView.setUrl(QUrl(u"about:blank"))
 
-        self.layout_Nasdaq100.addWidget(self.Nasdaq100_Label)
+        self.verticalLayout_7.addWidget(self.aboutTabWebView)
 
-        self.Nasdaq100_Percentage = QLabel(self.indices)
-        self.Nasdaq100_Percentage.setObjectName(u"Nasdaq100_Percentage")
-        self.Nasdaq100_Percentage.setFont(font3)
-
-        self.layout_Nasdaq100.addWidget(self.Nasdaq100_Percentage)
-
-        self.Nasdaq100 = QLCDNumber(self.indices)
-        self.Nasdaq100.setObjectName(u"Nasdaq100")
-        self.Nasdaq100.setDigitCount(8)
-        self.Nasdaq100.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_Nasdaq100.addWidget(self.Nasdaq100)
-
-
-        self.verticalLayout.addLayout(self.layout_Nasdaq100)
-
-        self.layout_SP500 = QHBoxLayout()
-        self.layout_SP500.setObjectName(u"layout_SP500")
-        self.SP500_Label = QLabel(self.indices)
-        self.SP500_Label.setObjectName(u"SP500_Label")
-        self.SP500_Label.setMinimumSize(QSize(180, 0))
-        self.SP500_Label.setFont(font2)
-        self.SP500_Label.setFrameShape(QFrame.Shape.Box)
-        self.SP500_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_SP500.addWidget(self.SP500_Label)
-
-        self.SP500_Percentage = QLabel(self.indices)
-        self.SP500_Percentage.setObjectName(u"SP500_Percentage")
-        self.SP500_Percentage.setFont(font3)
-
-        self.layout_SP500.addWidget(self.SP500_Percentage)
-
-        self.SP500 = QLCDNumber(self.indices)
-        self.SP500.setObjectName(u"SP500")
-        self.SP500.setDigitCount(8)
-        self.SP500.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_SP500.addWidget(self.SP500)
-
-
-        self.verticalLayout.addLayout(self.layout_SP500)
-
-        self.layout_Nikkei225 = QHBoxLayout()
-        self.layout_Nikkei225.setObjectName(u"layout_Nikkei225")
-        self.Nikkei225_Label = QLabel(self.indices)
-        self.Nikkei225_Label.setObjectName(u"Nikkei225_Label")
-        self.Nikkei225_Label.setMinimumSize(QSize(180, 0))
-        self.Nikkei225_Label.setFont(font2)
-        self.Nikkei225_Label.setFrameShape(QFrame.Shape.Box)
-        self.Nikkei225_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_Nikkei225.addWidget(self.Nikkei225_Label)
-
-        self.Nikkei225_Percentage = QLabel(self.indices)
-        self.Nikkei225_Percentage.setObjectName(u"Nikkei225_Percentage")
-        self.Nikkei225_Percentage.setFont(font3)
-
-        self.layout_Nikkei225.addWidget(self.Nikkei225_Percentage)
-
-        self.Nikkei225 = QLCDNumber(self.indices)
-        self.Nikkei225.setObjectName(u"Nikkei225")
-        self.Nikkei225.setDigitCount(8)
-        self.Nikkei225.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_Nikkei225.addWidget(self.Nikkei225)
-
-
-        self.verticalLayout.addLayout(self.layout_Nikkei225)
-
-        self.layout_Hangseng = QHBoxLayout()
-        self.layout_Hangseng.setObjectName(u"layout_Hangseng")
-        self.Hangseng_Label = QLabel(self.indices)
-        self.Hangseng_Label.setObjectName(u"Hangseng_Label")
-        self.Hangseng_Label.setMinimumSize(QSize(180, 0))
-        self.Hangseng_Label.setFont(font2)
-        self.Hangseng_Label.setFrameShape(QFrame.Shape.Box)
-        self.Hangseng_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_Hangseng.addWidget(self.Hangseng_Label)
-
-        self.Hangseng_Percentage = QLabel(self.indices)
-        self.Hangseng_Percentage.setObjectName(u"Hangseng_Percentage")
-        self.Hangseng_Percentage.setFont(font3)
-
-        self.layout_Hangseng.addWidget(self.Hangseng_Percentage)
-
-        self.Hangseng = QLCDNumber(self.indices)
-        self.Hangseng.setObjectName(u"Hangseng")
-        self.Hangseng.setDigitCount(8)
-        self.Hangseng.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_Hangseng.addWidget(self.Hangseng)
-
-
-        self.verticalLayout.addLayout(self.layout_Hangseng)
-
-
-        self.gridLayout_3.addLayout(self.verticalLayout, 0, 0, 1, 1)
-
-        self.verticalLayout_3 = QVBoxLayout()
-        self.verticalLayout_3.setSpacing(8)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.indianIndicesHeader = QLabel(self.indices)
-        self.indianIndicesHeader.setObjectName(u"indianIndicesHeader")
-        self.indianIndicesHeader.setFont(font1)
-        self.indianIndicesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.verticalLayout_3.addWidget(self.indianIndicesHeader)
-
-        self.layout_IndiaVix = QHBoxLayout()
-        self.layout_IndiaVix.setObjectName(u"layout_IndiaVix")
-        self.IndiaVix_Label = QLabel(self.indices)
-        self.IndiaVix_Label.setObjectName(u"IndiaVix_Label")
-        self.IndiaVix_Label.setMinimumSize(QSize(180, 0))
-        self.IndiaVix_Label.setFont(font2)
-        self.IndiaVix_Label.setFrameShape(QFrame.Shape.Box)
-        self.IndiaVix_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_IndiaVix.addWidget(self.IndiaVix_Label)
-
-        self.IndiaVix_Percentage = QLabel(self.indices)
-        self.IndiaVix_Percentage.setObjectName(u"IndiaVix_Percentage")
-        self.IndiaVix_Percentage.setFont(font3)
-
-        self.layout_IndiaVix.addWidget(self.IndiaVix_Percentage)
-
-        self.IndiaVix = QLCDNumber(self.indices)
-        self.IndiaVix.setObjectName(u"IndiaVix")
-        self.IndiaVix.setDigitCount(8)
-        self.IndiaVix.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_IndiaVix.addWidget(self.IndiaVix)
-
-
-        self.verticalLayout_3.addLayout(self.layout_IndiaVix)
-
-        self.layout_NiftyNext50 = QHBoxLayout()
-        self.layout_NiftyNext50.setObjectName(u"layout_NiftyNext50")
-        self.NiftyNext50_Label = QLabel(self.indices)
-        self.NiftyNext50_Label.setObjectName(u"NiftyNext50_Label")
-        self.NiftyNext50_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyNext50_Label.setFont(font2)
-        self.NiftyNext50_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftyNext50_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NiftyNext50.addWidget(self.NiftyNext50_Label)
-
-        self.NiftyNext50_Percentage = QLabel(self.indices)
-        self.NiftyNext50_Percentage.setObjectName(u"NiftyNext50_Percentage")
-        self.NiftyNext50_Percentage.setFont(font3)
-
-        self.layout_NiftyNext50.addWidget(self.NiftyNext50_Percentage)
-
-        self.NiftyNext50 = QLCDNumber(self.indices)
-        self.NiftyNext50.setObjectName(u"NiftyNext50")
-        self.NiftyNext50.setDigitCount(8)
-        self.NiftyNext50.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NiftyNext50.addWidget(self.NiftyNext50)
-
-
-        self.verticalLayout_3.addLayout(self.layout_NiftyNext50)
-
-        self.layout_NiftyIT = QHBoxLayout()
-        self.layout_NiftyIT.setObjectName(u"layout_NiftyIT")
-        self.NiftyIT_Label = QLabel(self.indices)
-        self.NiftyIT_Label.setObjectName(u"NiftyIT_Label")
-        self.NiftyIT_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyIT_Label.setFont(font2)
-        self.NiftyIT_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftyIT_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NiftyIT.addWidget(self.NiftyIT_Label)
-
-        self.NiftyIT_Percentage = QLabel(self.indices)
-        self.NiftyIT_Percentage.setObjectName(u"NiftyIT_Percentage")
-        self.NiftyIT_Percentage.setFont(font3)
-
-        self.layout_NiftyIT.addWidget(self.NiftyIT_Percentage)
-
-        self.NiftyIT = QLCDNumber(self.indices)
-        self.NiftyIT.setObjectName(u"NiftyIT")
-        self.NiftyIT.setDigitCount(8)
-        self.NiftyIT.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NiftyIT.addWidget(self.NiftyIT)
-
-
-        self.verticalLayout_3.addLayout(self.layout_NiftyIT)
-
-        self.layout_NiftyBank = QHBoxLayout()
-        self.layout_NiftyBank.setObjectName(u"layout_NiftyBank")
-        self.NiftyBank_Label = QLabel(self.indices)
-        self.NiftyBank_Label.setObjectName(u"NiftyBank_Label")
-        self.NiftyBank_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyBank_Label.setFont(font2)
-        self.NiftyBank_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftyBank_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NiftyBank.addWidget(self.NiftyBank_Label)
-
-        self.NiftyBank_Percentage = QLabel(self.indices)
-        self.NiftyBank_Percentage.setObjectName(u"NiftyBank_Percentage")
-        self.NiftyBank_Percentage.setFont(font3)
-
-        self.layout_NiftyBank.addWidget(self.NiftyBank_Percentage)
-
-        self.NiftyBank = QLCDNumber(self.indices)
-        self.NiftyBank.setObjectName(u"NiftyBank")
-        self.NiftyBank.setDigitCount(8)
-        self.NiftyBank.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NiftyBank.addWidget(self.NiftyBank)
-
-
-        self.verticalLayout_3.addLayout(self.layout_NiftyBank)
-
-        self.layout_NiftySmallCap250 = QHBoxLayout()
-        self.layout_NiftySmallCap250.setObjectName(u"layout_NiftySmallCap250")
-        self.NiftySmallCap250_Label = QLabel(self.indices)
-        self.NiftySmallCap250_Label.setObjectName(u"NiftySmallCap250_Label")
-        self.NiftySmallCap250_Label.setMinimumSize(QSize(180, 0))
-        self.NiftySmallCap250_Label.setFont(font2)
-        self.NiftySmallCap250_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftySmallCap250_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250_Label)
-
-        self.NiftySmallCap250_Percentage = QLabel(self.indices)
-        self.NiftySmallCap250_Percentage.setObjectName(u"NiftySmallCap250_Percentage")
-        self.NiftySmallCap250_Percentage.setFont(font3)
-
-        self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250_Percentage)
-
-        self.NiftySmallCap250 = QLCDNumber(self.indices)
-        self.NiftySmallCap250.setObjectName(u"NiftySmallCap250")
-        self.NiftySmallCap250.setDigitCount(8)
-        self.NiftySmallCap250.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250)
-
-
-        self.verticalLayout_3.addLayout(self.layout_NiftySmallCap250)
-
-        self.layout_NiftyMidcap150 = QHBoxLayout()
-        self.layout_NiftyMidcap150.setObjectName(u"layout_NiftyMidcap150")
-        self.NiftyMidcap150_Label = QLabel(self.indices)
-        self.NiftyMidcap150_Label.setObjectName(u"NiftyMidcap150_Label")
-        self.NiftyMidcap150_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyMidcap150_Label.setFont(font2)
-        self.NiftyMidcap150_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftyMidcap150_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150_Label)
-
-        self.NiftyMidcap150_Percentage = QLabel(self.indices)
-        self.NiftyMidcap150_Percentage.setObjectName(u"NiftyMidcap150_Percentage")
-        self.NiftyMidcap150_Percentage.setFont(font3)
-
-        self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150_Percentage)
-
-        self.NiftyMidcap150 = QLCDNumber(self.indices)
-        self.NiftyMidcap150.setObjectName(u"NiftyMidcap150")
-        self.NiftyMidcap150.setDigitCount(8)
-        self.NiftyMidcap150.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150)
-
-
-        self.verticalLayout_3.addLayout(self.layout_NiftyMidcap150)
-
-
-        self.gridLayout_3.addLayout(self.verticalLayout_3, 0, 2, 1, 1)
-
-        self.verticalLayout_2 = QVBoxLayout()
-        self.verticalLayout_2.setSpacing(8)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.commoditiesHeader = QLabel(self.indices)
-        self.commoditiesHeader.setObjectName(u"commoditiesHeader")
-        self.commoditiesHeader.setFont(font1)
-        self.commoditiesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.verticalLayout_2.addWidget(self.commoditiesHeader)
-
-        self.layout_Gold = QHBoxLayout()
-        self.layout_Gold.setObjectName(u"layout_Gold")
-        self.Gold_Label = QLabel(self.indices)
-        self.Gold_Label.setObjectName(u"Gold_Label")
-        self.Gold_Label.setMinimumSize(QSize(180, 0))
-        self.Gold_Label.setFont(font2)
-        self.Gold_Label.setFrameShape(QFrame.Shape.Box)
-        self.Gold_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_Gold.addWidget(self.Gold_Label)
-
-        self.Gold_Percentage = QLabel(self.indices)
-        self.Gold_Percentage.setObjectName(u"Gold_Percentage")
-        self.Gold_Percentage.setFont(font3)
-
-        self.layout_Gold.addWidget(self.Gold_Percentage)
-
-        self.Gold = QLCDNumber(self.indices)
-        self.Gold.setObjectName(u"Gold")
-        self.Gold.setDigitCount(8)
-        self.Gold.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_Gold.addWidget(self.Gold)
-
-
-        self.verticalLayout_2.addLayout(self.layout_Gold)
-
-        self.layout_Silver = QHBoxLayout()
-        self.layout_Silver.setObjectName(u"layout_Silver")
-        self.Silver_Label = QLabel(self.indices)
-        self.Silver_Label.setObjectName(u"Silver_Label")
-        self.Silver_Label.setMinimumSize(QSize(180, 0))
-        self.Silver_Label.setFont(font2)
-        self.Silver_Label.setFrameShape(QFrame.Shape.Box)
-        self.Silver_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_Silver.addWidget(self.Silver_Label)
-
-        self.Silver_Percentage = QLabel(self.indices)
-        self.Silver_Percentage.setObjectName(u"Silver_Percentage")
-        self.Silver_Percentage.setFont(font3)
-
-        self.layout_Silver.addWidget(self.Silver_Percentage)
-
-        self.Silver = QLCDNumber(self.indices)
-        self.Silver.setObjectName(u"Silver")
-        self.Silver.setDigitCount(8)
-        self.Silver.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_Silver.addWidget(self.Silver)
-
-
-        self.verticalLayout_2.addLayout(self.layout_Silver)
-
-        self.layout_BrentCrudeOil = QHBoxLayout()
-        self.layout_BrentCrudeOil.setObjectName(u"layout_BrentCrudeOil")
-        self.BrentCrudeOil_Label = QLabel(self.indices)
-        self.BrentCrudeOil_Label.setObjectName(u"BrentCrudeOil_Label")
-        self.BrentCrudeOil_Label.setMinimumSize(QSize(180, 0))
-        self.BrentCrudeOil_Label.setFont(font2)
-        self.BrentCrudeOil_Label.setFrameShape(QFrame.Shape.Box)
-        self.BrentCrudeOil_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil_Label)
-
-        self.BrentCrudeOil_Percentage = QLabel(self.indices)
-        self.BrentCrudeOil_Percentage.setObjectName(u"BrentCrudeOil_Percentage")
-        self.BrentCrudeOil_Percentage.setFont(font3)
-
-        self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil_Percentage)
-
-        self.BrentCrudeOil = QLCDNumber(self.indices)
-        self.BrentCrudeOil.setObjectName(u"BrentCrudeOil")
-        self.BrentCrudeOil.setAutoFillBackground(False)
-        self.BrentCrudeOil.setDigitCount(8)
-        self.BrentCrudeOil.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil)
-
-
-        self.verticalLayout_2.addLayout(self.layout_BrentCrudeOil)
-
-        self.layout_NaturalGas = QHBoxLayout()
-        self.layout_NaturalGas.setObjectName(u"layout_NaturalGas")
-        self.NaturalGas_Label = QLabel(self.indices)
-        self.NaturalGas_Label.setObjectName(u"NaturalGas_Label")
-        self.NaturalGas_Label.setMinimumSize(QSize(180, 0))
-        self.NaturalGas_Label.setFont(font2)
-        self.NaturalGas_Label.setFrameShape(QFrame.Shape.Box)
-        self.NaturalGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NaturalGas.addWidget(self.NaturalGas_Label)
-
-        self.NaturalGas_Percentage = QLabel(self.indices)
-        self.NaturalGas_Percentage.setObjectName(u"NaturalGas_Percentage")
-        self.NaturalGas_Percentage.setFont(font3)
-
-        self.layout_NaturalGas.addWidget(self.NaturalGas_Percentage)
-
-        self.NaturalGas = QLCDNumber(self.indices)
-        self.NaturalGas.setObjectName(u"NaturalGas")
-        self.NaturalGas.setDigitCount(8)
-        self.NaturalGas.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NaturalGas.addWidget(self.NaturalGas)
-
-
-        self.verticalLayout_2.addLayout(self.layout_NaturalGas)
-
-        self.layout_USDINR = QHBoxLayout()
-        self.layout_USDINR.setObjectName(u"layout_USDINR")
-        self.USDINR_Label = QLabel(self.indices)
-        self.USDINR_Label.setObjectName(u"USDINR_Label")
-        self.USDINR_Label.setMinimumSize(QSize(180, 0))
-        self.USDINR_Label.setFont(font2)
-        self.USDINR_Label.setFrameShape(QFrame.Shape.Box)
-        self.USDINR_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_USDINR.addWidget(self.USDINR_Label)
-
-        self.USDINR_Percentage = QLabel(self.indices)
-        self.USDINR_Percentage.setObjectName(u"USDINR_Percentage")
-        self.USDINR_Percentage.setFont(font3)
-
-        self.layout_USDINR.addWidget(self.USDINR_Percentage)
-
-        self.USDINR = QLCDNumber(self.indices)
-        self.USDINR.setObjectName(u"USDINR")
-        self.USDINR.setDigitCount(8)
-        self.USDINR.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_USDINR.addWidget(self.USDINR)
-
-
-        self.verticalLayout_2.addLayout(self.layout_USDINR)
-
-        self.layout_USVix = QHBoxLayout()
-        self.layout_USVix.setObjectName(u"layout_USVix")
-        self.USVix_Label = QLabel(self.indices)
-        self.USVix_Label.setObjectName(u"USVix_Label")
-        self.USVix_Label.setMinimumSize(QSize(180, 0))
-        self.USVix_Label.setFont(font2)
-        self.USVix_Label.setFrameShape(QFrame.Shape.Box)
-        self.USVix_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_USVix.addWidget(self.USVix_Label)
-
-        self.USVix_Percentage = QLabel(self.indices)
-        self.USVix_Percentage.setObjectName(u"USVix_Percentage")
-        self.USVix_Percentage.setFont(font3)
-
-        self.layout_USVix.addWidget(self.USVix_Percentage)
-
-        self.USVix = QLCDNumber(self.indices)
-        self.USVix.setObjectName(u"USVix")
-        self.USVix.setDigitCount(8)
-        self.USVix.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_USVix.addWidget(self.USVix)
-
-
-        self.verticalLayout_2.addLayout(self.layout_USVix)
-
-
-        self.gridLayout_3.addLayout(self.verticalLayout_2, 0, 1, 1, 1)
-
-        self.verticalLayout_4 = QVBoxLayout()
-        self.verticalLayout_4.setSpacing(8)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.moreIndicesHeader = QLabel(self.indices)
-        self.moreIndicesHeader.setObjectName(u"moreIndicesHeader")
-        self.moreIndicesHeader.setFont(font1)
-        self.moreIndicesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.verticalLayout_4.addWidget(self.moreIndicesHeader)
-
-        self.layout_NiftyFMCG = QHBoxLayout()
-        self.layout_NiftyFMCG.setObjectName(u"layout_NiftyFMCG")
-        self.NiftyFMCG_Label = QLabel(self.indices)
-        self.NiftyFMCG_Label.setObjectName(u"NiftyFMCG_Label")
-        self.NiftyFMCG_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyFMCG_Label.setFont(font2)
-        self.NiftyFMCG_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftyFMCG_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NiftyFMCG.addWidget(self.NiftyFMCG_Label)
-
-        self.NiftyFMCG_Percentage = QLabel(self.indices)
-        self.NiftyFMCG_Percentage.setObjectName(u"NiftyFMCG_Percentage")
-        self.NiftyFMCG_Percentage.setFont(font3)
-
-        self.layout_NiftyFMCG.addWidget(self.NiftyFMCG_Percentage)
-
-        self.NiftyFMCG = QLCDNumber(self.indices)
-        self.NiftyFMCG.setObjectName(u"NiftyFMCG")
-        self.NiftyFMCG.setDigitCount(8)
-        self.NiftyFMCG.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NiftyFMCG.addWidget(self.NiftyFMCG)
-
-
-        self.verticalLayout_4.addLayout(self.layout_NiftyFMCG)
-
-        self.layout_NiftyAuto = QHBoxLayout()
-        self.layout_NiftyAuto.setObjectName(u"layout_NiftyAuto")
-        self.NiftyAuto_Label = QLabel(self.indices)
-        self.NiftyAuto_Label.setObjectName(u"NiftyAuto_Label")
-        self.NiftyAuto_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyAuto_Label.setFont(font2)
-        self.NiftyAuto_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftyAuto_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NiftyAuto.addWidget(self.NiftyAuto_Label)
-
-        self.NiftyAuto_Percentage = QLabel(self.indices)
-        self.NiftyAuto_Percentage.setObjectName(u"NiftyAuto_Percentage")
-        self.NiftyAuto_Percentage.setFont(font3)
-
-        self.layout_NiftyAuto.addWidget(self.NiftyAuto_Percentage)
-
-        self.NiftyAuto = QLCDNumber(self.indices)
-        self.NiftyAuto.setObjectName(u"NiftyAuto")
-        self.NiftyAuto.setDigitCount(8)
-        self.NiftyAuto.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NiftyAuto.addWidget(self.NiftyAuto)
-
-
-        self.verticalLayout_4.addLayout(self.layout_NiftyAuto)
-
-        self.layout_NiftyPharma = QHBoxLayout()
-        self.layout_NiftyPharma.setObjectName(u"layout_NiftyPharma")
-        self.NiftyPharma_Label = QLabel(self.indices)
-        self.NiftyPharma_Label.setObjectName(u"NiftyPharma_Label")
-        self.NiftyPharma_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyPharma_Label.setFont(font2)
-        self.NiftyPharma_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftyPharma_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NiftyPharma.addWidget(self.NiftyPharma_Label)
-
-        self.NiftyPharma_Percentage = QLabel(self.indices)
-        self.NiftyPharma_Percentage.setObjectName(u"NiftyPharma_Percentage")
-        self.NiftyPharma_Percentage.setFont(font3)
-
-        self.layout_NiftyPharma.addWidget(self.NiftyPharma_Percentage)
-
-        self.NiftyPharma = QLCDNumber(self.indices)
-        self.NiftyPharma.setObjectName(u"NiftyPharma")
-        self.NiftyPharma.setDigitCount(8)
-        self.NiftyPharma.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NiftyPharma.addWidget(self.NiftyPharma)
-
-
-        self.verticalLayout_4.addLayout(self.layout_NiftyPharma)
-
-        self.layout_NIftyOilGas = QHBoxLayout()
-        self.layout_NIftyOilGas.setObjectName(u"layout_NIftyOilGas")
-        self.NiftyOilGas_Label = QLabel(self.indices)
-        self.NiftyOilGas_Label.setObjectName(u"NiftyOilGas_Label")
-        self.NiftyOilGas_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyOilGas_Label.setFont(font2)
-        self.NiftyOilGas_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftyOilGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NIftyOilGas.addWidget(self.NiftyOilGas_Label)
-
-        self.NiftyOilGas_Percentage = QLabel(self.indices)
-        self.NiftyOilGas_Percentage.setObjectName(u"NiftyOilGas_Percentage")
-        self.NiftyOilGas_Percentage.setFont(font3)
-
-        self.layout_NIftyOilGas.addWidget(self.NiftyOilGas_Percentage)
-
-        self.NiftyOilGas = QLCDNumber(self.indices)
-        self.NiftyOilGas.setObjectName(u"NiftyOilGas")
-        self.NiftyOilGas.setDigitCount(8)
-        self.NiftyOilGas.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NIftyOilGas.addWidget(self.NiftyOilGas)
-
-
-        self.verticalLayout_4.addLayout(self.layout_NIftyOilGas)
-
-        self.layout_NiftyIndiaDefence = QHBoxLayout()
-        self.layout_NiftyIndiaDefence.setObjectName(u"layout_NiftyIndiaDefence")
-        self.NiftyIndiaDefence_Label = QLabel(self.indices)
-        self.NiftyIndiaDefence_Label.setObjectName(u"NiftyIndiaDefence_Label")
-        self.NiftyIndiaDefence_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyIndiaDefence_Label.setFont(font2)
-        self.NiftyIndiaDefence_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftyIndiaDefence_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence_Label)
-
-        self.NiftyIndiaDefence_Percentage = QLabel(self.indices)
-        self.NiftyIndiaDefence_Percentage.setObjectName(u"NiftyIndiaDefence_Percentage")
-        self.NiftyIndiaDefence_Percentage.setFont(font3)
-
-        self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence_Percentage)
-
-        self.NiftyIndiaDefence = QLCDNumber(self.indices)
-        self.NiftyIndiaDefence.setObjectName(u"NiftyIndiaDefence")
-        self.NiftyIndiaDefence.setDigitCount(8)
-        self.NiftyIndiaDefence.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence)
-
-
-        self.verticalLayout_4.addLayout(self.layout_NiftyIndiaDefence)
-
-        self.layout_NiftyEnergy = QHBoxLayout()
-        self.layout_NiftyEnergy.setObjectName(u"layout_NiftyEnergy")
-        self.NiftyEnergy_Label = QLabel(self.indices)
-        self.NiftyEnergy_Label.setObjectName(u"NiftyEnergy_Label")
-        self.NiftyEnergy_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyEnergy_Label.setFont(font2)
-        self.NiftyEnergy_Label.setFrameShape(QFrame.Shape.Box)
-        self.NiftyEnergy_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.layout_NiftyEnergy.addWidget(self.NiftyEnergy_Label)
-
-        self.NiftyEnergy_Percentage = QLabel(self.indices)
-        self.NiftyEnergy_Percentage.setObjectName(u"NiftyEnergy_Percentage")
-        self.NiftyEnergy_Percentage.setFont(font3)
-
-        self.layout_NiftyEnergy.addWidget(self.NiftyEnergy_Percentage)
-
-        self.NiftyEnergy = QLCDNumber(self.indices)
-        self.NiftyEnergy.setObjectName(u"NiftyEnergy")
-        self.NiftyEnergy.setDigitCount(8)
-        self.NiftyEnergy.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
-
-        self.layout_NiftyEnergy.addWidget(self.NiftyEnergy)
-
-
-        self.verticalLayout_4.addLayout(self.layout_NiftyEnergy)
-
-
-        self.gridLayout_3.addLayout(self.verticalLayout_4, 1, 0, 1, 1)
-
-        self.sectoralWebViewThree = QWebEngineView(self.indices)
-        self.sectoralWebViewThree.setObjectName(u"sectoralWebViewThree")
-        self.sectoralWebViewThree.setUrl(QUrl(u"about:blank"))
-
-        self.gridLayout_3.addWidget(self.sectoralWebViewThree, 1, 1, 1, 2)
-
-        self.tabWidget.addTab(self.indices, "")
+        self.tabWidget.addTab(self.aboutTab, "")
 
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
 
@@ -899,7 +899,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1087,19 +1087,6 @@ class Ui_MainWindow(object):
 "            ", None))
         self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Quit", None))
         self.actionAbout.setText(QCoreApplication.translate("MainWindow", u"About", None))
-        self.textBrowser.setPlaceholderText(QCoreApplication.translate("MainWindow", u"AI assistant will reply here... Please note this is not a chat, no history of your messages will be kept in the context.", None))
-        self.textEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Enter your prompt here...", None))
-        self.send_msg_to_ai_btn.setText(QCoreApplication.translate("MainWindow", u"Send", None))
-        self.clear_prompt_btn.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
-        self.attach_ai_btn.setText(QCoreApplication.translate("MainWindow", u"Attach", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.aiTab), QCoreApplication.translate("MainWindow", u"Ask AI", None))
-#if QT_CONFIG(tooltip)
-        self.tabWidget.setTabToolTip(self.tabWidget.indexOf(self.aiTab), QCoreApplication.translate("MainWindow", u"Here you can send a message to Gemini and ask for it's input", None))
-#endif // QT_CONFIG(tooltip)
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.macro), QCoreApplication.translate("MainWindow", u"Macro", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.financials), QCoreApplication.translate("MainWindow", u"Financials", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.annualReports), QCoreApplication.translate("MainWindow", u"Annual Reports", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.sectoral), QCoreApplication.translate("MainWindow", u"Sectoral", None))
         self.majorIndicesHeader.setStyleSheet(QCoreApplication.translate("MainWindow", u"color: white; padding: 8px; border-radius: 4px;", None))
         self.majorIndicesHeader.setText(QCoreApplication.translate("MainWindow", u"MAJOR INDICES", None))
         self.MSCIWorld_Label.setText(QCoreApplication.translate("MainWindow", u"MSCI World", None))
@@ -1160,5 +1147,25 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(tooltip)
         self.tabWidget.setTabToolTip(self.tabWidget.indexOf(self.indices), QCoreApplication.translate("MainWindow", u"Indices all over the world", None))
 #endif // QT_CONFIG(tooltip)
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.sectoral),
+                                  QCoreApplication.translate("MainWindow", u"Sectoral", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.macro),
+                                  QCoreApplication.translate("MainWindow", u"Macro", None))
+        self.textBrowser.setPlaceholderText(QCoreApplication.translate("MainWindow",
+                                                                       u"AI assistant will reply here... Please note this is not a chat, no history of your messages will be kept in the context.",
+                                                                       None))
+        self.textEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Enter your prompt here...", None))
+        self.send_msg_to_ai_btn.setText(QCoreApplication.translate("MainWindow", u"Send", None))
+        self.clear_prompt_btn.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
+        self.attach_ai_btn.setText(QCoreApplication.translate("MainWindow", u"Attach", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.aiTab),
+                                  QCoreApplication.translate("MainWindow", u"Ask AI", None))
+        # if QT_CONFIG(tooltip)
+        self.tabWidget.setTabToolTip(self.tabWidget.indexOf(self.aiTab), QCoreApplication.translate("MainWindow",
+                                                                                                    u"Here you can send a message to Gemini and ask for it's input",
+                                                                                                    None))
+        # endif // QT_CONFIG(tooltip)
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.aboutTab),
+                                  QCoreApplication.translate("MainWindow", u"About", None))
     # retranslateUi
 

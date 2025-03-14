@@ -705,3 +705,214 @@ def setupSectoralWebViewFour(wv):
 
     _settings = wvSettings(wv)
     wv.setHtml(html_content)
+
+
+def aboutTabWebView(wv):
+    html_content = '''
+    <!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #1f2937;
+    color: #a3e635;
+    line-height: 1.4;
+  }
+  
+  .about-window {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .app-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .app-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 4px;
+    color: #4f46e5;
+    text-shadow: 0 0 8px rgba(79, 70, 229, 0.6);
+  }
+  
+  .app-version {
+    font-size: 13px;
+    color: #818cf8;
+    margin: 0;
+  }
+  
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #4f46e5, transparent);
+    margin: 15px 0;
+    position: relative;
+  }
+  
+  .divider::after {
+    content: "<EOF>";
+    position: absolute;
+    top: -8px;
+    right: 0;
+    background: #1f2937;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #9ca3af;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    color: #4f46e5;
+    margin-bottom: 8px;
+  }
+  
+  .section-title::before {
+    content: ">> ";
+    color: #818cf8;
+  }
+  
+  .info-section {
+    margin-bottom: 15px;
+  }
+  
+  .info-row {
+    display: flex;
+    margin-bottom: 4px;
+  }
+  
+  .info-label {
+    flex: 0 0 100px;
+    color: #818cf8;
+  }
+  
+  .info-label::after {
+    content: ":";
+  }
+  
+  .info-value {
+    flex: 1;
+  }
+  
+  a {
+    color: #60a5fa;
+    text-decoration: none;
+    border-bottom: 1px dashed #60a5fa;
+    padding-bottom: 1px;
+  }
+  
+  a:hover {
+    color: #93c5fd;
+    border-bottom-style: solid;
+  }
+  
+  .copyright {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .ascii-table {
+    font-family: monospace;
+    white-space: pre;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #818cf8;
+    margin-top: 10px;
+  }
+  
+  .ascii-table a {
+    border-bottom: none;
+  }
+  
+  .repository-link {
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="about-window">
+  <div class="app-header">
+    <h1 class="app-name">ApexFlow</h1>
+    <p class="app-version">v1.0.0-stable</p>
+  </div>
+  
+  <div class="divider"></div>
+  
+  <div class="info-section">
+    <div class="section-title">System Info</div>
+    <div class="info-row">
+      <div class="info-label">Developer</div>
+      <div class="info-value">Sakshat Shinde</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">License</div>
+      <div class="info-value">GPLv3</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Build</div>
+      <div class="info-value">20250314.1</div>
+    </div>
+  </div>
+  
+  <div class="divider"></div>
+  
+  <div class="info-section">
+        <div class="section-title">Software used</div>
+        <div class="info-row">
+          <div class="info-label">Python</div>
+          <div class="info-value">3.12</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">QT</div>
+          <div class="info-value">PySide6 6.8.2.1</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">nsepython</div>
+          <div class="info-value">2.94</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">yfinance</div>
+          <div class="info-value">0.2.54</div>
+        </div>
+  </div>
+    
+<div class="divider"></div>
+    
+  <div class="info-section">
+    <div class="section-title">Support Vector</div>
+    <div class="ascii-table">
+╔══════════════════════════════════════════════════════════════╗
+║                      DONATION CHANNELS                       ║
+╠═══════════════╦══════════════════════════════════════════════╣
+║ Metamask      ║ 0x3448729cdF18051727A8d2fFe5A5322F433e1D09   ║
+╠═══════════════╬══════════════════════════════════════════════╣
+║ UPI           ║ sakshatshinde@pingpay                        ║
+╚═══════════════╩══════════════════════════════════════════════╝
+    </div>
+  </div>
+  
+  <div class="divider"></div>
+  
+  <div class="copyright">
+    © 2025 Sakshat Shinde. All rights reserved.
+  </div>
+</div>
+
+</body>
+</html>
+    '''
+
+    wv.setHtml(html_content)
+
+    settings = wv.settings()
+
+    settings.setAttribute(QWebEngineSettings.WebAttribute.JavascriptEnabled, False)
+    settings.setAttribute(QWebEngineSettings.WebAttribute.WebGLEnabled, True)
