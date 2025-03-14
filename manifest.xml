@@ -14,13 +14,6 @@
         </security>
     </trustInfo>
 
-    <!-- DPI Awareness for High-Resolution Displays -->
-    <application xmlns="urn:schemas-microsoft-com:asm.v3">
-        <windowsSettings>
-            <dpiAware>true/PM</dpiAware>
-        </windowsSettings>
-    </application>
-
     <!-- Windows Compatibility -->
     <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
         <application>
