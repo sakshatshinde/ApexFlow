@@ -630,10 +630,7 @@ def setupSectoralWebViewThree(wv):
   </script>
 </div>
 <!-- TradingView Widget END -->
-
-
-
-    '''
+'''
 
     _settings = wvSettings(wv)
     wv.setHtml(html_content)
