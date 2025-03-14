@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainUcsPLQ.ui'
+## Form generated from reading UI file 'mainSIfxwg.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -57,6 +57,11 @@ class Ui_MainWindow(object):
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.textBrowser = QTextBrowser(self.aiTab)
         self.textBrowser.setObjectName(u"textBrowser")
+        font = QFont()
+        font.setPointSize(14)
+        self.textBrowser.setFont(font)
+        self.textBrowser.setTextInteractionFlags(
+            Qt.TextInteractionFlag.LinksAccessibleByKeyboard | Qt.TextInteractionFlag.LinksAccessibleByMouse | Qt.TextInteractionFlag.TextBrowserInteraction | Qt.TextInteractionFlag.TextSelectableByKeyboard | Qt.TextInteractionFlag.TextSelectableByMouse)
         self.textBrowser.setOpenExternalLinks(True)
 
         self.gridLayout_2.addWidget(self.textBrowser, 0, 0, 1, 1)
@@ -70,6 +75,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
         self.textEdit.setSizePolicy(sizePolicy)
+        self.textEdit.setFont(font)
         self.textEdit.setTabChangesFocus(True)
 
         self.verticalLayout_5.addWidget(self.textEdit)
@@ -146,6 +152,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2.addWidget(self.sectoralWebViewFour)
 
+
         self.verticalLayout_6.addLayout(self.horizontalLayout_2)
 
         self.NiftyHeatmapWebView = QWebEngineView(self.sectoral)
@@ -153,6 +160,7 @@ class Ui_MainWindow(object):
         self.NiftyHeatmapWebView.setUrl(QUrl(u"about:blank"))
 
         self.verticalLayout_6.addWidget(self.NiftyHeatmapWebView)
+
 
         self.gridLayout_5.addLayout(self.verticalLayout_6, 0, 1, 1, 1)
 
@@ -166,11 +174,11 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.majorIndicesHeader = QLabel(self.indices)
         self.majorIndicesHeader.setObjectName(u"majorIndicesHeader")
-        font = QFont()
-        font.setFamilies([u"Segoe UI"])
-        font.setPointSize(12)
-        font.setWeight(QFont.DemiBold)
-        self.majorIndicesHeader.setFont(font)
+        font1 = QFont()
+        font1.setFamilies([u"Segoe UI"])
+        font1.setPointSize(12)
+        font1.setWeight(QFont.DemiBold)
+        self.majorIndicesHeader.setFont(font1)
         self.majorIndicesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.verticalLayout.addWidget(self.majorIndicesHeader)
@@ -180,11 +188,11 @@ class Ui_MainWindow(object):
         self.MSCIWorld_Label = QLabel(self.indices)
         self.MSCIWorld_Label.setObjectName(u"MSCIWorld_Label")
         self.MSCIWorld_Label.setMinimumSize(QSize(180, 0))
-        font1 = QFont()
-        font1.setFamilies([u"Segoe UI"])
-        font1.setPointSize(12)
-        font1.setBold(False)
-        self.MSCIWorld_Label.setFont(font1)
+        font2 = QFont()
+        font2.setFamilies([u"Segoe UI"])
+        font2.setPointSize(12)
+        font2.setBold(False)
+        self.MSCIWorld_Label.setFont(font2)
         self.MSCIWorld_Label.setFrameShape(QFrame.Shape.Box)
         self.MSCIWorld_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -192,10 +200,10 @@ class Ui_MainWindow(object):
 
         self.MSCIWorld_Percentage = QLabel(self.indices)
         self.MSCIWorld_Percentage.setObjectName(u"MSCIWorld_Percentage")
-        font2 = QFont()
-        font2.setPointSize(12)
-        font2.setBold(False)
-        self.MSCIWorld_Percentage.setFont(font2)
+        font3 = QFont()
+        font3.setPointSize(12)
+        font3.setBold(False)
+        self.MSCIWorld_Percentage.setFont(font3)
 
         self.layout_MSCIWorld.addWidget(self.MSCIWorld_Percentage)
 
@@ -214,7 +222,7 @@ class Ui_MainWindow(object):
         self.Nifty50_Label = QLabel(self.indices)
         self.Nifty50_Label.setObjectName(u"Nifty50_Label")
         self.Nifty50_Label.setMinimumSize(QSize(180, 0))
-        self.Nifty50_Label.setFont(font1)
+        self.Nifty50_Label.setFont(font2)
         self.Nifty50_Label.setFrameShape(QFrame.Shape.Box)
         self.Nifty50_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -222,7 +230,7 @@ class Ui_MainWindow(object):
 
         self.Nifty50_Percentage = QLabel(self.indices)
         self.Nifty50_Percentage.setObjectName(u"Nifty50_Percentage")
-        self.Nifty50_Percentage.setFont(font2)
+        self.Nifty50_Percentage.setFont(font3)
 
         self.layout_Nifty50.addWidget(self.Nifty50_Percentage)
 
@@ -241,7 +249,7 @@ class Ui_MainWindow(object):
         self.Nasdaq100_Label = QLabel(self.indices)
         self.Nasdaq100_Label.setObjectName(u"Nasdaq100_Label")
         self.Nasdaq100_Label.setMinimumSize(QSize(180, 0))
-        self.Nasdaq100_Label.setFont(font1)
+        self.Nasdaq100_Label.setFont(font2)
         self.Nasdaq100_Label.setFrameShape(QFrame.Shape.Box)
         self.Nasdaq100_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -249,7 +257,7 @@ class Ui_MainWindow(object):
 
         self.Nasdaq100_Percentage = QLabel(self.indices)
         self.Nasdaq100_Percentage.setObjectName(u"Nasdaq100_Percentage")
-        self.Nasdaq100_Percentage.setFont(font2)
+        self.Nasdaq100_Percentage.setFont(font3)
 
         self.layout_Nasdaq100.addWidget(self.Nasdaq100_Percentage)
 
@@ -268,7 +276,7 @@ class Ui_MainWindow(object):
         self.SP500_Label = QLabel(self.indices)
         self.SP500_Label.setObjectName(u"SP500_Label")
         self.SP500_Label.setMinimumSize(QSize(180, 0))
-        self.SP500_Label.setFont(font1)
+        self.SP500_Label.setFont(font2)
         self.SP500_Label.setFrameShape(QFrame.Shape.Box)
         self.SP500_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -276,7 +284,7 @@ class Ui_MainWindow(object):
 
         self.SP500_Percentage = QLabel(self.indices)
         self.SP500_Percentage.setObjectName(u"SP500_Percentage")
-        self.SP500_Percentage.setFont(font2)
+        self.SP500_Percentage.setFont(font3)
 
         self.layout_SP500.addWidget(self.SP500_Percentage)
 
@@ -295,7 +303,7 @@ class Ui_MainWindow(object):
         self.Nikkei225_Label = QLabel(self.indices)
         self.Nikkei225_Label.setObjectName(u"Nikkei225_Label")
         self.Nikkei225_Label.setMinimumSize(QSize(180, 0))
-        self.Nikkei225_Label.setFont(font1)
+        self.Nikkei225_Label.setFont(font2)
         self.Nikkei225_Label.setFrameShape(QFrame.Shape.Box)
         self.Nikkei225_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -303,7 +311,7 @@ class Ui_MainWindow(object):
 
         self.Nikkei225_Percentage = QLabel(self.indices)
         self.Nikkei225_Percentage.setObjectName(u"Nikkei225_Percentage")
-        self.Nikkei225_Percentage.setFont(font2)
+        self.Nikkei225_Percentage.setFont(font3)
 
         self.layout_Nikkei225.addWidget(self.Nikkei225_Percentage)
 
@@ -322,7 +330,7 @@ class Ui_MainWindow(object):
         self.Hangseng_Label = QLabel(self.indices)
         self.Hangseng_Label.setObjectName(u"Hangseng_Label")
         self.Hangseng_Label.setMinimumSize(QSize(180, 0))
-        self.Hangseng_Label.setFont(font1)
+        self.Hangseng_Label.setFont(font2)
         self.Hangseng_Label.setFrameShape(QFrame.Shape.Box)
         self.Hangseng_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -330,7 +338,7 @@ class Ui_MainWindow(object):
 
         self.Hangseng_Percentage = QLabel(self.indices)
         self.Hangseng_Percentage.setObjectName(u"Hangseng_Percentage")
-        self.Hangseng_Percentage.setFont(font2)
+        self.Hangseng_Percentage.setFont(font3)
 
         self.layout_Hangseng.addWidget(self.Hangseng_Percentage)
 
@@ -352,7 +360,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.indianIndicesHeader = QLabel(self.indices)
         self.indianIndicesHeader.setObjectName(u"indianIndicesHeader")
-        self.indianIndicesHeader.setFont(font)
+        self.indianIndicesHeader.setFont(font1)
         self.indianIndicesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.indianIndicesHeader)
@@ -362,7 +370,7 @@ class Ui_MainWindow(object):
         self.IndiaVix_Label = QLabel(self.indices)
         self.IndiaVix_Label.setObjectName(u"IndiaVix_Label")
         self.IndiaVix_Label.setMinimumSize(QSize(180, 0))
-        self.IndiaVix_Label.setFont(font1)
+        self.IndiaVix_Label.setFont(font2)
         self.IndiaVix_Label.setFrameShape(QFrame.Shape.Box)
         self.IndiaVix_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -370,7 +378,7 @@ class Ui_MainWindow(object):
 
         self.IndiaVix_Percentage = QLabel(self.indices)
         self.IndiaVix_Percentage.setObjectName(u"IndiaVix_Percentage")
-        self.IndiaVix_Percentage.setFont(font2)
+        self.IndiaVix_Percentage.setFont(font3)
 
         self.layout_IndiaVix.addWidget(self.IndiaVix_Percentage)
 
@@ -389,7 +397,7 @@ class Ui_MainWindow(object):
         self.NiftyNext50_Label = QLabel(self.indices)
         self.NiftyNext50_Label.setObjectName(u"NiftyNext50_Label")
         self.NiftyNext50_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyNext50_Label.setFont(font1)
+        self.NiftyNext50_Label.setFont(font2)
         self.NiftyNext50_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyNext50_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -397,7 +405,7 @@ class Ui_MainWindow(object):
 
         self.NiftyNext50_Percentage = QLabel(self.indices)
         self.NiftyNext50_Percentage.setObjectName(u"NiftyNext50_Percentage")
-        self.NiftyNext50_Percentage.setFont(font2)
+        self.NiftyNext50_Percentage.setFont(font3)
 
         self.layout_NiftyNext50.addWidget(self.NiftyNext50_Percentage)
 
@@ -416,7 +424,7 @@ class Ui_MainWindow(object):
         self.NiftyIT_Label = QLabel(self.indices)
         self.NiftyIT_Label.setObjectName(u"NiftyIT_Label")
         self.NiftyIT_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyIT_Label.setFont(font1)
+        self.NiftyIT_Label.setFont(font2)
         self.NiftyIT_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyIT_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -424,7 +432,7 @@ class Ui_MainWindow(object):
 
         self.NiftyIT_Percentage = QLabel(self.indices)
         self.NiftyIT_Percentage.setObjectName(u"NiftyIT_Percentage")
-        self.NiftyIT_Percentage.setFont(font2)
+        self.NiftyIT_Percentage.setFont(font3)
 
         self.layout_NiftyIT.addWidget(self.NiftyIT_Percentage)
 
@@ -443,7 +451,7 @@ class Ui_MainWindow(object):
         self.NiftyBank_Label = QLabel(self.indices)
         self.NiftyBank_Label.setObjectName(u"NiftyBank_Label")
         self.NiftyBank_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyBank_Label.setFont(font1)
+        self.NiftyBank_Label.setFont(font2)
         self.NiftyBank_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyBank_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -451,7 +459,7 @@ class Ui_MainWindow(object):
 
         self.NiftyBank_Percentage = QLabel(self.indices)
         self.NiftyBank_Percentage.setObjectName(u"NiftyBank_Percentage")
-        self.NiftyBank_Percentage.setFont(font2)
+        self.NiftyBank_Percentage.setFont(font3)
 
         self.layout_NiftyBank.addWidget(self.NiftyBank_Percentage)
 
@@ -470,7 +478,7 @@ class Ui_MainWindow(object):
         self.NiftySmallCap250_Label = QLabel(self.indices)
         self.NiftySmallCap250_Label.setObjectName(u"NiftySmallCap250_Label")
         self.NiftySmallCap250_Label.setMinimumSize(QSize(180, 0))
-        self.NiftySmallCap250_Label.setFont(font1)
+        self.NiftySmallCap250_Label.setFont(font2)
         self.NiftySmallCap250_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftySmallCap250_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -478,7 +486,7 @@ class Ui_MainWindow(object):
 
         self.NiftySmallCap250_Percentage = QLabel(self.indices)
         self.NiftySmallCap250_Percentage.setObjectName(u"NiftySmallCap250_Percentage")
-        self.NiftySmallCap250_Percentage.setFont(font2)
+        self.NiftySmallCap250_Percentage.setFont(font3)
 
         self.layout_NiftySmallCap250.addWidget(self.NiftySmallCap250_Percentage)
 
@@ -497,7 +505,7 @@ class Ui_MainWindow(object):
         self.NiftyMidcap150_Label = QLabel(self.indices)
         self.NiftyMidcap150_Label.setObjectName(u"NiftyMidcap150_Label")
         self.NiftyMidcap150_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyMidcap150_Label.setFont(font1)
+        self.NiftyMidcap150_Label.setFont(font2)
         self.NiftyMidcap150_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyMidcap150_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -505,7 +513,7 @@ class Ui_MainWindow(object):
 
         self.NiftyMidcap150_Percentage = QLabel(self.indices)
         self.NiftyMidcap150_Percentage.setObjectName(u"NiftyMidcap150_Percentage")
-        self.NiftyMidcap150_Percentage.setFont(font2)
+        self.NiftyMidcap150_Percentage.setFont(font3)
 
         self.layout_NiftyMidcap150.addWidget(self.NiftyMidcap150_Percentage)
 
@@ -527,7 +535,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.commoditiesHeader = QLabel(self.indices)
         self.commoditiesHeader.setObjectName(u"commoditiesHeader")
-        self.commoditiesHeader.setFont(font)
+        self.commoditiesHeader.setFont(font1)
         self.commoditiesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.verticalLayout_2.addWidget(self.commoditiesHeader)
@@ -537,7 +545,7 @@ class Ui_MainWindow(object):
         self.Gold_Label = QLabel(self.indices)
         self.Gold_Label.setObjectName(u"Gold_Label")
         self.Gold_Label.setMinimumSize(QSize(180, 0))
-        self.Gold_Label.setFont(font1)
+        self.Gold_Label.setFont(font2)
         self.Gold_Label.setFrameShape(QFrame.Shape.Box)
         self.Gold_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -545,7 +553,7 @@ class Ui_MainWindow(object):
 
         self.Gold_Percentage = QLabel(self.indices)
         self.Gold_Percentage.setObjectName(u"Gold_Percentage")
-        self.Gold_Percentage.setFont(font2)
+        self.Gold_Percentage.setFont(font3)
 
         self.layout_Gold.addWidget(self.Gold_Percentage)
 
@@ -564,7 +572,7 @@ class Ui_MainWindow(object):
         self.Silver_Label = QLabel(self.indices)
         self.Silver_Label.setObjectName(u"Silver_Label")
         self.Silver_Label.setMinimumSize(QSize(180, 0))
-        self.Silver_Label.setFont(font1)
+        self.Silver_Label.setFont(font2)
         self.Silver_Label.setFrameShape(QFrame.Shape.Box)
         self.Silver_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -572,7 +580,7 @@ class Ui_MainWindow(object):
 
         self.Silver_Percentage = QLabel(self.indices)
         self.Silver_Percentage.setObjectName(u"Silver_Percentage")
-        self.Silver_Percentage.setFont(font2)
+        self.Silver_Percentage.setFont(font3)
 
         self.layout_Silver.addWidget(self.Silver_Percentage)
 
@@ -591,7 +599,7 @@ class Ui_MainWindow(object):
         self.BrentCrudeOil_Label = QLabel(self.indices)
         self.BrentCrudeOil_Label.setObjectName(u"BrentCrudeOil_Label")
         self.BrentCrudeOil_Label.setMinimumSize(QSize(180, 0))
-        self.BrentCrudeOil_Label.setFont(font1)
+        self.BrentCrudeOil_Label.setFont(font2)
         self.BrentCrudeOil_Label.setFrameShape(QFrame.Shape.Box)
         self.BrentCrudeOil_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -599,7 +607,7 @@ class Ui_MainWindow(object):
 
         self.BrentCrudeOil_Percentage = QLabel(self.indices)
         self.BrentCrudeOil_Percentage.setObjectName(u"BrentCrudeOil_Percentage")
-        self.BrentCrudeOil_Percentage.setFont(font2)
+        self.BrentCrudeOil_Percentage.setFont(font3)
 
         self.layout_BrentCrudeOil.addWidget(self.BrentCrudeOil_Percentage)
 
@@ -619,7 +627,7 @@ class Ui_MainWindow(object):
         self.NaturalGas_Label = QLabel(self.indices)
         self.NaturalGas_Label.setObjectName(u"NaturalGas_Label")
         self.NaturalGas_Label.setMinimumSize(QSize(180, 0))
-        self.NaturalGas_Label.setFont(font1)
+        self.NaturalGas_Label.setFont(font2)
         self.NaturalGas_Label.setFrameShape(QFrame.Shape.Box)
         self.NaturalGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -627,7 +635,7 @@ class Ui_MainWindow(object):
 
         self.NaturalGas_Percentage = QLabel(self.indices)
         self.NaturalGas_Percentage.setObjectName(u"NaturalGas_Percentage")
-        self.NaturalGas_Percentage.setFont(font2)
+        self.NaturalGas_Percentage.setFont(font3)
 
         self.layout_NaturalGas.addWidget(self.NaturalGas_Percentage)
 
@@ -646,7 +654,7 @@ class Ui_MainWindow(object):
         self.USDINR_Label = QLabel(self.indices)
         self.USDINR_Label.setObjectName(u"USDINR_Label")
         self.USDINR_Label.setMinimumSize(QSize(180, 0))
-        self.USDINR_Label.setFont(font1)
+        self.USDINR_Label.setFont(font2)
         self.USDINR_Label.setFrameShape(QFrame.Shape.Box)
         self.USDINR_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -654,7 +662,7 @@ class Ui_MainWindow(object):
 
         self.USDINR_Percentage = QLabel(self.indices)
         self.USDINR_Percentage.setObjectName(u"USDINR_Percentage")
-        self.USDINR_Percentage.setFont(font2)
+        self.USDINR_Percentage.setFont(font3)
 
         self.layout_USDINR.addWidget(self.USDINR_Percentage)
 
@@ -673,7 +681,7 @@ class Ui_MainWindow(object):
         self.USVix_Label = QLabel(self.indices)
         self.USVix_Label.setObjectName(u"USVix_Label")
         self.USVix_Label.setMinimumSize(QSize(180, 0))
-        self.USVix_Label.setFont(font1)
+        self.USVix_Label.setFont(font2)
         self.USVix_Label.setFrameShape(QFrame.Shape.Box)
         self.USVix_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -681,7 +689,7 @@ class Ui_MainWindow(object):
 
         self.USVix_Percentage = QLabel(self.indices)
         self.USVix_Percentage.setObjectName(u"USVix_Percentage")
-        self.USVix_Percentage.setFont(font2)
+        self.USVix_Percentage.setFont(font3)
 
         self.layout_USVix.addWidget(self.USVix_Percentage)
 
@@ -703,7 +711,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.moreIndicesHeader = QLabel(self.indices)
         self.moreIndicesHeader.setObjectName(u"moreIndicesHeader")
-        self.moreIndicesHeader.setFont(font)
+        self.moreIndicesHeader.setFont(font1)
         self.moreIndicesHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.verticalLayout_4.addWidget(self.moreIndicesHeader)
@@ -713,7 +721,7 @@ class Ui_MainWindow(object):
         self.NiftyFMCG_Label = QLabel(self.indices)
         self.NiftyFMCG_Label.setObjectName(u"NiftyFMCG_Label")
         self.NiftyFMCG_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyFMCG_Label.setFont(font1)
+        self.NiftyFMCG_Label.setFont(font2)
         self.NiftyFMCG_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyFMCG_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -721,7 +729,7 @@ class Ui_MainWindow(object):
 
         self.NiftyFMCG_Percentage = QLabel(self.indices)
         self.NiftyFMCG_Percentage.setObjectName(u"NiftyFMCG_Percentage")
-        self.NiftyFMCG_Percentage.setFont(font2)
+        self.NiftyFMCG_Percentage.setFont(font3)
 
         self.layout_NiftyFMCG.addWidget(self.NiftyFMCG_Percentage)
 
@@ -740,7 +748,7 @@ class Ui_MainWindow(object):
         self.NiftyAuto_Label = QLabel(self.indices)
         self.NiftyAuto_Label.setObjectName(u"NiftyAuto_Label")
         self.NiftyAuto_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyAuto_Label.setFont(font1)
+        self.NiftyAuto_Label.setFont(font2)
         self.NiftyAuto_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyAuto_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -748,7 +756,7 @@ class Ui_MainWindow(object):
 
         self.NiftyAuto_Percentage = QLabel(self.indices)
         self.NiftyAuto_Percentage.setObjectName(u"NiftyAuto_Percentage")
-        self.NiftyAuto_Percentage.setFont(font2)
+        self.NiftyAuto_Percentage.setFont(font3)
 
         self.layout_NiftyAuto.addWidget(self.NiftyAuto_Percentage)
 
@@ -767,7 +775,7 @@ class Ui_MainWindow(object):
         self.NiftyPharma_Label = QLabel(self.indices)
         self.NiftyPharma_Label.setObjectName(u"NiftyPharma_Label")
         self.NiftyPharma_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyPharma_Label.setFont(font1)
+        self.NiftyPharma_Label.setFont(font2)
         self.NiftyPharma_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyPharma_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -775,7 +783,7 @@ class Ui_MainWindow(object):
 
         self.NiftyPharma_Percentage = QLabel(self.indices)
         self.NiftyPharma_Percentage.setObjectName(u"NiftyPharma_Percentage")
-        self.NiftyPharma_Percentage.setFont(font2)
+        self.NiftyPharma_Percentage.setFont(font3)
 
         self.layout_NiftyPharma.addWidget(self.NiftyPharma_Percentage)
 
@@ -794,7 +802,7 @@ class Ui_MainWindow(object):
         self.NiftyOilGas_Label = QLabel(self.indices)
         self.NiftyOilGas_Label.setObjectName(u"NiftyOilGas_Label")
         self.NiftyOilGas_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyOilGas_Label.setFont(font1)
+        self.NiftyOilGas_Label.setFont(font2)
         self.NiftyOilGas_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyOilGas_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -802,7 +810,7 @@ class Ui_MainWindow(object):
 
         self.NiftyOilGas_Percentage = QLabel(self.indices)
         self.NiftyOilGas_Percentage.setObjectName(u"NiftyOilGas_Percentage")
-        self.NiftyOilGas_Percentage.setFont(font2)
+        self.NiftyOilGas_Percentage.setFont(font3)
 
         self.layout_NIftyOilGas.addWidget(self.NiftyOilGas_Percentage)
 
@@ -821,7 +829,7 @@ class Ui_MainWindow(object):
         self.NiftyIndiaDefence_Label = QLabel(self.indices)
         self.NiftyIndiaDefence_Label.setObjectName(u"NiftyIndiaDefence_Label")
         self.NiftyIndiaDefence_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyIndiaDefence_Label.setFont(font1)
+        self.NiftyIndiaDefence_Label.setFont(font2)
         self.NiftyIndiaDefence_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyIndiaDefence_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -829,7 +837,7 @@ class Ui_MainWindow(object):
 
         self.NiftyIndiaDefence_Percentage = QLabel(self.indices)
         self.NiftyIndiaDefence_Percentage.setObjectName(u"NiftyIndiaDefence_Percentage")
-        self.NiftyIndiaDefence_Percentage.setFont(font2)
+        self.NiftyIndiaDefence_Percentage.setFont(font3)
 
         self.layout_NiftyIndiaDefence.addWidget(self.NiftyIndiaDefence_Percentage)
 
@@ -848,7 +856,7 @@ class Ui_MainWindow(object):
         self.NiftyEnergy_Label = QLabel(self.indices)
         self.NiftyEnergy_Label.setObjectName(u"NiftyEnergy_Label")
         self.NiftyEnergy_Label.setMinimumSize(QSize(180, 0))
-        self.NiftyEnergy_Label.setFont(font1)
+        self.NiftyEnergy_Label.setFont(font2)
         self.NiftyEnergy_Label.setFrameShape(QFrame.Shape.Box)
         self.NiftyEnergy_Label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -856,7 +864,7 @@ class Ui_MainWindow(object):
 
         self.NiftyEnergy_Percentage = QLabel(self.indices)
         self.NiftyEnergy_Percentage.setObjectName(u"NiftyEnergy_Percentage")
-        self.NiftyEnergy_Percentage.setFont(font2)
+        self.NiftyEnergy_Percentage.setFont(font3)
 
         self.layout_NiftyEnergy.addWidget(self.NiftyEnergy_Percentage)
 
@@ -891,7 +899,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(4)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
