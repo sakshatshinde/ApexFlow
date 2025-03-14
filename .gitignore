@@ -1,3 +1,7 @@
 
 # Ignore dynaconf secret files
 .secrets.*
+
+# ignore build stuff
+dist
+build

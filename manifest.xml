@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    <assemblyIdentity version="1.0.0.0" processorArchitecture="*" name="ApexFlow.SakshatShinde" type="win32"/>
+
+    <!-- Developer Info -->
+    <description>ApexFlow by Sakshat Shinde</description>
+
+    <!-- Execution Level -->
+    <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+        <security>
+            <requestedPrivileges>
+                <requestedExecutionLevel level="asInvoker" uiAccess="false"/>
+            </requestedPrivileges>
+        </security>
+    </trustInfo>
+
+    <!-- DPI Awareness for High-Resolution Displays -->
+    <application xmlns="urn:schemas-microsoft-com:asm.v3">
+        <windowsSettings>
+            <dpiAware>true/PM</dpiAware>
+        </windowsSettings>
+    </application>
+
+    <!-- Windows Compatibility -->
+    <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+        <application>
+            <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/> <!-- Windows 10 -->
+            <supportedOS Id="{4f3d1606-3f3e-4f06-b8aa-f587bc69cc32}"/> <!-- Windows 8 -->
+            <supportedOS Id="{1e64c6fc-2a5c-4016-9043-0c7c31ca1f68}"/> <!-- Windows 7 -->
+            <supportedOS Id="{d4c416d1-14d5-4d38-a3e1-5e43a05205a4}"/> <!-- Windows 11 -->
+        </application>
+    </compatibility>
+
+    <!-- Common Controls v6 for Modern UI -->
+    <dependency>
+        <dependentAssembly>
+            <assemblyIdentity type="win32" name="Microsoft.Windows.Common-Controls" version="6.0.0.0"
+                              processorArchitecture="*" publicKeyToken="6595b64144ccf1df" language="*"/>
+        </dependentAssembly>
+    </dependency>
+</assembly>
