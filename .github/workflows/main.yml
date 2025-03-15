@@ -1,0 +1,46 @@
+name: Build ApexFlow for Windows
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        
+    - name: Create virtual environment
+      run: |
+        python -m venv .venv
+        
+    - name: Install dependencies
+      run: |
+        .venv\Scripts\python -m pip install --upgrade pip
+        .venv\Scripts\pip install -r requirements.txt
+        
+    - name: Update pysidedeploy.spec
+      run: |
+        (Get-Content pysidedeploy.spec) -replace "D:\\Dev\\ApexFlow", "${{ github.workspace }}" | Set-Content pysidedeploy.spec
+        (Get-Content pysidedeploy.spec) -replace "D:\\Dev\\ApexFlow\\.venv\\Scripts\\python.exe", "${{ github.workspace }}\\.venv\\Scripts\\python.exe" | Set-Content pysidedeploy.spec
+        Add-Content -Path pysidedeploy.spec -Value "`n# Added by GitHub Actions`nextra_args = --quiet --noinclude-qt-translations"
+        
+    - name: Build with pyside6-deploy
+      run: |
+        .venv\Scripts\pyside6-deploy app.py
+        
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ApexFlow-Windows
+        path: deployment/app.exe
