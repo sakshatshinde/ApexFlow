@@ -40,7 +40,7 @@ qml_files =
 excluded_qml_plugins = 
 
 # qt modules used. comma separated
-modules = Gui,Widgets,Core,WebEngineWidgets,WebEngineCore
+modules = WebEngineWidgets,Widgets,WebEngineCore,Gui,Core
 
 # qt plugins used by the application. only relevant for desktop deployment. for qt plugins used
 # in android application see [android][plugins]
@@ -68,7 +68,7 @@ macos.permissions =
 mode = onefile
 
 # (str) specify any extra nuitka arguments
-extra_args = --quiet --noinclude-qt-translations --enable-plugin=numpy
+extra_args = --quiet --noinclude-qt-translations --jobs=2 --lto=no
 
 [buildozer]
 
