@@ -15,7 +15,7 @@
         </property>
         <property name="windowIcon">
             <iconset>
-                <normaloff>apexFlowIcon.png</normaloff>apexFlowIcon.png
+                <normaloff>apexFlowIcon.ico</normaloff>apexFlowIcon.ico
             </iconset>
         </property>
         <property name="styleSheet">
