@@ -37,7 +37,8 @@ jobs:
         
     - name: Build with pyside6-deploy
       run: |
-        .venv\Scripts\pyside6-deploy app.py
+        .venv\Scripts\activate
+        pyside6-deploy app.py
         
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
