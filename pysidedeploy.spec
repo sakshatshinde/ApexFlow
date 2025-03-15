@@ -68,7 +68,7 @@ macos.permissions =
 mode = onefile
 
 # (str) specify any extra nuitka arguments
-extra_args = --quiet --noinclude-qt-translations --jobs=2 --lto=no
+extra_args = --quiet --noinclude-qt-translations
 
 [buildozer]
 
