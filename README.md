@@ -6,7 +6,13 @@ All in one AI powered financial markets app
 
 Currently I have not figured out how to package this application. For now please follow below steps.
 
+Please get a GEMINI api key if you intende to use the AI features - https://ai.google.dev/gemini-api/docs/api-key
+
 ```sh
+
+# Create a ".secrets.toml" to store your Gemini API key
+$ echo "GEMINI = <YOUR_API_KEY_HERE>" >> .secrets.toml
+
 # verify you have python installed
 $ python --version
 
