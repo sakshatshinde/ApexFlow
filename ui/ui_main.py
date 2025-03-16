@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainQLrloY.ui'
+## Form generated from reading UI file 'mainbHdkWE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -903,7 +903,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(4)
+        self.tabWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1158,9 +1158,7 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.macro),
                                   QCoreApplication.translate("MainWindow", u"Macro", None))
         self.textBrowser.setPlaceholderText(QCoreApplication.translate("MainWindow",
-                                                                       u"AI assistant will reply here... Please note this is not a chat, no\n"
-                                                                       "                                                history of your messages will be kept in the context.\n"
-                                                                       "                                            ",
+                                                                       u"AI assistant will reply here... Please note this is not a chat, no history of your messages will be kept in the context.                                             ",
                                                                        None))
         self.textEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Enter your prompt here...", None))
         self.send_msg_to_ai_btn.setText(QCoreApplication.translate("MainWindow", u"Send", None))
