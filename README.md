@@ -2,6 +2,23 @@
 
 All in one AI powered financial markets app
 
+### How to install?
+
+Currently I have not figured out how to package this application. For now please follow below steps.
+
+```sh
+# verify you have python installed
+$ python --version
+
+# install all the required packages
+$ pip install -r requirements.txt
+
+# run the app
+$ python app.py
+```
+
+### Screenshots
+
 ![image](https://github.com/user-attachments/assets/8adcab56-6058-4802-a2b8-98444f22a0a1)
 
 ![{D6BE5D43-6189-444F-AD6A-7570907A80CD}](https://github.com/user-attachments/assets/9b07fb21-3574-4cf2-91a9-72d21542b8fc)
