@@ -31,7 +31,7 @@ jobs:
     - name: Build with pyinstaller
       run: |
         .venv\Scripts\activate
-        pyinstaller --noconfirm --onefile --windowed --icon "ui\apexFlowIcon.ico" --name "apexflow" --clean --manifest "manifest.xml" --add-data "ui;ui" --add-data "ai.py;." --add-data "config.py;." --add-data "data.py;." --collect-all "nsepython" --hidden-import "scipy.special._cdflib"  --hidden-import "scipy.stats.distributions" --hidden-import "scipy.stats._distn_infrastructure" "D:\Dev\ApexFlow\app.pyw"
+        pyinstaller --noconfirm --onefile --windowed --icon "ui\apexFlowIcon.ico" --name "apexflow" --clean --manifest "manifest.xml" --add-data "ui;ui" --add-data "ai.py;." --add-data "config.py;." --add-data "data.py;." --collect-all "nsepython" --hidden-import "scipy.special._cdflib"  --hidden-import "scipy.stats.distributions" --hidden-import "scipy.stats._distn_infrastructure" "app.pyw"
         
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
