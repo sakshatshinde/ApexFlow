@@ -4,7 +4,13 @@ All in one AI powered financial markets app
 
 ### How to install?
 
-Currently I have not figured out how to package this application. For now please follow below steps.
+Currently I have not figured out how to package this application. 
+```sh
+# Things tried so far
+pyinstaller --noconfirm --onefile --windowed --icon "D:\Dev\ApexFlow\ui\apexFlowIcon.ico" --name "apexflow" --clean --manifest "D:\Dev\ApexFlow\manifest.xml" --add-data "D:\Dev\ApexFlow\ui;ui/" --add-data "D:\Dev\ApexFlow\ai.py;." --add-data "D:\Dev\ApexFlow\config.py;." --add-data "D:\Dev\ApexFlow\data.py;." --collect-all "nsepython" --hidden-import "scipy.special._cdflib"  "D:\Dev\ApexFlow\app.pyw"
+```
+
+For now please follow below steps.
 
 Please get a GEMINI api key if you intende to use the AI features - https://ai.google.dev/gemini-api/docs/api-key
 
