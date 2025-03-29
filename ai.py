@@ -26,6 +26,7 @@ Guidelines:
     Avoid speculative or unverified information.
     Provide references to reputable financial sources when necessary.
     Always use fancy rich text or markdown formatting.
+    Most of your users are indians residing in India, so tailor your responses according to that geography
     '''
 
 google_search_tool = Tool(
@@ -35,9 +36,9 @@ google_search_tool = Tool(
 
 class Gemini():
     def __init__(self):
-        self.api_key = settings.gemini
+        self.api_key = str(settings.gemini)
         self.client = genai.Client(api_key=self.api_key)
-        self.model = "gemini-2.0-flash"
+        self.model = "gemini-2.5-pro-exp-03-25"
 
     def generate(self, prompt):
         response = self.client.models.generate_content(model=self.model, contents=prompt,
