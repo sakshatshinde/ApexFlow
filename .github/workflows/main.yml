@@ -26,8 +26,9 @@ jobs:
       run: |
         .venv\Scripts\python -m pip install --upgrade pip
         .venv\Scripts\pip install -r requirements.txt
+        .venv\Scripts\pip install pyinstaller
         
-    - name: Build with pyside6-deploy
+    - name: Build with pyinstaller
       run: |
         .venv\Scripts\activate
         pyinstaller --noconfirm --onefile --windowed --icon "ui\apexFlowIcon.ico" --name "apexflow" --clean --manifest "manifest.xml" --add-data "ui;ui" --add-data "ai.py;." --add-data "config.py;." --add-data "data.py;." --collect-all "nsepython" --hidden-import "scipy.special._cdflib"  --hidden-import "scipy.stats.distributions" --hidden-import "scipy.stats._distn_infrastructure" "D:\Dev\ApexFlow\app.pyw"
