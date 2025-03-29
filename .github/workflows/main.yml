@@ -12,10 +12,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     
-    - name: Set up Python 3.12
+    - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
-        python-version: '3.12'
+        python-version: '3.11'
         
     - name: Create virtual environment
       run: |
@@ -26,16 +26,10 @@ jobs:
         .venv\Scripts\python -m pip install --upgrade pip
         .venv\Scripts\pip install -r requirements.txt
         
-    - name: Update pysidedeploy.spec
-      run: |
-        (Get-Content pysidedeploy.spec) -replace "D:\\Dev\\ApexFlow", "${{ github.workspace }}" | Set-Content pysidedeploy.spec
-        (Get-Content pysidedeploy.spec) -replace "D:\\Dev\\ApexFlow\\.venv\\Scripts\\python.exe", "${{ github.workspace }}\\.venv\\Scripts\\python.exe" | Set-Content pysidedeploy.spec
-        Add-Content -Path pysidedeploy.spec -Value "`n# Added by GitHub Actions`nextra_args = --quiet --noinclude-qt-translations"
-        
     - name: Build with pyside6-deploy
       run: |
         .venv\Scripts\activate
-        pyside6-deploy app.py
+        pyinstaller --noconfirm --onefile --windowed --icon "ui\apexFlowIcon.ico" --name "apexflow" --clean --manifest "manifest.xml" --add-data "ui;ui" --add-data "ai.py;." --add-data "config.py;." --add-data "data.py;." --collect-all "nsepython" --hidden-import "scipy.special._cdflib"  --hidden-import "scipy.stats.distributions" --hidden-import "scipy.stats._distn_infrastructure" "D:\Dev\ApexFlow\app.pyw"
         
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
