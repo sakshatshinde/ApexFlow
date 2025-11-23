@@ -23,7 +23,7 @@ Please get a GEMINI api key if you intend to use the AI features - https://ai.go
 ```sh
 
 # Create a ".secrets.toml" to store your Gemini API key
-$ echo "GEMINI = <YOUR_API_KEY_HERE>" >> .secrets.toml
+$ echo "GEMINI = "<YOUR_API_KEY_HERE>"" >> .secrets.toml
 
 # verify you have python installed
 $ python --version
